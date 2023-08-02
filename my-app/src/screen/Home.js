@@ -3,6 +3,8 @@ import React from "react";
 //import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import "./Rodape";
+import Rodape from "./Rodape";
 
 export default function Home() {
   const { c_emailresp_cont } = useParams();
@@ -108,6 +110,7 @@ export default function Home() {
       <button className="button" onClick={SalaDeAula}>
         Sala de Aula
       </button>
+      <Rodape/>
     </div>
   );
 }

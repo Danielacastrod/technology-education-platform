@@ -3,6 +3,8 @@ import React from "react";
 //import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import "./Rodape"
+import Rodape from "./Rodape";
 
 export default function SalaDeAula() {
   const { c_emailresp_cont } = useParams();
@@ -98,6 +100,7 @@ export default function SalaDeAula() {
       <button className="button" onClick={Curso}>
         Curso
       </button>
+      <Rodape/>
     </div>
   );
 }
