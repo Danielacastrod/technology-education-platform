@@ -24,6 +24,7 @@ export default function Home() {
 
   return (
     <div className="App">
+      <main>
       <h2>Sala de aula</h2>
       <div className="saladeaula">
         <button className="serie">
@@ -97,6 +98,7 @@ export default function Home() {
             
             <div className="rolagem"> <button className="seta esquerda">&gt;</button></div>
            </div>
+           </main>
           
 
       <button className="button" onClick={Perfil}>
