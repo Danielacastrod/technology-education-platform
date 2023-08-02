@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgba(67, 62, 71, 1);
+}
+
+
+header{
+    
+    background-image: url("../img/Capa.png");
+    height: 443px;
+
+
+}
+.box3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+.box4{
+    margin-right: 2rem;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.logo{
+    width: 230px;
+    flex-shrink: 0;
+  
+}
+
+.home{
+    width: 225px;
+    height: 25;
+    align-self: end;
+    margin-left: -650px;
+    transform: translateY(-15px); 
+}
+
+.perfil{
+    width: 85px;
+    height: 85px;
+    border-radius: 85px;
+    margin-left: -0px;
+    align-self: end;
+    margin-left: -180px;
+    transform: translateY(-30px);
+    
+}
+
+
+h1{
+
+    color: #ffff;
+    text-shadow: 5px 5px 0px #6100C0;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 3px;
+   
+}
+
+h2{
+    color: #ffff;
+    text-shadow: 5px 5px 0px #6100C0;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 788;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.linkaula{
+    width: 250px;
+    height: 53px;
+    color: black;
+    text-decoration: none;
+    font-family: "bold", sans-serif;
+    font-size: 20px;
+} 
+.saladeaula{
+    display: flex;
+    justify-content: space-around;
+}
+.aula1{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.imgaula{
+    width: 250x;
+    height: 245px;
+    text-align: center;
+    border: #000000;
+    border-radius: 10%;
+    border-top-right-radius: 0%;
+    transform: translateY(-15px); 
+
+
+}
+  
+.botaoaula{
+    width: 250px;
+    height: 311px;
+    background: #6100C0;
+    color: black;
+    text-align: center;
+    border-radius: 10px;  
+    transition: transform 0.2s;
+    border: none;
+    cursor: pointer;
+  
+    
+}
+
+.rolagem{
+    position: relative;
+    width: 35px;
+    overflow: hidden;
+   
+}
+
+.seta {
+    position: absolute; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px; 
+    background-color: transparent;
+    color: #000;
+    font-size: 30px;
+    border: none; 
+    cursor: pointer;
+}
+.seta.direita{ 
+    left: 0;
+
+}
+
+.seta.esquerda { 
+    left: 0;
+}
+
+.botaoaula:hover{
+    transform: scale(1.1);
+    background-image: linear-gradient(45deg, #0000, #040408);
+}
+
+footer {
+    background-color: #000000;
+    padding: 0px;
+    width: 100%;
+}
+  
+.logoeemail{
+      display: flex;
+      justify-content: center;
+}
+  
+.logo2{
+      width: 230px;
+      height: 100;
+      margin-left: -450px;
+}
+  
+.email{
+      width: 225px;
+      height: 25;
+      align-self: end;
+      margin-left: -180px;
+      transform: translateY(-40px);
+}
+.redesetermo{
+      display: flex;
+      justify-content: center;
+     
+}
+  
+.sociais{
+      width: 55px;
+      transform: translateY(-140px);
+      right: 25%;
+      position: relative;
+      left: 190px;
+}
+  
+.termos{
+      width: 225px;
+      height: 25;
+      align-self: end;
+      margin-right: -200px;
+      transform: translateY(-85px);
+}
+  
+.fim{
+      display: flex;
+      justify-content: flex-end;
+} 
+  
+.cript{
+      position: relative;
+      left: -40%;
+  }
+  

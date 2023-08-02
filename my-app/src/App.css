@@ -1,0 +1,753 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+button {
+  cursor: pointer;
+  transition: opacity .5s;
+}
+
+button:hover {
+  opacity: .8;
+}
+
+/* INÍCIO ACESSO (LOGIN, CADASTRO, RECUPERAÇÃO DE SENHA, PERFIL) */
+
+.container--acesso {
+  background: url("./screen/img/capa.png") no-repeat center / cover;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+}
+
+.logo--acesso {
+  height: 230px;
+  margin-top: -4rem;
+  position: fixed;
+  width: 230px;
+}
+
+.box--acesso {
+  align-items: flex-end;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.boxTransparente--acesso {
+  align-items: center;
+  background: rgba(28, 28, 28, 0.75);
+  border-radius: 20px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  font-size: 17px;
+  font-weight: 400;
+  height: 484px;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  position: absolute;
+  width: 639px;
+}
+
+.titulo--acesso {
+  text-align: center;
+  text-transform: uppercase;
+
+}
+
+.login-form--acesso {
+  margin-top: 3rem;
+}
+
+.login-form-group--acesso {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.inputs--acesso {
+  background: rgba(12, 12, 12, 0.75);
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.432);
+  color: #ffffff;
+  height: 43px;
+  margin: 5px 0;
+  padding: 0 6px;
+  width: 513px;
+}
+
+.form-error--acesso {
+  color: #A9E500;
+  font-size: 12px;
+}
+
+.boxBotao--acesso {
+  display: flex;
+  justify-content: center;
+}
+
+.botao--acesso {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.24);
+  color: #000;
+  font-size: 17px;
+  font-weight: 700;
+  height: 50px;
+  text-align: center;
+  width: 150px;
+}
+
+/* FIM ACESSO (LOGIN, CADASTRO, RECUPERAÇÃO DE SENHA, PERFIL) */
+
+
+/* INÍCIO TELA DE LOGIN */
+
+.boxCaminhos--login {
+  display: flex;
+  flex-direction: column;
+  height: 4rem;
+  justify-content: space-between;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.recuperaSenha--login,
+.cadastrar--login {
+  color: #ffffff;
+}
+
+.cadastrar--login {
+  margin-left: .3rem;
+}
+
+/* FIM TELA DE LOGIN */
+
+
+/* INÍCIO TELA DE CADASTRO */
+
+
+.logo--cadastro {
+  height: 180px;
+  margin-top: -3.5rem;
+  position: fixed;
+  width: 180px;
+}
+
+.botaoLogin--cadastro {
+  position: fixed;
+  margin-top: .5rem;
+  margin-left: 85%;
+  text-transform: uppercase;
+  background-color: #6100C0;
+  color: #ffffff;
+}
+
+.box--cadastro {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.boxTransparente--cadastro {
+  align-items: center;
+  background: rgba(28, 28, 28, 0.75);
+  border-radius: 20px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat";
+  font-size: 17px;
+  font-weight: 400;
+  height: 98%;
+  padding-top: 1rem;
+  position: absolute;
+  width: 639px;
+}
+
+.login-form--cadastro {
+  margin-top: .5rem;
+}
+
+.login-form-group--cadastro {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: .5rem;
+}
+
+.inputs--cadastro {
+  background: rgba(12, 12, 12, 0.75);
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.432);
+  color: #ffffff;
+  cursor: text;
+  height: 43px;
+  margin: 4px 0;
+  padding: 0 6px;
+  width: 513px;
+}
+
+.containerBox {
+  align-items: center;
+  display: flex;
+  height: 4.8rem;
+  justify-content: space-between;
+}
+
+.boxDocumentos--cadastro {
+  height: 100%;
+}
+
+.boxPermicao--cadastro {
+  color: #ffffff;
+  font-size: .8rem;
+  margin: 0 .5rem 5rem 0;
+  padding: 1rem;
+  width: 21rem;
+}
+
+.checkPermicao--cadastro {
+  cursor: pointer;
+  margin-right: .4rem;
+}
+
+.links--cadastro {
+  color: #ffffff;
+}
+
+/* FIM TELA DE CADASTRO */
+
+/* INÍCIO TELA DE RECUPERAÇÃO DE SENHA */
+
+.chaves--recsenha {
+  margin-top: 2rem;
+}
+
+/* FIM TELA DE RECUPERAÇÃO DE SENHA */
+
+
+/* INÍCIO TELA DE PERFIL */
+
+.container--perfil {
+  background: url("./screen/img/capa.png") no-repeat center / cover;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.cabecalho--perfil {
+  align-items: center;
+  display: flex;
+  height: 10%;
+  justify-content: space-around;
+  padding-top: .5rem;
+  position: absolute;
+  width: 100%;
+}
+
+.logo--pefil {
+  height: 150px;
+  width: 150px;
+}
+
+.inicio--perfil {
+  background: url("./screen/img/botao-de-inicio\ 1.png") no-repeat center / cover;
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  width: 44px;
+}
+
+.boxCabecalho--perfil {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  width: 159px;
+}
+
+.notificacao--perfil {
+  background: url("./screen/img/sino.png") no-repeat center / cover;
+  border: none;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+}
+
+.botaoPerfil--perfil {
+  background: url("./screen/img/perfil.png") no-repeat center / cover;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  height: 54px;
+  width: 54px;
+}
+
+.containerUserData--perfil {
+  margin-top: 1rem;
+}
+
+.boxUserData--perfil {
+  margin: 5px 0 15px 0;
+}
+
+.dados--perfil {
+  align-items: center;
+  background: rgba(12, 12, 12, 0.75);
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.432);
+  color: #797979;
+  display: flex;
+  height: 43px;
+  margin-top: 5px;
+  padding: 0 6px;
+  user-select: none;
+  width: 513px;
+}
+
+.carregando {
+  font-size: 2rem;
+  margin-top: 10rem;
+}
+
+/* FIM TELA DE PERFIL */
+
+/* INÍCIO DOCUMENTAÇÃO (TERMOS E CONDIÇÕES, POLÍTICA DE PRIVACIDADE) */
+
+.container--documentacao {
+  background-color: #433E47;
+  height: 100%;
+  width: 100%;
+}
+
+.cabecalho--documentacao {
+  display: flex;
+  justify-content: center;
+  height: 6rem;
+  margin-bottom: 3rem;
+}
+
+.logo--documentacao {
+  height: 150px;
+  width: auto;
+}
+
+.corpo--documentacao {
+  text-align: center;
+  color: #ffffff;
+}
+
+.titulo--documentacao {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.conteudo--documentacao {
+  margin-top: 2rem;
+  text-align: start;
+  padding: 0 10rem;
+}
+
+.secao--documentacao {
+  margin-top: 2rem;
+}
+
+.tituloSecao--documentacao {
+  margin-top: 2rem;
+}
+
+.conteudoSecao--documentacao {
+  margin: 1rem 0;
+}
+
+.conteudoFinal--documentacao {
+  margin-top: 2rem;
+}
+
+.lista--documentacao {
+  padding-left: 2rem;
+}
+
+
+.rodape {
+  background-color: #000000;
+  margin-top: 3rem;
+}
+
+.boxRodape {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.boxContato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.logoRodape {
+  width: 130px;
+  height: 130px;
+}
+
+.link {
+  color: #ffffff;
+}
+
+.boxRedes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.boxRedesSociais {
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+  margin-bottom: 1rem;
+}
+
+.redesSociais {
+  width: 24px;
+  height: 24px;
+  border: none;
+}
+
+.redesSociais.instagram {
+  background: url("./screen/img/instagram.png") no-repeat center / cover;
+}
+
+.redesSociais.facebook {
+  background: url("./screen/img/facebook.png") no-repeat center / cover;
+}
+
+.redesSociais.twitter {
+  background: url("./screen/img/twitter.png") no-repeat center / cover;
+}
+
+.redesSociais.linkedin {
+  background: url("./screen/img/linkedin.png") no-repeat center / cover;
+}
+
+.boxCopyRodape {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+/* FIM DOCUMENTAÇÃO (TERMOS E CONDIÇÕES, POLÍTICA DE PRIVACIDADE) */
+
+
+/* INÍCIO CURSO */
+
+.container--curso {
+  height: 100%;
+  width: 100%;
+}
+
+.cabecalho--curso {
+  align-items: center;
+  background: url("./screen/img/capa.png") no-repeat center / cover;
+  height: 10%;
+  padding: 1rem 1rem 0 1rem;
+  width: 100%;
+}
+
+.navegacao--curso {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.botaoVoltar--curso {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+  color: #dbdbdb;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.iconVoltar--curso {
+  background: url("./screen/img/seta-para-a-esquerda.png") no-repeat center / cover;
+  height: 44px;
+  width: 44px;
+  margin-right: .5rem;
+}
+
+.logoInicio--curso {
+  background: url("./screen/img/logo-developer-kids.png") no-repeat center / cover;
+  border: none;
+  margin-top: -1rem;
+  height: 94px;
+  width: 94px;
+}
+
+.botaoPerfil--curso {
+  background: url("./screen/img/perfil.png") no-repeat center / cover;
+  background-color: #dbdbdb;
+  border: none;
+  border-radius: 100%;
+  height: 54px;
+  width: 54px;
+}
+
+.corpo--curso {
+  background-color: #433E47;
+  width: 100%;
+  height: calc(100vh - 5.9rem);
+}
+
+.conteudo--curso {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.ladoEsquerdo--curso {
+  width: 25%;
+  overflow: auto;
+  height: 100%;
+  min-width: 200px;
+}
+
+.container--aula {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.boxTitulo--aula {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 5rem;
+}
+
+.botao--aula {
+  width: 100%;
+  height: 4rem;
+  font-weight: 700;
+  transition: background .2s;
+}
+
+.botao--aula:hover {
+  background-color: #6100C0;
+  border: none;
+  color: #ffffff;
+}
+
+.botao-ativo {
+  background-color: #6100C0;
+  color: #fff;
+  border: none;
+}
+
+.boxVideo--aula {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boxTitulo--aula {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.botoesAula--aula {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  font-size: 17px;
+  border: none;
+  padding: 0 .5rem;
+  font-weight: 700;
+  height: 50px;
+  transition: background .2s;
+}
+
+.botoesAula--aula:hover {
+  background-color: #6100C0;
+  border: none;
+  color: #ffffff;
+}
+
+.botoesAula--aula.aulaNulo--aula {
+  background-color: #797979;
+}
+
+.botoesAula--aula.aulaNulo--aula:hover {
+  background-color: #797979;
+  color: #000000;
+  opacity: 1;
+  cursor: default;
+}
+
+.iconVoltar--aula {
+  background: url("./screen/img/seta-para-a-esquerda-preta.png") no-repeat center / cover;
+  height: 44px;
+  width: 44px;
+  margin-right: .5rem;
+}
+
+.iconProceguir--aula {
+  background: url("./screen/img/seta-para-a-direita-preta.png") no-repeat center / cover;
+  height: 44px;
+  width: 44px;
+  margin-left: .5rem;
+}
+
+.ladoDireito--curso {
+  padding: 1rem 1rem 0 1rem;
+  width: 75%;
+}
+
+.linkJogo--aula {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 700;
+  font-size: 2rem;
+
+}
+
+.imagem--aula {
+  width: 672px;
+  height: 378px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cargoBot--aula {
+  background: url("./screen/img/CargoBot.png") no-repeat center / cover;
+}
+
+.doodle--aula {
+  background: url("./screen/img/doodle-do-google.png") no-repeat center / cover;
+}
+
+.tetris--aula {
+  background: url("./screen/img/tetris.png") no-repeat center / cover;
+}
+
+.cliqueAqui--aula {
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+  border: none;
+}
+
+.cliqueAqui--aula.fundoPreto {
+  color: #ffffff;
+  text-shadow: 5px 5px 10px rgba(255, 255, 255, 0.9);
+}
+
+.boxQuestionario--aula {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.questionario--aula {
+  background-color: #797979;
+  border-radius: 20px;
+  width: 672px;
+  height: 450px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.questao--aula {
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.listaOpcoes--aula {
+  list-style-type: none;
+  margin-left: 6px;
+  display: grid;
+  grid-template-rows: 6rem 4rem auto;
+  grid-template-columns: 1fr 2fr;
+  grid-row-gap: 0;
+  /* Espaçamento vertical entre linhas */
+  grid-column-gap: 1rem;
+  /* Espaçamento horizontal entre colunas */
+  justify-items: center;
+  /* Alinhamento horizontal dos itens */
+  align-items: center;
+  /* Alinhamento vertical dos itens */
+  justify-content: center;
+  /* Alinhamento horizontal do grid dentro do contêiner */
+  align-content: center;
+  /* Alinhamento vertical do grid dentro do contêiner */
+}
+
+.opcao--aula {
+  font-weight: 700;
+  padding: 8px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border-radius: 20px;
+  margin-bottom: 4px;
+  width: 20rem;
+  margin-bottom: 1rem;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.opcao--aula:hover {
+  background-color: #f0f0f0;
+}
+
+.resultado--aula {
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.boxImagemQuestionario--aula {
+  display: flex;
+}
+
+.imagemQuestionario--aula {
+  width: 464px;
+  height: 177px;
+}
+
+.imgResult--aula {
+  width: 177px;
+}
+
+/* FIM CURSO */
