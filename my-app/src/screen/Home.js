@@ -24,6 +24,20 @@ export default function Home() {
 
   return (
     <div className="App">
+       <header className="cabecalho"> {/**cabeçalho */}
+        <div className="box" >
+        <a href="logo"><img src="img/logo DevPro.png" alt="" className="logo"/></a>{/** <!--Logo-->*/}
+        <div className="box2">{/**<!-- Botão Modo carreira--> */}
+        <a href="perfil"><button className="perfil">
+        <img src="img/Group 22.png" alt="perfil"/></button></a>{/**<!--Botão perfil do usúario--> */}
+     </div>  
+    </div>
+       <h1>Aprenda jogando</h1>
+       
+    
+    </header>
+
+      <main>
       <h2>Sala de aula</h2>
       <div className="saladeaula">
         <button className="serie">
@@ -97,6 +111,7 @@ export default function Home() {
             
             <div className="rolagem"> <button className="seta esquerda">&gt;</button></div>
            </div>
+           </main>
           
 
       <button className="button" onClick={Perfil}>
