@@ -1,4 +1,4 @@
-/* The code is importing various components and libraries from the React and react-router-dom packages. */
+/* O código está importando vários componentes e bibliotecas dos pacotes React e react-router-dom. */
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Inicio from "./screen/Index";
@@ -13,13 +13,9 @@ import SalaDeAula from "./screen/SalaDeAula";
 import Curso from "./screen/Curso";
 
 /**
- * The function exports a component that sets up the routing for different paths in a React
- * application.
- * @returns a JSX code that sets up the routing for different paths in the application. It uses the
- * React Router library to define the routes and their corresponding components. The components being
- * rendered for each route include Inicio, Cadastro, TermosECondicoes, PoliticaDePrivacidade, Login,
- * RecSenha, Home, SalaDeAula, Curso, and Perfil.
- */
+A função exporta um componente que configura o roteamento para diferentes caminhos em um aplicativo React.
+@returns um código JSX que configura o roteamento para diferentes caminhos no aplicativo. Ele usa a biblioteca React Router para definir as rotas e seus componentes correspondentes. Os componentes que estão sendo renderizados para cada rota incluem Inicio, Cadastro, TermosECondicoes, PoliticaDePrivacidade, Login, RecSenha, Home, SalaDeAula, Curso e Perfil.
+*/
 export default function App() {
   return (
     <Router>

@@ -3,11 +3,8 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 
-/* This code is creating a root element using `ReactDOM.createRoot()` and rendering the `<App />`
-component inside it. The root element is obtained by calling `document.getElementById("root")`,
-which is typically a `<div>` element in the HTML file with the id "root". The `<App />` component is
-wrapped in `<React.StrictMode>`, which is a development mode feature that performs additional checks
-and warnings to help identify potential issues in the application. */
+/* Este código está criando um elemento raiz usando `ReactDOM.createRoot()` e renderizando o componente `<App />` dentro dele. O elemento raiz é obtido chamando `document.getElementById("root")`, que normalmente é um elemento `<div>` no arquivo HTML com o id "root". O componente `<App />` é agrupado em `<React.StrictMode>`, que é um recurso do modo de desenvolvimento que executa verificações adicionais
+e avisos para ajudar a identificar possíveis problemas no aplicativo. */
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
