@@ -5,6 +5,11 @@
   font-family: "Montserrat", sans-serif;
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(100%);
+  /* Inverter as cores do ícone */
+}
+
 button {
   cursor: pointer;
   transition: opacity .5s;
