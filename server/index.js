@@ -12,7 +12,7 @@ const db = mysql2.createPool({
   host: "localhost",
   user: "root",
   password: "123@start",
-  database: "devpro",
+  database: "developerkids",
 });
 
 /* 'app.use(express.json())' é um middleware que permite ao aplicativo analisar dados JSON enviados no corpo da solicitação. Ele é usado para lidar com dados JSON na solicitação. */
