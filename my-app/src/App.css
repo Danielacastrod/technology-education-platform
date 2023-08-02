@@ -770,6 +770,9 @@ header{
   
   background-image: url("../src/screen/img/capa.png");
   height: 443px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 
 }
@@ -1014,6 +1017,9 @@ header{
   
   background-image: url("./screen/img/capa.png");
   height: 443px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 
 }
