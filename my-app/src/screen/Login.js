@@ -5,7 +5,7 @@ import * as yup from "yup";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { AES } from "crypto-js";
-import logo from "./img/logo.png";
+import logo from "./img/logo-developer-kids.png";
 
 /**
   A função Login é uma função JavaScript que lida com a funcionalidade de login, incluindo criptografar o e-mail, fazer uma solicitação POST ao servidor e navegar para a página inicial se o login for bem-sucedido.

@@ -4,7 +4,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
-import logo from "./img/logo.png";
+import logo from "./img/logo-developer-kids.png";
 import chaves from "./img/chaves.png";
 
 export default function RecSenha({ navigation }) {

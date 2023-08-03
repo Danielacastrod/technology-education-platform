@@ -33,10 +33,9 @@ button:hover {
 }
 
 .logo--acesso {
-  height: 230px;
-  margin-top: -4rem;
+  height: 110px;
   position: fixed;
-  width: 230px;
+  width: 110px;
 }
 
 .box--acesso {
@@ -57,8 +56,8 @@ button:hover {
   font-size: 17px;
   font-weight: 400;
   height: 484px;
+  justify-content: center;
   margin-bottom: 1.5rem;
-  padding-top: 1rem;
   position: absolute;
   width: 639px;
 }
@@ -988,71 +987,19 @@ button:hover {
   /* INÍCIO ACESSO (LOGIN, CADASTRO, RECUPERAÇÃO DE SENHA, PERFIL) */
 
   .logo--acesso {
-    height: 230px;
-    margin-top: -4rem;
-    position: fixed;
-    width: 230px;
-  }
-
-  .box--acesso {
-    align-items: flex-end;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    width: 100%;
+    height: 115px;
+    width: 115px;
   }
 
   .boxTransparente--acesso {
-    align-items: center;
-    background: rgba(28, 28, 28, 0.75);
-    border-radius: 20px;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    font-size: 17px;
-    font-weight: 400;
-    height: 484px;
-    margin-bottom: 1.5rem;
-    padding-top: 1rem;
-    position: absolute;
-    width: 639px;
+    height: 424px;
+    margin-bottom: -6rem;
+    padding-top: 0;
+    width: 589px;
   }
 
   .titulo--acesso {
     font-size: 1.5rem;
-  }
-
-  .login-form--acesso {
-    margin-top: 3rem;
-  }
-
-  .login-form-group--acesso {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
-  }
-
-  .inputs--acesso {
-    background: rgba(12, 12, 12, 0.75);
-    border: 1px solid #ffffff;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.432);
-    color: #ffffff;
-    height: 43px;
-    margin: 5px 0;
-    padding: 0 6px;
-    width: 513px;
-  }
-
-  .form-error--acesso {
-    color: #A9E500;
-    font-size: 12px;
-  }
-
-  .boxBotao--acesso {
-    display: flex;
-    justify-content: center;
   }
 
   .botao--acesso {
@@ -1071,6 +1018,11 @@ button:hover {
     margin-left: 1rem;
     position: fixed;
     width: 90px;
+  }
+
+  .box--acesso {
+    align-items: center;
+
   }
 
   .botaoLogin--cadastro {
@@ -1104,6 +1056,15 @@ button:hover {
   }
 
   /* FIM TELA DE CADASTRO */
+
+
+  /* INÍCIO RECUPERAÇÃO DE SENHA */
+
+  .chaves--recsenha {
+    width: 9rem;
+  }
+
+  /* FIM RECUPERAÇÃO DE SENHA */
 }
 
 
@@ -1111,71 +1072,42 @@ button:hover {
   /* INÍCIO ACESSO (LOGIN, CADASTRO, RECUPERAÇÃO DE SENHA, PERFIL) */
 
   .logo--acesso {
-    height: 230px;
-    margin-top: -4rem;
-    position: fixed;
-    width: 230px;
-  }
-
-  .box--acesso {
-    align-items: flex-end;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    width: 100%;
+    height: 70px;
+    width: 70px;
   }
 
   .boxTransparente--acesso {
-    align-items: center;
-    background: rgba(28, 28, 28, 0.75);
+    margin-bottom: 0;
     border-radius: 20px;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
     font-size: 17px;
-    font-weight: 400;
-    height: 484px;
-    margin-bottom: 1.5rem;
-    padding-top: 1rem;
-    position: absolute;
-    width: 639px;
+    height: 22rem;
+    width: 305px;
   }
 
   .titulo--acesso {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .login-form--acesso {
-    margin-top: 3rem;
+    width: 100%;
+    padding: 0 2rem;
   }
 
   .login-form-group--acesso {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
+    width: 100%;
   }
 
   .inputs--acesso {
-    background: rgba(12, 12, 12, 0.75);
-    border: 1px solid #ffffff;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.432);
-    color: #ffffff;
-    height: 43px;
+    border-radius: 8px;
+    height: 30px;
     margin: 5px 0;
     padding: 0 6px;
-    width: 513px;
+    width: 100%;
+    font-size: .5rem;
   }
 
   .form-error--acesso {
-    color: #A9E500;
     font-size: .4rem;
-  }
-
-  .boxBotao--acesso {
-    display: flex;
-    justify-content: center;
   }
 
   .botao--acesso {
@@ -1187,6 +1119,20 @@ button:hover {
   }
 
   /* FIM ACESSO (LOGIN, CADASTRO, RECUPERAÇÃO DE SENHA, PERFIL) */
+
+  /* INÍCIO TELA DE LOGIN */
+
+  .labelInputs--login {
+    font-size: 13px;
+  }
+
+  .boxCaminhos--login {
+    font-size: 13px;
+    height: 3rem;
+    margin-top: 1rem;
+  }
+
+  /* FIM TELA DE LOGIN */
 
   /* INÍCIO TELA DE CADASTRO */
 
@@ -1244,4 +1190,14 @@ button:hover {
   .documentacao--cadastro {
     font-size: .6rem;
   }
+
+  /* FIM TELA DE CADASTRO */
+
+  /* INÍCIO RECUPERAÇÃO DE SENHA */
+
+  .chaves--recsenha {
+    width: 5rem;
+  }
+
+  /* FIM RECUPERAÇÃO DE SENHA */
 }
