@@ -4,7 +4,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
-import logo from "./img/logo.png";
+import logo from "./img/logo-developer-kids.png";
 
 /* Esta é uma função JavaScript que manipula o processo de registro em um aplicativo da web.
 O código está retornando um componente React chamado "Cadastro". Este componente é responsável por renderizar um formulário para cadastramento do usuário. Inclui campos de entrada para o nome da criança, data de nascimento, nome dos pais, e-mail dos pais, senha e confirmação de senha. Também inclui uma caixa de seleção para aceitar os termos e condições. Quando o formulário é enviado, é chamada a função handleClickCadastro, que envia um POST. */
@@ -89,7 +89,9 @@ export default function Cadastro() {
           >
             <Form className="login-form--cadastro">
               <div className="login-form-group--cadastro">
-                <label for="nomeCrianca">Nome da Criança </label>
+                <label for="nomeCrianca" className="label--cadastro">
+                  Nome da Criança{" "}
+                </label>
                 <Field
                   name="c_nomecria_cont"
                   className="form-field inputs--cadastro"
@@ -104,7 +106,9 @@ export default function Cadastro() {
               </div>
 
               <div className="login-form-group--cadastro">
-                <label for="nascCrianca">Data de nascimento da Criança </label>
+                <label for="nascCrianca" className="label--cadastro">
+                  Data de nascimento da Criança{" "}
+                </label>
                 <Field
                   name="d_nasccria_cont"
                   className="form-field inputs--cadastro"
@@ -120,7 +124,9 @@ export default function Cadastro() {
               </div>
 
               <div className="login-form-group--cadastro">
-                <label for="nomeResponsavel">Nome do Responsável </label>
+                <label for="nomeResponsavel" className="label--cadastro">
+                  Nome do Responsável{" "}
+                </label>
                 <Field
                   name="c_nomeresp_cont"
                   className="form-field inputs--cadastro"
@@ -135,7 +141,9 @@ export default function Cadastro() {
               </div>
 
               <div className="login-form-group--cadastro">
-                <label for="email">E-mail do responsável </label>
+                <label for="email" className="label--cadastro">
+                  E-mail do responsável{" "}
+                </label>
                 <Field
                   type="email"
                   name="c_emailresp_cont"
@@ -151,7 +159,9 @@ export default function Cadastro() {
               </div>
 
               <div className="login-form-group--cadastro">
-                <label for="senha">Senha </label>
+                <label for="senha" className="label--cadastro">
+                  Senha{" "}
+                </label>
                 <Field
                   type="password"
                   name="c_senha_cont"
@@ -167,7 +177,9 @@ export default function Cadastro() {
               </div>
 
               <div className="login-form-group--cadastro">
-                <label for="confirmaSenha">Confirme sua senha </label>
+                <label for="confirmaSenha" className="label--cadastro">
+                  Confirme sua senha{" "}
+                </label>
                 <Field
                   type="password"
                   name="confirmSenha"

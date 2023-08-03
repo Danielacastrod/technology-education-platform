@@ -3,8 +3,15 @@ import React from "react";
 //import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import "./Rodape";
 import Rodape from "./Rodape";
+import jogo_doodle from "./img/jogo_doodle.png";
+import jogo_tetris from "./img/jogo_tetris.png";
+import jogo_cargoBot from "./img/jogo_cargoBot.png";
+import jogo_scratch from "./img/jogo_scratch.png";
+import jogo_flexboxFroggy from "./img/jogo_flexboxFroggy.png";
+import jogo_gridGarden from "./img/jogo_gridGarden.png";
+import jogo_cssDiner from "./img/jogo_cssDiner.png";
+import jogo_flexboxDefense from "./img/jogo_flexboxDefense.png";
 
 export default function Home() {
   const { c_emailresp_cont } = useParams();
@@ -24,108 +31,200 @@ export default function Home() {
 
   return (
     <div className="App">
-       <header className="cabecalho"> {/**cabeçalho */}
-        <div className="box" >
-        <a href="logo"><img src="img/logo DevPro.png" alt="" className="logo"/></a>{/** <!--Logo-->*/}
-        <div className="box2">{/**<!-- Botão Modo carreira--> */}
-        <a href="perfil"><button className="perfil">
-        <img src="img/Group 22.png" alt="perfil"/></button></a>{/**<!--Botão perfil do usúario--> */}
-     </div>  
-    </div>
-       <h1>Aprenda jogando</h1>
-       
-    
-    </header>
+      <header className="cabecalho--app">
+        <nav className="navegacaoCabecalho--app">
+          <button className="logoInicio--app"></button>
+          <div className="boxCabecalho--app">
+            <button className="botaoPerfil--app" onClick={Perfil}></button>
+            <button className="botaoSair--app" onClick={Sair}>
+              Sair
+            </button>
+          </div>
+        </nav>
+        <div className="boxTituloCabecalho--app">
+          <h1 className="tituloCabecalho--app">Aprenda jogando</h1>
+        </div>
+      </header>
 
-      <main>
-      <h2>Sala de aula</h2>
-      <div className="saladeaula">
-        <button className="serie">
-        <a className="nomeSerie" href="file:///C:/Users/Rede2102/Desktop/sala%20de%20aula%20DevPro/index.html"> 3° ano</a></button>
+      <main className="corpo--app">
+        <h2 className="tituloCorpo--app">Sala de aula</h2>
+        <div className="saladeaula--app">
+          <button className="serie--app" onClick={SalaDeAula}>
+            3° ano
+          </button>
+          <button className="serie--app" onClick={SalaDeAula}>
+            4° ano
+          </button>
+          <button className="serie--app" onClick={SalaDeAula}>
+            5° ano
+          </button>
+          <button className="serie--app" onClick={SalaDeAula}>
+            6° ano
+          </button>
+          <button className="serie--app" onClick={SalaDeAula}>
+            7° ano
+          </button>
+          <button className="serie--app" onClick={SalaDeAula}>
+            8° ano
+          </button>
+          <button className="serie--app" onClick={SalaDeAula}>
+            9° ano
+          </button>
+        </div>
 
-        <button className="serie">
-        <a className="nomeSerie" href="file:///C:/Users/Rede2102/Desktop/sala%20de%20aula%20DevPro/index.html"> 4° ano</a></button>
+        <h2 className="tituloCorpo--app">Comece por Aqui</h2>
+        <div className="jogos--app">
+          <div className="rolagem">
+            <button className="seta direita">&lt;</button>
+          </div>
+          <a
+            href="https://www.google.com/doodles/celebrating-50-years-of-kids-coding?hl=pt-BR"
+            target="blank"
+            className="link--app"
+          >
+            <button className="botaoJogo--app">
+              <img
+                className="imagemJogo--app"
+                src={jogo_doodle}
+                alt="Jogo Doodle do Google"
+              />
+              <div className="boxNomeJogo--app">
+                <p className="nomeJogo--app">Doodle do Google</p>
+              </div>
+            </button>
+          </a>
+          {/*vai direto pra plataforma de jogo escolhido */}
+          <a
+            href="https://tetris.com/play-tetris"
+            target="blank"
+            className="link--app"
+          >
+            <button className="botaoJogo--app">
+              <img className="imagemJogo--app" src={jogo_tetris} alt="Tetris" />
+              <div className="boxNomeJogo--app">
+                <p className="nomeJogo--app">Tetris</p>
+              </div>
+            </button>
+          </a>
+          {/* vai direto pra plataforma de jogo escolhido */}
+          <a
+            href="https://i4ds.github.io/CargoBot/?state=1"
+            target="blank"
+            className="link--app"
+          >
+            <button className="botaoJogo--app">
+              <img
+                className="imagemJogo--app"
+                src={jogo_cargoBot}
+                alt="Cargo Bot"
+              />
+              <div className="boxNomeJogo--app">
+                <p className="nomeJogo--app">Cargo Bot</p>
+              </div>
+            </button>
+          </a>
+          {/* vai direto pra plataforma de jogo escolhido */}
+          <a
+            href="https://scratch.mit.edu/projects/editor/?tutorial=getStarted"
+            target="blank"
+            className="link--app"
+          >
+            <button className="botaoJogo--app">
+              <img
+                className="imagemJogo--app"
+                src={jogo_scratch}
+                alt="Scratch"
+              />
+              <div className="boxNomeJogo--app">
+                <p className="nomeJogo--app">Scratch</p>
+              </div>
+            </button>
+          </a>
+          {/*vai direto pra plataforma de jogo escolhido */}
+          <div className="rolagem">
+            <button className="seta esquerda">&gt;</button>
+          </div>
+        </div>
 
-        <button className="serie">
-        <a className="nomeSerie" href="file:///C:/Users/Rede2102/Desktop/sala%20de%20aula%20DevPro/index.html"> 5° ano</a></button> 
-
-        
-        <button className="serie">
-        <a className="nomeSerie" href="file:///C:/Users/Rede2102/Desktop/sala%20de%20aula%20DevPro/index.html"> 6° ano</a></button>
-
-        <button className="serie">
-        <a className="nomeSerie" href="file:///C:/Users/Rede2102/Desktop/sala%20de%20aula%20DevPro/index.html"> 7° ano</a></button>
-        
-        <button className="serie">
-        <a className="nomeSerie" href="file:///C:/Users/Rede2102/Desktop/sala%20de%20aula%20DevPro/index.html"> 8° ano</a></button>
-
-          <button className="serie">    
-        <a className="nomeSerie" href="file:///C:/Users/Rede2102/Desktop/sala%20de%20aula%20DevPro/index.html"> 9° ano</a></button>
-       
-     </div>
-
-        <h2>Comece por Aqui</h2>
-        <div className="jogo1">
-            
-            <div className="rolagem"><button className="seta direita">&lt;</button></div>
-
-              <button className="botaoJogo">
-              <img className="imgJog" src="img/image 19.png" alt="https://studio.code.org/s/express-2023/lessons/2/levels/1?redirect_warning=true"/>
-              <a className="linkJogo" href="https://studio.code.org/s/express-2023/lessons/2/levels/1?redirect_warning=true">Depurando no labirinto</a></button> {/*vai direto pra plataforma de jogo escolhido */}
-
-              <button className="botaoJogo">
-              <img className="imgJog" src="img/image 20 (1).png" alt="https://flukeout.github.io/"/>
-              <a className="linkJogo" href="https://flukeout.github.io/">CSS Dinner</a></button>  {/* vai direto pra plataforma de jogo escolhido */}
-
-              <button className="botaoJogo">
-              <img className="imgJog" src="img/image 51.png" alt="http://robozzle.com/js/index.aspx"/>
-              <a className="linkJogo" href="http://robozzle.com/js/index.aspx">RoboZZle</a></button> {/* vai direto pra plataforma de jogo escolhido */} 
-
-              <button className="botaoJogo">
-              <img className="imgJog" src="img/image 19 (1).png" alt="https://play.elevatorsaga.com/"/>
-              <a className="linkJogo" href="https://play.elevatorsaga.com/">Criando arte com código</a></button> {/*vai direto pra plataforma de jogo escolhido */} 
-
-             <div className="rolagem"><button className="seta esquerda">&gt;</button> </div>
-           </div>
-
-           <h2>Aprenda css jogando</h2>
-           <div className="jogo1">
-
-              <div className="rolagem"><button className="seta direita">&lt;</button></div>
-
-              <button className="botaoJogo">
-              <img className="imgJog" src="img/image 50.png" alt="https://studio.code.org/s/express-2023/lessons/1/levels/1?redirect_warning=true"/>
-              <a className="linkJogo" href="https://studio.code.org/s/express-2023/lessons/1/levels/1?redirect_warning=true">Programação com Angry Birds</a></button> {/*vai direto pra plataforma de jogo escolhido*/}  
-            
-              <button className="botaoJogo">
-              <img class="imgJog" src="img/image 52.png" alt="https://blockly.games/"/>
-              <a className="linkJogo" href="https://blockly.games/">Blockly Games</a></button> {/*vai direto pra plataforma de jogo escolhido*/}
-            
-              <button className="botaoJogo">
-              <img className="imgJog" src="img/image 19 (2).png " alt="https://flexboxfroggy.com/"/>
-              <a className="linkJogo" href="https://flexboxfroggy.com/">Flexbox Froggy</a></button> {/*vai direto pra plataforma de jogo escolhido*/} 
-
-              <button className="botaoJogo">
-              <img className="imgJog" src="img/image 53.png" alt="https://studio.code.org/s/coursec-2023/lessons/6/levels/1?redirect_warning=true"/>
-              <a className="linkJogo" href="https://studio.code.org/s/coursec-2023/lessons/6/levels/1?redirect_warning=true">Criando arte com código</a></button> {/*  vai direto pra plataforma de jogo escolhido*/} 
-            
-            <div className="rolagem"> <button className="seta esquerda">&gt;</button></div>
-           </div>
-           </main>
-          
-
-      <button className="button" onClick={Perfil}>
-        Perfil
-      </button>
-
-      <button className="button" onClick={Sair}>
-        Sair da Conta
-      </button>
-
-      <button className="button" onClick={SalaDeAula}>
-        Sala de Aula
-      </button>
-      <Rodape/>
+        <h2 className="tituloCorpo--app">Aprenda css jogando</h2>
+        <div className="jogos--app">
+          <div className="rolagem">
+            <button className="seta direita">&lt;</button>
+          </div>
+          <a
+            href="https://flexboxfroggy.com/"
+            target="blank"
+            className="link--app"
+          >
+            <button className="botaoJogo--app">
+              <img
+                className="imagemJogo--app"
+                src={jogo_flexboxFroggy}
+                alt="Flexbox Froggy"
+              />
+              <div className="boxNomeJogo--app">
+                <p className="nomeJogo--app">Flexbox Froggy</p>
+              </div>
+            </button>
+          </a>
+          {/*vai direto pra plataforma de jogo escolhido*/}
+          <a
+            href="https://cssgridgarden.com/"
+            target="blank"
+            className="link--app"
+          >
+            <button className="botaoJogo--app">
+              <img
+                class="imagemJogo--app"
+                src={jogo_gridGarden}
+                alt="Grid Garden"
+              />
+              <div className="boxNomeJogo--app">
+                <p className="nomeJogo--app">Grid Garden</p>
+              </div>
+            </button>
+          </a>
+          {/*vai direto pra plataforma de jogo escolhido*/}
+          <a
+            href="https://flukeout.github.io/"
+            target="blank"
+            className="link--app"
+          >
+            <button className="botaoJogo--app">
+              <img
+                className="imagemJogo--app"
+                src={jogo_cssDiner}
+                alt="CSS Diner"
+              />
+              <div className="boxNomeJogo--app">
+                <p className="nomeJogo--app">CSS Diner</p>
+              </div>
+            </button>
+          </a>
+          {/*vai direto pra plataforma de jogo escolhido*/}
+          <a
+            href="http://www.flexboxdefense.com/?utm_source=gabcodes&utm_medium=Pingback"
+            target="blank"
+            className="link--app"
+          >
+            <button className="botaoJogo--app">
+              <img
+                className="imagemJogo--app"
+                src={jogo_flexboxDefense}
+                alt="Flexbox Defense"
+              />
+              <div className="boxNomeJogo--app">
+                <p className="nomeJogo--app">Flexbox Defense</p>
+              </div>
+            </button>
+          </a>
+          {/*  vai direto pra plataforma de jogo escolhido*/}
+          <div className="rolagem">
+            <button className="seta esquerda">&gt;</button>
+          </div>
+        </div>
+      </main>
+      <Rodape />
     </div>
   );
 }
