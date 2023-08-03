@@ -910,6 +910,10 @@ button:hover {
   border-radius: 15px 15px 0 0;
 }
 
+.imagemAula--app {
+  border-radius: 15px;
+}
+
 .boxNomeJogo--app,
 .boxNomeAula--app {
   width: 100%;
@@ -917,6 +921,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 1rem;
 }
 
 .nomeJogo--app,
