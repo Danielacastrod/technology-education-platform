@@ -78,6 +78,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
+  position: relative;
 }
 
 .inputs--acesso {
@@ -95,6 +96,8 @@ button:hover {
 .form-error--acesso {
   color: #A9E500;
   font-size: 12px;
+  position: absolute;
+  right: 0;
 }
 
 .boxBotao--acesso {
@@ -177,7 +180,7 @@ button:hover {
   font-family: "Montserrat";
   font-size: 17px;
   font-weight: 400;
-  height: 98%;
+  height: 38rem;
   padding: 1rem 0;
   position: absolute;
   width: 639px;
@@ -199,6 +202,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   margin-bottom: .5rem;
+  position: relative;
 }
 
 .inputs--cadastro {
@@ -1079,69 +1083,165 @@ button:hover {
   }
 
   .boxTransparente--cadastro {
-    border-radius: 20px;
-    font-size: 17px;
-    padding: 1rem 0;
+    height: 33rem;
+    padding: .3rem 0;
     width: 520px;
   }
 
-  .login-form--cadastro {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-around;
-    padding: 0 3rem;
-    width: 100%;
-  }
-
   .login-form-group--cadastro {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: .5rem;
+    margin-bottom: .3rem;
     width: 100%;
   }
 
   .label--cadastro {
-    font-size: 1rem;
+    font-size: .9rem;
   }
 
   .inputs--cadastro {
-    border-radius: 10px;
     height: 38px;
-    margin: 4px 0;
     padding: 0 6px;
     width: 100%;
   }
 
-  .containerBox {
-    align-items: center;
-    display: flex;
-    height: 4.8rem;
-    justify-content: space-between;
+  /* FIM TELA DE CADASTRO */
+}
+
+
+@media(max-width: 430px) {
+  /* INÍCIO ACESSO (LOGIN, CADASTRO, RECUPERAÇÃO DE SENHA, PERFIL) */
+
+  .logo--acesso {
+    height: 230px;
+    margin-top: -4rem;
+    position: fixed;
+    width: 230px;
   }
 
-  .boxDocumentos--cadastro {
+  .box--acesso {
+    align-items: flex-end;
+    display: flex;
     height: 100%;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .boxTransparente--acesso {
+    align-items: center;
+    background: rgba(28, 28, 28, 0.75);
+    border-radius: 20px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    font-size: 17px;
+    font-weight: 400;
+    height: 484px;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    position: absolute;
+    width: 639px;
+  }
+
+  .titulo--acesso {
+    font-size: 1.5rem;
+  }
+
+  .login-form--acesso {
+    margin-top: 3rem;
+  }
+
+  .login-form-group--acesso {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .inputs--acesso {
+    background: rgba(12, 12, 12, 0.75);
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.432);
+    color: #ffffff;
+    height: 43px;
+    margin: 5px 0;
+    padding: 0 6px;
+    width: 513px;
+  }
+
+  .form-error--acesso {
+    color: #A9E500;
+    font-size: .4rem;
+  }
+
+  .boxBotao--acesso {
+    display: flex;
+    justify-content: center;
+  }
+
+  .botao--acesso {
+    border-radius: 8px;
+    font-size: .5rem;
+    height: 2rem;
+    width: 70px;
+    font-weight: 900;
+  }
+
+  /* FIM ACESSO (LOGIN, CADASTRO, RECUPERAÇÃO DE SENHA, PERFIL) */
+
+  /* INÍCIO TELA DE CADASTRO */
+
+  .logo--cadastro {
+    height: 60px;
+    width: 60px;
+    margin-left: .1rem;
+    margin-top: -.1rem;
+  }
+
+  .botaoLogin--cadastro {
+    margin-top: .3rem;
+    margin-left: 82%;
+    font-size: .5rem;
+    width: 4rem;
+    height: 2rem;
+    border-radius: 8px;
+  }
+
+  .boxTransparente--cadastro {
+    height: 29rem;
+    padding: .1rem 0;
+    width: 305px;
+  }
+
+  .login-form--cadastro {
+    padding: 0 2rem;
+  }
+
+  .login-form-group--cadastro {
+    margin-bottom: .1rem;
+    width: 100%;
+  }
+
+  .label--cadastro {
+    font-size: .6rem;
+  }
+
+  .inputs--cadastro {
+    height: 28px;
+    padding: 0 6px;
+    width: 100%;
+    font-size: .5rem;
+    border-radius: 8px;
   }
 
   .boxPermicao--cadastro {
     color: #ffffff;
-    font-size: .8rem;
+    font-size: .6rem;
     margin: 0 .5rem 5rem 0;
-    padding: 1rem;
-    width: 21rem;
+    padding: 1rem 0;
+    width: 12rem;
   }
 
-  .checkPermicao--cadastro {
-    cursor: pointer;
-    margin-right: .4rem;
+  .documentacao--cadastro {
+    font-size: .6rem;
   }
-
-  .links--cadastro {
-    color: #ffffff;
-  }
-
-  /* FIM TELA DE CADASTRO */
 }
