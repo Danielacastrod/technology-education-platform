@@ -79,9 +79,9 @@ export default function Curso() {
     navigate(`/perfil/${c_emailresp_cont}`);
   }
 
-  // function Sair() {
-  //   navigate("/");
-  // }
+  function Sair() {
+    navigate("/");
+  }
 
   /* O código abaixo está renderizando um contêiner para uma página de curso com cabeçalho, navegação e conteúdo principal. */
   return (
@@ -89,10 +89,15 @@ export default function Curso() {
       <header className="cabecalho--curso">
         <nav className="navegacao--curso">
           <button className="botaoVoltar--curso" onClick={Voltar}>
-            <div className="iconVoltar--curso"></div>Voltar
+            <div className="iconVoltar--curso"></div>
           </button>
           <button className="logoInicio--curso" onClick={Inicio}></button>
-          <button className="botaoPerfil--curso" onClick={Perfil}></button>
+          <div className="boxCabecalho--app">
+            <button className="botaoPerfil--app" onClick={Perfil}></button>
+            <button className="botaoSair--app" onClick={Sair}>
+              Sair
+            </button>
+          </div>
         </nav>
       </header>
       <main className="corpo--curso">

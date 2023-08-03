@@ -494,24 +494,24 @@ button:hover {
   width: 100%;
   height: 100%;
   justify-content: space-between;
+  align-items: center;
 }
 
 .botaoVoltar--curso {
   display: flex;
   align-items: center;
   border: none;
-  background: none;
-  color: #dbdbdb;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1rem;
+  background-color: #dbdbdb;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
 }
 
 .iconVoltar--curso {
-  background: url("./screen/img/seta-para-a-esquerda.png") no-repeat center / cover;
-  height: 44px;
-  width: 44px;
-  margin-right: .5rem;
+  background: url("./screen/img/angulo-esquerdo-preto.png") no-repeat center / cover;
+  height: 40px;
+  width: 40px;
 }
 
 .logoInicio--curso {
@@ -783,6 +783,7 @@ button:hover {
   width: 100%;
   justify-content: space-between;
   padding: 0 2rem;
+  align-items: center;
 }
 
 .logoInicio--app {
@@ -840,6 +841,9 @@ button:hover {
 .corpo--app {
   background-color: #433e47;
   padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tituloCorpo--app {
@@ -855,6 +859,7 @@ button:hover {
 .saladeaula--app {
   display: flex;
   justify-content: space-around;
+  width: 100%;
 }
 
 .serie--app {
@@ -874,8 +879,24 @@ button:hover {
 
 .jogos--app,
 .aulas--app {
+  align-items: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  height: 360px;
+  width: 100%;
+}
+
+.carrossel--app {
+  max-width: 80vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.carrossel--app::-webkit-scrollbar {
+  display: none;
 }
 
 .link--app {
@@ -894,6 +915,8 @@ button:hover {
   border: none;
   display: flex;
   flex-direction: column;
+  margin: 0 20px;
+  flex: none;
 }
 
 .botaoJogo--app:hover,
@@ -912,6 +935,7 @@ button:hover {
 
 .imagemAula--app {
   border-radius: 15px;
+  height: 100%;
 }
 
 .boxNomeJogo--app,
@@ -930,28 +954,25 @@ button:hover {
   font-size: 20px;
 }
 
-.rolagem--app {
-  position: relative;
-  width: 35px;
-  overflow: hidden;
+.esquerda--app {
+  background: url("./screen/img/angulo-esquerdo.png") no-repeat center / cover;
+}
+
+.direita--app {
+  background: url("./screen/img/angulo-direito.png") no-repeat center / cover;
 }
 
 .seta--app {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   width: 30px;
   height: 30px;
-  background-color: transparent;
-  color: #ffffff;
-  font-size: 30px;
   border: none;
+  margin: 0 1rem;
 }
 
-.seta--app.direita--app,
+/* .seta--app.direita--app,
 .seta--app.esquerda--app {
   left: 0;
-}
+} */
 
 /* FIM TELAS APP (PÓS LOGIN/HOME E SALA DE AULA) */
 
