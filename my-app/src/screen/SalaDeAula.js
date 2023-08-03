@@ -50,8 +50,8 @@ export default function SalaDeAula() {
         <h2 className="tituloCorpo--app">Aulas</h2>
 
         <div class="aulas--app">
-          <div className="rolagem">
-            <button className="seta direita">&lt;</button>
+          <div className="rolagem--app">
+            <button className="seta--app direita--app">&lt;</button>
           </div>
           <button className="botaoAula--app" onClick={Curso}>
             <img className="imagemAula--app" src="img/image 49.png" alt="" />
@@ -80,16 +80,16 @@ export default function SalaDeAula() {
               <p className="nomeAula--app">Lógica de Programação</p>
             </div>
           </button>
-          <div className="rolagem">
-            <button className="seta esquerda">&gt;</button>
+          <div className="rolagem--app">
+            <button className="seta--app esquerda">&gt;</button>
           </div>
           {/** vai direto pra plataforma de jogo escolhido*/}
         </div>
 
         <h2 className="tituloCorpo--app">Dicas</h2>
         <div className="aulas--app">
-          <div className="rolagem">
-            <button class="seta direita">&lt;</button>
+          <div className="rolagem--app">
+            <button class="seta--app direita--app">&lt;</button>
           </div>
           <button className="botaoAula--app" onClick={Curso}>
             <img class="imagemAula--app" src="img/js.png" alt="" />
@@ -119,8 +119,8 @@ export default function SalaDeAula() {
             </div>
           </button>
           {/** vai direto pra plataforma de jogo escolhido*/}
-          <div className="rolagem">
-            <button class="seta esquerda">&gt;</button>
+          <div className="rolagem--app">
+            <button class="seta--app esquerda">&gt;</button>
           </div>
         </div>
       </main>

@@ -74,8 +74,8 @@ export default function Home() {
 
         <h2 className="tituloCorpo--app">Comece por Aqui</h2>
         <div className="jogos--app">
-          <div className="rolagem">
-            <button className="seta direita">&lt;</button>
+          <div className="rolagem--app">
+            <button className="seta--app direita">&lt;</button>
           </div>
           <a
             href="https://www.google.com/doodles/celebrating-50-years-of-kids-coding?hl=pt-BR"
@@ -141,15 +141,15 @@ export default function Home() {
             </button>
           </a>
           {/*vai direto pra plataforma de jogo escolhido */}
-          <div className="rolagem">
-            <button className="seta esquerda">&gt;</button>
+          <div className="rolagem--app">
+            <button className="seta--app esquerda--app">&gt;</button>
           </div>
         </div>
 
         <h2 className="tituloCorpo--app">Aprenda css jogando</h2>
         <div className="jogos--app">
-          <div className="rolagem">
-            <button className="seta direita">&lt;</button>
+          <div className="rolagem--app">
+            <button className="seta--app direita">&lt;</button>
           </div>
           <a
             href="https://flexboxfroggy.com/"
@@ -219,8 +219,8 @@ export default function Home() {
             </button>
           </a>
           {/*  vai direto pra plataforma de jogo escolhido*/}
-          <div className="rolagem">
-            <button className="seta esquerda">&gt;</button>
+          <div className="rolagem--app">
+            <button className="seta--app esquerda--app">&gt;</button>
           </div>
         </div>
       </main>

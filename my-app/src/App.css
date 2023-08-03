@@ -769,7 +769,7 @@ button:hover {
 /* FIM CURSO */
 
 
-/* TELA PÓS LOGIN*/
+/* INÍCIO TELAS APP (PÓS LOGIN/HOME E SALA DE AULA) */
 
 .cabecalho--app {
   background: url("../src/screen/img/capa.png") no-repeat center / cover;
@@ -925,87 +925,31 @@ button:hover {
   font-size: 20px;
 }
 
-/*TELA DE SALA DE AULA*/
-
-.linkaula {
-  width: 250px;
-  height: 53px;
-  color: black;
-  text-decoration: none;
-  font-family: "bold", sans-serif;
-  font-size: 20px;
-}
-
-.saladeaula {
-  display: flex;
-  justify-content: space-around;
-}
-
-.aula1 {
-  display: flex;
-  justify-content: space-around;
-
-}
-
-.imgaula {
-  width: 250x;
-  height: 245px;
-  text-align: center;
-  border: #000000;
-  border-radius: 10%;
-  border-top-right-radius: 0%;
-  transform: translateY(-15px);
-
-
-}
-
-.botaoaula {
-  width: 250px;
-  height: 311px;
-  background: #6100C0;
-  color: black;
-  text-align: center;
-  border-radius: 10px;
-  transition: transform 0.2s;
-  border: none;
-  cursor: pointer;
-
-
-}
-
-.rolagem {
+.rolagem--app {
   position: relative;
   width: 35px;
   overflow: hidden;
-
 }
 
-.seta {
+.seta--app {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 30px;
   height: 30px;
   background-color: transparent;
-  color: #000;
+  color: #ffffff;
   font-size: 30px;
   border: none;
-  cursor: pointer;
 }
 
-.seta.direita {
-  left: 0;
-
-}
-
-.seta.esquerda {
+.seta--app.direita--app,
+.seta--app.esquerda--app {
   left: 0;
 }
 
-.botaoaula:hover {
-  transform: scale(1.1);
-  background-image: linear-gradient(45deg, #0000, #040408);
-}
+/* FIM TELAS APP (PÓS LOGIN/HOME E SALA DE AULA) */
+
 
 
 /* RESPONSIVIDADE */
