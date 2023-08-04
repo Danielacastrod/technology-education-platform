@@ -266,51 +266,8 @@ button:hover {
 }
 
 .cabecalho--perfil {
-  align-items: center;
-  display: flex;
-  height: 10%;
-  justify-content: space-around;
-  padding-top: .5rem;
   position: absolute;
   width: 100%;
-}
-
-.logo--pefil {
-  height: 150px;
-  width: 150px;
-}
-
-.inicio--perfil {
-  background: url("./screen/img/botao-de-inicio\ 1.png") no-repeat center / cover;
-  border: none;
-  cursor: pointer;
-  height: 44px;
-  width: 44px;
-}
-
-.boxCabecalho--perfil {
-  align-items: center;
-  display: flex;
-  justify-content: space-around;
-  width: 159px;
-}
-
-.notificacao--perfil {
-  background: url("./screen/img/sino.png") no-repeat center / cover;
-  border: none;
-  cursor: pointer;
-  height: 25px;
-  width: 25px;
-}
-
-.botaoPerfil--perfil {
-  background: url("./screen/img/perfil.png") no-repeat center / cover;
-  background-color: #ffffff;
-  border: none;
-  border-radius: 100%;
-  cursor: pointer;
-  height: 54px;
-  width: 54px;
 }
 
 .containerUserData--perfil {
@@ -1065,6 +1022,52 @@ button:hover {
   }
 
   /* FIM RECUPERAÇÃO DE SENHA */
+
+  /* INÍCIO TELA DE PERFIL */
+
+  /* .container--perfil {
+    background: url("./screen/img/capa.png") no-repeat center / cover;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  } */
+
+  /* .cabecalho--perfil {
+    position: absolute;
+    width: 100%;
+  } */
+
+  .containerUserData--perfil {
+    margin-top: .5rem;
+    width: 100%;
+    padding: 0 5rem;
+  }
+
+  .boxUserData--perfil {
+    margin: 5px 0 10px 0;
+  }
+
+  .dados--perfil {
+    /* align-items: center; */
+    /* background: rgba(12, 12, 12, 0.75); */
+    /* border: 1px solid #ffffff; */
+    border-radius: 10px;
+    /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.432); */
+    /* color: #797979; */
+    /* display: flex; */
+    height: 38px;
+    margin-top: 5px;
+    /* padding: 0 6px; */
+    /* user-select: none; */
+    width: 100%;
+  }
+
+  /* .carregando {
+    font-size: 2rem;
+    margin-top: 10rem;
+  } */
+
+  /* FIM TELA DE PERFIL */
 }
 
 
@@ -1200,4 +1203,43 @@ button:hover {
   }
 
   /* FIM RECUPERAÇÃO DE SENHA */
+
+  /* INÍCIO TELA DE PERFIL */
+
+  .containerUserData--perfil {
+    /* margin-top: .5rem; */
+    /* width: 100%; */
+    padding: 0 1rem;
+  }
+
+  .boxUserData--perfil {
+    margin: 2px 0 10px 0;
+  }
+
+  .tipoDado--perfil {
+    font-size: 13px;
+  }
+
+  .dados--perfil {
+    /* align-items: center; */
+    /* background: rgba(12, 12, 12, 0.75); */
+    /* border: 1px solid #ffffff; */
+    border-radius: 8px;
+    /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.432); */
+    /* color: #797979; */
+    /* display: flex; */
+    height: 28px;
+    margin-top: 5px;
+    /* padding: 0 6px; */
+    /* user-select: none; */
+    /* width: 100%; */
+    font-size: 13px;
+  }
+
+  /* .carregando {
+    font-size: 2rem;
+    margin-top: 10rem;
+  } */
+
+  /* FIM TELA DE PERFIL */
 }

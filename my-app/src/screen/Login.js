@@ -33,7 +33,7 @@ export default function Login() {
   const handleClickLogin = (values) => {
     const encryptedEmail = encryptEmail(
       values.c_emailresp_cont,
-      "sua_chave_secreta_aqui"
+      "chave_secreta"
     );
 
     /* O código `Axios.post("http://localhost:3001/login", { c_emailresp_cont: values.c_emailresp_cont, c_senha_cont: values.c_senha_cont, }).then((response) => { if (response.data.msg === "Usuário Logado com sucesso") { navigation(`/home/`); } else { alert(response.data.msg); } });` está fazendo uma requisição POST para o servidor na URL "http ://localhost:3001/login" com o e-mail e a senha informados pelo usuário como corpo da solicitação. */

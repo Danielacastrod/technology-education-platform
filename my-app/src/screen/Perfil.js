@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { AES } from "crypto-js";
 import { enc } from "crypto-js";
-import logo from "./img/logo.png";
 
 export default function Perfil() {
   const { c_emailresp_cont } = useParams();
@@ -13,6 +12,10 @@ export default function Perfil() {
 
   function Home() {
     navigate(`/home/${c_emailresp_cont}`);
+  }
+
+  function Sair() {
+    navigate("/");
   }
 
   const [userData, setUserData] = useState(null);
@@ -26,10 +29,7 @@ export default function Perfil() {
 
   useEffect(() => {
     // Descriptografe o email recebido na URL
-    const decryptedEmail = decryptEmail(
-      c_emailresp_cont,
-      "sua_chave_secreta_aqui"
-    );
+    const decryptedEmail = decryptEmail(c_emailresp_cont, "chave_secreta");
     // Faça a chamada à API usando o email descriptografado
     Axios.get(`http://localhost:3001/perfil/${decryptedEmail}`) // Faz uma chamada ao endpoint definido no backend
       .then((response) => {
@@ -60,20 +60,15 @@ export default function Perfil() {
   return (
     <div className="container--perfil">
       <header className="cabecalho--perfil">
-        <img src={logo} alt="Logo DevPro" className="logo--pefil" />
-        <button className="inicio--perfil" onClick={Home}></button>
-        <div className="boxCabecalho--perfil">
-          <div>
-            <button
-              className="notificacao--perfil"
-              id="notificationButton"
-            ></button>
-            <div id="notificationArea">
-              <ul id="notificationList"></ul>
-            </div>
+        <nav className="navegacaoCabecalho--app">
+          <button className="logoInicio--app" onClick={Home}></button>
+          <div className="boxCabecalho--app">
+            <button className="botaoPerfil--app"></button>
+            <button className="botaoSair--app" onClick={Sair}>
+              Sair
+            </button>
           </div>
-          <button className="botaoPerfil--perfil"></button>
-        </div>
+        </nav>
       </header>
       <main className="box--acesso">
         <div className="boxTransparente--acesso">
@@ -81,23 +76,23 @@ export default function Perfil() {
           {userData ? (
             <div className="containerUserData--perfil">
               <div className="boxUserData--perfil">
-                <p>Nome da Criança</p>
+                <p className="tipoDado--perfil">Nome da Criança</p>
                 <p className="dados--perfil">{userData.c_nomecria_cont}</p>
               </div>
               <div className="boxUserData--perfil">
-                <p>Data de Nascimento</p>
+                <p className="tipoDado--perfil">Data de Nascimento</p>
                 <p className="dados--perfil">{userData.d_nasccria_cont}</p>
               </div>
               <div className="boxUserData--perfil">
-                <p>Nome do Responsável</p>
+                <p className="tipoDado--perfil">Nome do Responsável</p>
                 <p className="dados--perfil">{userData.c_nomeresp_cont}</p>
               </div>
               <div className="boxUserData--perfil">
-                <p>E-mail do Responsável</p>
+                <p className="tipoDado--perfil">E-mail do Responsável</p>
                 <p className="dados--perfil">{userData.c_emailresp_cont}</p>
               </div>
               <div className="boxUserData--perfil">
-                <p>Senha</p>
+                <p className="tipoDado--perfil">Senha</p>
                 <p className="dados--perfil">{senhaOculta}</p>
               </div>
               {/* <p>Senha: {userData.c_senha_cont}</p> */}

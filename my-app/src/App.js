@@ -35,7 +35,7 @@ export default function App() {
         <Route path="/saladeaula" element={<SalaDeAula />} />
         <Route path="/curso/:c_emailresp_cont" element={<Curso />} />
         <Route path="/curso" element={<Curso />} />
-        <Route path="/pefil/:c_emailresp_cont" element={<Perfil />} />
+        <Route path="/perfil/:c_emailresp_cont" element={<Perfil />} />
       </Routes>
     </Router>
   );
