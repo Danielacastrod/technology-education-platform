@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import logoDeveloperKids from "./img/logo-developer-kids.ico"
 import profile1 from "./img/profile1.jpeg"
 import profile2 from "./img/profile2.jpeg"
@@ -17,8 +18,17 @@ import curso2 from "./img/curso2.png"
 import curso3 from "./img/curso3.png"
 
 export default function MainScreen() {
+
+    const navigate = useNavigate();
+    function cadastrar() {
+        navigate("/cadastro");
+      }
+      function login() {
+        navigate("/login");
+      }
+
     return (
-                
+
         <div>
                   <meta charSet="UTF-8" />
                   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -73,8 +83,8 @@ export default function MainScreen() {
                             <div className="carousel-caption d-md-block">
                               <h2>Crie você mesmo seus jogos</h2>
                               <p>Jogos que facilitam a aprendizagem e melhoram o raciocínio lógico</p>
-                              <a href="#" target="_blank" className="main-btn">Torne-se aluno</a>
-                              <a href="#" className="main-btn ml-4">Área do aluno</a>
+                              <a onClick={cadastrar} target="_blank" className="main-btn">Torne-se aluno</a>
+                              <a onClick={login} className="main-btn ml-4">Área do aluno</a>
                             </div>
                           </div>
                           <div className="carousel-item">
@@ -82,8 +92,8 @@ export default function MainScreen() {
                             <div className="carousel-caption d-md-block">
                               <h2>Você pode aprender se divertindo</h2>
                               <p>Melhore sua capacidade de solucionar problemas de uma forma descontraida.</p>
-                              <a href className="main-btn">Torne-se aluno</a>
-                              <a href="#" className="main-btn ml-4">Área do aluno</a>
+                              <a onClick={cadastrar} target="_blank" className="main-btn">Torne-se aluno</a>
+                              <a onClick={login} className="main-btn ml-4">Área do aluno</a>
                             </div>
                           </div>
                           <div className="carousel-item">
@@ -91,8 +101,8 @@ export default function MainScreen() {
                             <div className="carousel-caption d-md-block">
                               <h2>Linguagem de programação objetiva</h2>
                               <p>Conheça Python: A LP que tem uma redigibilidade como nenhuma outra.</p>
-                              <a href="#" className="main-btn">Torne-se aluno</a>
-                              <a href="#" className="main-btn ml-4">Área do aluno</a>
+                              <a onClick={cadastrar} target="_blank" className="main-btn">Torne-se aluno</a>
+                              <a onClick={login} className="main-btn ml-4">Área do aluno</a>
                             </div>
                           </div>
                         </div>
