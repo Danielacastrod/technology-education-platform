@@ -17,6 +17,7 @@ import curso1 from "./img/curso1.png"
 import curso2 from "./img/curso2.png"
 import curso3 from "./img/curso3.png"
 
+
 export default function MainScreen() {
 
     const navigate = useNavigate();
@@ -56,12 +57,12 @@ export default function MainScreen() {
                         </button>
                         <div className="collapse navbar-collapse justify-content-end" id="navbar-links">
                           <div className="navbar-nav">
-                            <a className="nav-item nav-link" id="home-menu" href="#">Home</a>
-                            <a className="nav-item nav-link" id="about-menu" href="#">Sobre nós</a>
-                            <a className="nav-item nav-link" id="services-menu" href="#">Serviços</a>
-                            <a className="nav-item nav-link" id="team-menu" href="#">Time</a>
-                            <a className="nav-item nav-link" id="portfolio-menu" href="#">Projetos</a>
-                            <a className="nav-item nav-link" id="contact-menu" href="#">Contato</a>
+                            <a className="nav-item nav-link" id="home-menu" href="#">Home</a>                          
+                            <a className="nav-item nav-link" id="about-menu" href="#about-area">Sobre nós</a>
+                            <a className="nav-item nav-link" id="services-menu" href="#services-area">Serviços</a>
+                            <a className="nav-item nav-link" id="team-menu" href="#team-area">Time</a>
+                            <a className="nav-item nav-link" id="portfolio-menu" href="#portfolio-area">Projetos</a>
+                            <a className="nav-item nav-link" id="contact-menu" href="#contact-area">Contato</a>
                           </div>
                         </div>
                       </nav>
@@ -116,6 +117,7 @@ export default function MainScreen() {
                         </a>
                       </div>
                       {/* Sobre a empresa */}
+                     
                       <div id="about-area">
                         <div className="container">
                           <div className="row">
@@ -302,7 +304,7 @@ export default function MainScreen() {
                               <img src= {curso2} className="img-fluid" alt="Projeto 5" />
                             </div>
                             <div className="col-md-4 project-box cursos">
-                              <img src= {curso3} className="img-fluid" alt="Projeto 5" />
+                              <img src= {curso3} className="img-fluid" alt="Projeto 6" />
                             </div>
                           </div>
                         </div>
