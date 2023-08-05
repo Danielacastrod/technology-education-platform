@@ -26,20 +26,29 @@ export default function Cadastro() {
       return;
     }
 
-    /* O código está fazendo uma solicitação POST para o terminal "http://localhost:3001/cadastro" com os dados do formulário como carga útil da solicitação. Os dados do formulário incluem o nome da criança, data de nascimento, nome dos pais, e-mail dos pais e senha. */
-    Axios.post("http://localhost:3001/cadastro", {
-      c_nomecria_cont: values.c_nomecria_cont,
-      d_nasccria_cont: values.d_nasccria_cont,
-      c_nomeresp_cont: values.c_nomeresp_cont,
+    Axios.post("http://localhost:3001/cadastrado", {
       c_emailresp_cont: values.c_emailresp_cont,
-      c_senha_cont: values.c_senha_cont,
     }).then((response) => {
-      console.log(response);
-      if (response.data.msg === "Cadastrado com sucesso") {
-        alert("Cadastro realizado com sucesso");
-        navigate("/login");
+      console.log(response.data);
+      if (response.data[0]) {
+        console.log("E-mail já está sendo utilizado");
+        alert("E-mail já está sendo utilizado");
       } else {
-        alert(response.data.msg);
+        Axios.post("http://localhost:3001/cadastro", {
+          c_nomecria_cont: values.c_nomecria_cont,
+          d_nasccria_cont: values.d_nasccria_cont,
+          c_nomeresp_cont: values.c_nomeresp_cont,
+          c_emailresp_cont: values.c_emailresp_cont,
+          c_senha_cont: values.c_senha_cont,
+        }).then((response) => {
+          console.log(response.data[0].message);
+          if (response.data[0].message === "Cadastrado com sucesso") {
+            alert("Cadastro realizado com sucesso");
+            navigate("/login");
+          } else {
+            alert(response.data[0].message);
+          }
+        });
       }
     });
   };

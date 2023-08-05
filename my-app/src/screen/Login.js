@@ -31,20 +31,19 @@ export default function Login() {
   @param values - Um objeto contendo os valores do e-mail e senha digitados pelo usuário.
   */
   const handleClickLogin = (values) => {
-    const encryptedEmail = encryptEmail(
-      values.c_emailresp_cont,
-      "chave_secreta"
-    );
+    const email = values.c_emailresp_cont;
+    const encryptedEmail = encryptEmail(email, "chave_secreta");
 
-    /* O código `Axios.post("http://localhost:3001/login", { c_emailresp_cont: values.c_emailresp_cont, c_senha_cont: values.c_senha_cont, }).then((response) => { if (response.data.msg === "Usuário Logado com sucesso") { navigation(`/home/`); } else { alert(response.data.msg); } });` está fazendo uma requisição POST para o servidor na URL "http ://localhost:3001/login" com o e-mail e a senha informados pelo usuário como corpo da solicitação. */
     Axios.post("http://localhost:3001/login", {
       c_emailresp_cont: values.c_emailresp_cont,
       c_senha_cont: values.c_senha_cont,
     }).then((response) => {
-      if (response.data.msg === "Usuário Logado com sucesso") {
+      if (response.data[0]) {
+        console.log("Usuário Logado com sucesso");
         navigate(`/home/${encryptedEmail}`);
+        window.location.reload();
       } else {
-        alert(response.data.msg);
+        alert("Conta não encontrada");
       }
     });
   };

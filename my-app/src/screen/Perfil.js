@@ -31,9 +31,11 @@ export default function Perfil() {
     // Descriptografe o email recebido na URL
     const decryptedEmail = decryptEmail(c_emailresp_cont, "chave_secreta");
     // Faça a chamada à API usando o email descriptografado
-    Axios.get(`http://localhost:3001/perfil/${decryptedEmail}`) // Faz uma chamada ao endpoint definido no backend
+    Axios.post(`http://localhost:3001/perfil/`, {
+      c_emailresp_cont: decryptedEmail,
+    })
       .then((response) => {
-        if (response.data.length > 0) {
+        if (response.data[0]) {
           const user = response.data[0];
           const formattedDate = formatDate(user.d_nasccria_cont);
           setUserData({ ...user, d_nasccria_cont: formattedDate });
