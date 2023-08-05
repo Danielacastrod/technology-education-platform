@@ -357,8 +357,76 @@ button:hover {
   padding-left: 2rem;
 }
 
-/* FIM DOCUMENTAÇÃO (TERMOS E CONDIÇÕES, POLÍTICA DE PRIVACIDADE) */
 
+/* FIM DOCUMENTAÇÃO (TERMOS E CONDIÇÕES, POLÍTICA DE PRIVACIDADE) */
+/* RESPONSIVIDADE */
+@media(max-width: 768px){
+  
+  
+  .logo--documentacao {
+    height: 120px;
+  } 
+  
+  .corpo--documentacao {
+    font-size: 10px;
+  
+  }
+  
+  .titulo--documentacao {
+    font-size: 20px;
+   
+  }
+  
+  .conteudo--documentacao {
+    font-size: 15px;
+    margin: 20px;
+    padding: 40px;
+  }
+  
+  .secao--documentacao {
+    font-size: 15px;
+  }
+  
+  .tituloSecao--documentacao {
+    font-size: 18px;
+  }
+  
+  .conteudoSecao--documentacao {
+    font-size: 15px;
+  }
+
+}
+
+@media(max-width: 430px){
+  
+  .logo--documentacao {
+    height: 100px;
+  } 
+  
+  .titulo--documentacao {
+    font-size: 15px;
+   
+  }
+  
+  .conteudo--documentacao {
+    font-size: 12px;
+    margin: 15px;
+    padding: 20px;
+  }
+  
+  .secao--documentacao {
+    font-size: 12px;
+
+  }
+  
+  .tituloSecao--documentacao {
+    font-size: 12px;
+  }
+  
+  .conteudoSecao--documentacao {
+    font-size: 12px;
+  }
+}
 /* INÍCIO RODAPÉ */
 
 .rodape {
