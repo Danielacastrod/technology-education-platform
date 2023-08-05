@@ -1,5 +1,4 @@
 CREATE DATABASE developerkids;
-USE developerkids;
 CREATE TABLE devconta (
    n_id_cont INT NOT NULL AUTO_INCREMENT,
    c_nomecria_cont VARCHAR(100) NOT NULL,

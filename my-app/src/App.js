@@ -30,11 +30,8 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/recsenha" element={<RecSenha />} />
         <Route path="/home/:c_emailresp_cont" element={<Home />} />
-        <Route path="/home" element={<Home />} />
         <Route path="/saladeaula/:c_emailresp_cont" element={<SalaDeAula />} />
-        <Route path="/saladeaula" element={<SalaDeAula />} />
         <Route path="/curso/:c_emailresp_cont" element={<Curso />} />
-        <Route path="/curso" element={<Curso />} />
         <Route path="/perfil/:c_emailresp_cont" element={<Perfil />} />
       </Routes>
     </Router>
