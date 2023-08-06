@@ -1,27 +1,13 @@
 import "../App.css";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import MainScreen from "./mainScreen";
 
-export default function Inicio({ navigation }) {
-  const navigate = useNavigate();
-
-  function cadastrar() {
-    navigate("/cadastro");
-  }
-  function login() {
-    navigate("/login");
-  }
+export default function Inicio({}) {
 
   return (
+     
     <div className="App">
-      <h1>Tela Inicial</h1>
-
-      <button className="button" onClick={cadastrar}>
-        Cadastrar
-      </button>
-      <button className="button" onClick={login}>
-        Login
-      </button>
+      <MainScreen/>
     </div>
   );
 }
