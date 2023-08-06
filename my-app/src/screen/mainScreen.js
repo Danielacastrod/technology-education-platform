@@ -1,5 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheck, faCoffee, faMobileScreenButton, faUserGroup } from '@fortawesome/free-solid-svg-icons'
 import logoDeveloperKids from "./img/logo-developer-kids.ico"
 import profile1 from "./img/profile1.jpeg"
 import profile2 from "./img/profile2.jpeg"
@@ -20,7 +22,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import Carousel from 'react-bootstrap/Carousel';
+
 
 
 export default function MainScreen() {
@@ -155,11 +157,11 @@ export default function MainScreen() {
                                     <p>Todo nosso design é pensado de forma que cative de forma expontânea! Você pode aprender se divertindo.</p>
                                     <p>Quais os benefícios?</p>
                                     <ul id="about-list">
-                                        <li><i className="fas fa-check" /> Estímulo do raciocínio lógico e da criatividade</li>
-                                        <li><i className="fas fa-check" /> Ajuda na organização</li>
-                                        <li><i className="fas fa-check" /> Melhora o desempenho em matemática, inglês e física</li>
-                                        <li><i className="fas fa-check" /> Ajuda nas descobertas pessoais e profissionais</li>
-                                        <li><i className="fas fa-check" /> Capacidade de solucionar problemas</li>
+                                        <li><i className="fas fa-check" /><FontAwesomeIcon icon={faCheck} className="me-1" /> Estímulo do raciocínio lógico e da criatividade</li>
+                                        <li><i className="fas fa-check" /><FontAwesomeIcon icon={faCheck} className="me-1" /> Ajuda na organização</li>
+                                        <li><i className="fas fa-check" /><FontAwesomeIcon icon={faCheck} className="me-1" /> Melhora o desempenho em matemática, inglês e física</li>
+                                        <li><i className="fas fa-check" /><FontAwesomeIcon icon={faCheck} className="me-1" /> Ajuda nas descobertas pessoais e profissionais</li>
+                                        <li><i className="fas fa-check" /><FontAwesomeIcon icon={faCheck} className="me-1" /> Capacidade de solucionar problemas</li>
                                     </ul>
                                 </div>
                             </div>
@@ -173,12 +175,12 @@ export default function MainScreen() {
                                     <h3 className="main-title">O que garantimos?</h3>
                                 </div>
                                 <div className="col-md-4 service-box">
-                                    <i className="fas fa-mobile-alt" />
+                                    <i className="fas fa-mobile-alt" /><FontAwesomeIcon icon={faMobileScreenButton} className="me-1" />
                                     <h4>Acessibilidade</h4>
                                     <p>Acesse nossa plataforma de qualquer dispositivo, seja ele smartPhone, tablet ou computador .</p>
                                 </div>
                                 <div className="col-md-4 service-box">
-                                    <i className="fas fa-shopping-cart" />
+                                    <i className="fas fa-shopping-cart" /><FontAwesomeIcon icon={faUserGroup} />
                                     <h4>Mentoria</h4>
                                     <p>Proporcionamos um acompanhamento exclusivo para os usuários.</p>
                                 </div>
