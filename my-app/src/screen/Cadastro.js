@@ -1,57 +1,65 @@
 import "../App.css";
-import React from "react";
+import React, { useState, useRef } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 import logo from "./img/logo-developer-kids.png";
 
-/* Esta é uma função JavaScript que manipula o processo de registro em um aplicativo da web.
-O código está retornando um componente React chamado "Cadastro". Este componente é responsável por renderizar um formulário para cadastramento do usuário. Inclui campos de entrada para o nome da criança, data de nascimento, nome dos pais, e-mail dos pais, senha e confirmação de senha. Também inclui uma caixa de seleção para aceitar os termos e condições. Quando o formulário é enviado, é chamada a função handleClickCadastro, que envia um POST. */
 export default function Cadastro() {
-  /* A linha 'const navegar = useNavigate();' está usando o gancho 'useNavigate' da biblioteca 'react-router-dom' para obter a função 'navigate'. Esta função pode ser usada para navegar programaticamente para diferentes rotas no aplicativo. Neste caso, ele é usado para navegar para a rota "/login" após um registro bem-sucedido. */
   const navigate = useNavigate();
 
   function login() {
     navigate("/login");
   }
 
-  /**
-  A função 'handleClickCadastro' é utilizada para tratar o evento click de um formulário de cadastro, onde verifica se o usuário aceitou os termos, envia uma requisição POST para um servidor com os dados do formulário e exibe os alertas apropriados com base na resposta.
-  @param values - Um objeto contendo os valores inseridos pelo usuário no formulário.
-  */
-  const handleClickCadastro = (values) => {
+  // const [setData] = useState([]);
+  const [atualizaGrid, setAtializaGrid] = useState(false);
+  const FormRef = useRef();
+
+  // async function Cadastrar() {
+  //   await Axios.get("http://localhost:3000/cadastro").then((response) =>
+  //     setData(response.data)
+  //   );
+  // }
+
+  async function handleClickCadastro(values) {
     if (!values.aceitarTermos) {
       alert("Você precisa aceitar os termos para continuar.");
       return;
     }
+    const {
+      c_nomecria_cont,
+      d_nasccria_cont,
+      c_nomeresp_cont,
+      c_emailresp_cont,
+      c_senha_cont,
+    } = FormRef.current;
 
-    Axios.post("http://localhost:3001/cadastrado", {
-      c_emailresp_cont: values.c_emailresp_cont,
-    }).then((response) => {
-      console.log(response.data);
-      if (response.data[0]) {
-        console.log("E-mail já está sendo utilizado");
-        alert("E-mail já está sendo utilizado");
-      } else {
-        Axios.post("http://localhost:3001/cadastro", {
-          c_nomecria_cont: values.c_nomecria_cont,
-          d_nasccria_cont: values.d_nasccria_cont,
-          c_nomeresp_cont: values.c_nomeresp_cont,
-          c_emailresp_cont: values.c_emailresp_cont,
-          c_senha_cont: values.c_senha_cont,
-        }).then((response) => {
-          console.log(response.data[0].message);
-          if (response.data[0].message === "Cadastrado com sucesso") {
-            alert("Cadastro realizado com sucesso");
-            navigate("/login");
-          } else {
-            alert(response.data[0].message);
-          }
-        });
-      }
-    });
-  };
+    const dados = {
+      c_nomecria_cont: c_nomecria_cont.value,
+      d_nasccria_cont: d_nasccria_cont.value,
+      c_nomeresp_cont: c_nomeresp_cont.value,
+      c_emailresp_cont: c_emailresp_cont.value,
+      c_senha_cont: c_senha_cont.value,
+    };
+
+    const response = await Axios.get(
+      `http://localhost:3000/cadastro?c_emailresp_cont=${dados.c_emailresp_cont}`
+    );
+    if (response.data.length > 0) {
+      alert("Este e-mail já está cadastrado.");
+      return;
+    }
+    await Axios.post("http://localhost:3000/cadastro", dados);
+    setAtializaGrid(!atualizaGrid);
+    alert("Cadastro realizado com sucesso");
+    login();
+  }
+
+  // useEffect(() => {
+  //   handleClickCadastro();
+  // }, [atualizaGrid]);
 
   /* A constante 'validationCadastro' está criando um esquema de validação usando a biblioteca 'yup'. Este esquema define as regras de validação de cada campo do formulário de cadastro. */
   const validationCadastro = yup.object().shape({
@@ -96,9 +104,9 @@ export default function Cadastro() {
             onSubmit={handleClickCadastro}
             validationSchema={validationCadastro}
           >
-            <Form className="login-form--cadastro">
+            <Form className="login-form--cadastro" ref={FormRef}>
               <div className="login-form-group--cadastro">
-                <label for="nomeCrianca" className="label--cadastro">
+                <label htmlFor="nomeCrianca" className="label--cadastro">
                   Nome da Criança{" "}
                 </label>
                 <Field
@@ -115,7 +123,7 @@ export default function Cadastro() {
               </div>
 
               <div className="login-form-group--cadastro">
-                <label for="nascCrianca" className="label--cadastro">
+                <label htmlFor="nascCrianca" className="label--cadastro">
                   Data de nascimento da Criança{" "}
                 </label>
                 <Field
@@ -133,7 +141,7 @@ export default function Cadastro() {
               </div>
 
               <div className="login-form-group--cadastro">
-                <label for="nomeResponsavel" className="label--cadastro">
+                <label htmlFor="nomeResponsavel" className="label--cadastro">
                   Nome do Responsável{" "}
                 </label>
                 <Field
@@ -150,7 +158,7 @@ export default function Cadastro() {
               </div>
 
               <div className="login-form-group--cadastro">
-                <label for="email" className="label--cadastro">
+                <label htmlFor="email" className="label--cadastro">
                   E-mail do responsável{" "}
                 </label>
                 <Field
@@ -168,7 +176,7 @@ export default function Cadastro() {
               </div>
 
               <div className="login-form-group--cadastro">
-                <label for="senha" className="label--cadastro">
+                <label htmlFor="senha" className="label--cadastro">
                   Senha{" "}
                 </label>
                 <Field
@@ -186,7 +194,7 @@ export default function Cadastro() {
               </div>
 
               <div className="login-form-group--cadastro">
-                <label for="confirmaSenha" className="label--cadastro">
+                <label htmlFor="confirmaSenha" className="label--cadastro">
                   Confirme sua senha{" "}
                 </label>
                 <Field

@@ -28,20 +28,26 @@ export default function Perfil() {
   };
 
   useEffect(() => {
-    // Descriptografe o email recebido na URL
     const decryptedEmail = decryptEmail(c_emailresp_cont, "chave_secreta");
-    // Faça a chamada à API usando o email descriptografado
-    Axios.post(`http://localhost:3001/perfil/`, {
-      c_emailresp_cont: decryptedEmail,
-    })
-      .then((response) => {
+
+    const fetchData = async () => {
+      try {
+        const response = await Axios.get(
+          `http://localhost:3000/cadastro?c_emailresp_cont=${decryptedEmail}`
+        );
+
         if (response.data[0]) {
           const user = response.data[0];
+          setUserData(user); // Atualiza o estado userData com os dados do perfil
           const formattedDate = formatDate(user.d_nasccria_cont);
           setUserData({ ...user, d_nasccria_cont: formattedDate });
         }
-      })
-      .catch((error) => console.error("Erro ao obter dados:", error));
+      } catch (error) {
+        console.error("Erro ao obter dados:", error);
+      }
+    };
+
+    fetchData(); // Chama a função fetchData para buscar os dados
   }, [c_emailresp_cont]);
 
   const formatDate = (dateString) => {
@@ -56,8 +62,7 @@ export default function Perfil() {
     return "•".repeat(frase.length);
   }
 
-  let senha = "Senha secreta do usuário";
-  let senhaOculta = ocultarFrase(senha);
+  // const senhaOculta = ocultarFrase(userData.c_senha_cont);
 
   return (
     <div className="container--perfil">
@@ -95,9 +100,10 @@ export default function Perfil() {
               </div>
               <div className="boxUserData--perfil">
                 <p className="tipoDado--perfil">Senha</p>
-                <p className="dados--perfil">{senhaOculta}</p>
+                <p className="dados--perfil">
+                  {ocultarFrase(userData.c_senha_cont)}
+                </p>
               </div>
-              {/* <p>Senha: {userData.c_senha_cont}</p> */}
             </div>
           ) : (
             <p className="carregando">Carregando...</p>
