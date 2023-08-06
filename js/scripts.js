@@ -146,6 +146,8 @@ $( document ).ready(function() {
 
   // scroll para as seções
 
+
+
   let navBtn = $('.nav-item');
 
   let bannerSection = $('#mainSlider');
