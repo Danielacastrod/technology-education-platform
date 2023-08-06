@@ -1846,11 +1846,11 @@ header, .navbar {
   text-align: center;
 }
 
-#company-img {
-  background-image: url('./screen/img/empresa.jpg');
+/*#company-img {
+  background-image: url('../img/empresa.jpg');
   background-size: cover;
   height: 100%;
-}
+}*/
 
 #pattern-img h4, #pattern-img p {
   color: #FFF;

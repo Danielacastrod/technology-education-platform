@@ -5,7 +5,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js.map';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck, faCoffee, faMobileScreenButton } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faPhone, faMobileScreenButton, faEnvelope, faLocationDot, faHandPointer, faChildren , faPaintbrush, faUsers, faHandshakeAngle } from '@fortawesome/free-solid-svg-icons'
 import logoDeveloperKids from "./img/logo-developer-kids.ico"
 import profile1 from "./img/profile1.jpeg"
 import profile2 from "./img/profile2.jpeg"
@@ -162,27 +162,27 @@ export default function MainScreen() {
                   <p>Acesse nossa plataforma de qualquer dispositivo, seja ele smartPhone, tablet ou computador .</p>
                 </div>
                 <div className="col-md-4 service-box">
-                  <i className="fas fa-shopping-cart" />
+                  <i className="fas fa-shopping-cart" /><FontAwesomeIcon icon={faChildren} />
                   <h4>Mentoria</h4>
                   <p>Proporcionamos um acompanhamento exclusivo para os usuários.</p>
                 </div>
                 <div className="col-md-4 service-box">
-                  <i className="fas fa-paint-brush" />
+                  <i className="fas fa-paint-brush" /><FontAwesomeIcon icon={faPaintbrush} />
                   <h4>Design Criativo</h4>
                   <p>Nossos designers são altamente capacitados para atrair cada vez mais o público infanto-juvenil.</p>
                 </div>
                 <div className="col-md-4 service-box">
-                  <i className="fab fa-google" />
+                  <i className="fab fa-google" /><FontAwesomeIcon icon={faUsers} />
                   <h4>Público aberto</h4>
                   <p>Com nosso serviço gratuito, disponibilizamos variados conteúdos visando o futuro da sociedade.</p>
                 </div>
                 <div className="col-md-4 service-box">
-                  <i className="fas fa-hands-helping" />
+                  <i className="fas fa-hands-helping" /><FontAwesomeIcon icon={faHandshakeAngle} />
                   <h4>Suporte 24/7</h4>
                   <p>Você sempre terá alguem da equipe disponível para suporte, em diferentes plataformas. (chat, email, skype).</p>
                 </div>
                 <div className="col-md-4 service-box">
-                  <i className="fas fa-user" />
+                  <i className="fas fa-user" /><FontAwesomeIcon icon={faHandPointer} />
                   <h4>Interatividade</h4>
                   <p>Garantimos um conteúdo de fácil acesso e entendimento simples para gerar uma aprendizagem participativa.</p>
                 </div>
@@ -260,6 +260,9 @@ export default function MainScreen() {
             </div>
           </div>
           {/* Portfólio */}
+          <div className="col-12">
+            <h3 className="main-title">Sobre a Developer Kids</h3>
+          </div>
           <div id="portfolio-area">
             <div className="col-md-12" id="filter-btn-box">
               <button
@@ -324,16 +327,16 @@ export default function MainScreen() {
                 <h3 className="main-title">Entre em contato conosco</h3>
               </div>
               <div className="col-md-4 contact-box">
-                <i className="fas fa-phone" />
+                <i/><FontAwesomeIcon icon={faPhone} className="me-2"/>
                 <p><span className="contact-tile">Ligue para:</span> (48)99999-9999</p>
                 <p><span className="contact-tile">Horários:</span> 8:00 - 19:00</p>
               </div>
-              <div className="col-md-4 contact-box">
+              <div className="col-md-4 contact-box"><FontAwesomeIcon icon={faEnvelope} />
                 <i className="fas fa-envelope" />
                 <p><span className="contact-tile">Envie um email:</span> contato@DeveloperKids.com.br</p>
               </div>
               <div className="col-md-4 contact-box">
-                <i className="fas fa-map-marker-alt" />
+                <i className="fas fa-map-marker-alt" /><FontAwesomeIcon icon={faLocationDot} />
                 <p><span className="contact-tile">Venha tomar um café:</span> Rua Lorem Ipsum - 1314</p>
               </div>
               <div className="col-md-6" id="msg-box">
