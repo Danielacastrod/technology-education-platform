@@ -33,6 +33,10 @@ export default function SalaDeAula() {
     navigate(`/curso/${c_emailresp_cont}`);
   }
 
+  function Dicas() {
+    navigate(`/dicas/${c_emailresp_cont}`);
+  }
+
   const handleEsquerdaClick1 = (e) => {
     e.preventDefault();
     carrossel1.current.scrollLeft -= carrossel1.current.offsetWidth;
@@ -138,11 +142,11 @@ export default function SalaDeAula() {
             onClick={handleEsquerdaClick2}
           ></button>
           <div className="carrossel--app" ref={carrossel2}>
-            <button className="botaoAula--app" onClick={Curso}>
+            <button className="botaoAula--app" onClick={Dicas}>
               <img class="imagemAula--app" src={programacao_1} alt="" />
             </button>
             {/** vai direto pra plataforma de jogo escolhido*/}
-            <button className="botaoAula--app" onClick={Curso}>
+            <button className="botaoAula--app" onClick={Dicas}>
               <img class="imagemAula--app" src={html_1} alt="" />
             </button>
             {/** vai direto pra plataforma de jogo escolhido*/}

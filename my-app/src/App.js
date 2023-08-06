@@ -11,6 +11,7 @@ import TermosECondicoes from "./screen/TermosECondicoes";
 import PoliticaDePrivacidade from "./screen/PoliticaDePrivacidade";
 import SalaDeAula from "./screen/SalaDeAula";
 import Curso from "./screen/Curso";
+import Dicas from "./screen/Dicas";
 
 /**
 A função exporta um componente que configura o roteamento para diferentes caminhos em um aplicativo React.
@@ -31,6 +32,7 @@ export default function App() {
         <Route path="/recsenha" element={<RecSenha />} />
         <Route path="/home/:c_emailresp_cont" element={<Home />} />
         <Route path="/saladeaula/:c_emailresp_cont" element={<SalaDeAula />} />
+        <Route path="/dicas/:c_emailresp_cont" element={<Dicas />} />
         <Route path="/curso/:c_emailresp_cont" element={<Curso />} />
         <Route path="/perfil/:c_emailresp_cont" element={<Perfil />} />
       </Routes>
