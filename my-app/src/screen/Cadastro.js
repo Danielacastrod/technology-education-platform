@@ -13,15 +13,8 @@ export default function Cadastro() {
     navigate("/login");
   }
 
-  // const [setData] = useState([]);
   const [atualizaGrid, setAtializaGrid] = useState(false);
   const FormRef = useRef();
-
-  // async function Cadastrar() {
-  //   await Axios.get("http://localhost:3000/cadastro").then((response) =>
-  //     setData(response.data)
-  //   );
-  // }
 
   async function handleClickCadastro(values) {
     if (!values.aceitarTermos) {
@@ -56,10 +49,6 @@ export default function Cadastro() {
     alert("Cadastro realizado com sucesso");
     login();
   }
-
-  // useEffect(() => {
-  //   handleClickCadastro();
-  // }, [atualizaGrid]);
 
   /* A constante 'validationCadastro' está criando um esquema de validação usando a biblioteca 'yup'. Este esquema define as regras de validação de cada campo do formulário de cadastro. */
   const validationCadastro = yup.object().shape({

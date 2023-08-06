@@ -43,7 +43,9 @@ export default function Login() {
     const email = dados.c_emailresp_cont;
     const encryptedEmail = encryptEmail(email, "chave_secreta");
 
-    navigate(`/home/${encryptedEmail}`);
+    const encodedEncryptedEmail = encodeURIComponent(encryptedEmail);
+
+    navigate(`/home/${encodedEncryptedEmail}`);
     window.location.reload();
   }
 
