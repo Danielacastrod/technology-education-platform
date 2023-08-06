@@ -20,18 +20,27 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-import{Swiper, SwiperSlide} from 'swiper/react';
-
+import Carousel from 'react-bootstrap/Carousel';
 
 
 export default function MainScreen() {
 
     const data = [
-        { id: '1', image: walp, frase: 'Crie você mesmo seus jogos', frase2: 'Jogos que facilitam a aprendizagem e melhoram o raciocínio lógico'},
-        { id: '2', image: jogando, frase: 'Você pode aprender se divertindo', frase2:'Melhore sua capacidade de solucionar problemas de uma forma descontraida.'},
-        { id: '3', image: crianca, frase: 'Linguagem de programação objetiva', frase2: 'Conheça Python: A LP que tem uma redigibilidade como nenhuma outra.'}
+        {
+            image: { walp },
+            caption: "Caption",
+            description: "Crie você mesmo seus jogos"
+        },
+        {
+            image: { jogando },
+            caption: "Caption",
+            description: "Você pode aprender se divertindo"
+        },
+        {
+            image: { crianca },
+            caption: "Caption",
+            description: "Linguagem de programação objetiva"
+        }
     ]
 
     const navigate = useNavigate();
@@ -44,7 +53,7 @@ export default function MainScreen() {
 
 
     return (
-
+        
         <div>
             <meta charSet="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -87,29 +96,46 @@ export default function MainScreen() {
                 <div className="container-fluid">
                     {/* slider */}
 
-                    <Swiper
-                     modules={[Navigation, Pagination, Scrollbar, A11y]}
-                     spaceBetween={50}
-                     slidesPerView={1}
-                     navigation
-                     pagination={{ clickable: true }}
-                     scrollbar={{ draggable: true }}
-                    >
-                        {data.map( (item) =>(
-                        <SwiperSlide key={item.id}>
-                         <div className="carousel-item active">
-                                <img src={item.image} className="d-block w-100" alt="Conteúdo interativo" />
+                    <div id="mainSlider" className="carousel slide" data-ride="carousel">
+                        <div className="carousel-inner">
+                            <div className="carousel-item active">
+                                <img src={walp} className="d-block w-100" alt="Conteúdo interativo" />
                                 {/* tirar classe d-none */}
                                 <div className="carousel-caption d-md-block">
-                                    <h2 id="texth2">DEVELOPER KIDS</h2>
-                                    <p>Desenvolvendo mentes, criando futuro!</p>
+                                    <h2>Crie você mesmo seus jogos</h2>
+                                    <p>Jogos que facilitam a aprendizagem e melhoram o raciocínio lógico</p>
                                     <a onClick={cadastrar} target="_blank" className="main-btn">Torne-se aluno</a>
                                     <a onClick={login} className="main-btn ml-4">Área do aluno</a>
                                 </div>
                             </div>
-                        </SwiperSlide> 
-                        ))}
-                    </Swiper>
+                            <div className="carousel-item">
+                                <img src={jogando} className="d-block w-100" alt="Engenharia de software" />
+                                <div className="carousel-caption d-md-block">
+                                    <h2>Você pode aprender se divertindo</h2>
+                                    <p>Melhore sua capacidade de solucionar problemas de uma forma descontraida.</p>
+                                    <a onClick={cadastrar} target="_blank" className="main-btn">Torne-se aluno</a>
+                                    <a onClick={login} className="main-btn ml-4">Área do aluno</a>
+                                </div>
+                            </div>
+                            <div className="carousel-item">
+                                <img src={crianca} className="d-block w-100" alt="Manutenção em software" />
+                                <div className="carousel-caption d-md-block">
+                                    <h2>Linguagem de programação objetiva</h2>
+                                    <p>Conheça Python: A LP que tem uma redigibilidade como nenhuma outra.</p>
+                                    <a onClick={cadastrar} target="_blank" className="main-btn">Torne-se aluno</a>
+                                    <a onClick={login} className="main-btn ml-4">Área do aluno</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a className="carousel-control-prev" href="#mainSlider" role="button" data-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true" />
+                            <span className="sr-only">Previous</span>
+                        </a>
+                        <a className="carousel-control-next" href="#mainSlider" role="button" data-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true" />
+                            <span className="sr-only">Next</span>
+                        </a>
+                    </div>
 
                     {/* Sobre a empresa */}
 
@@ -179,7 +205,7 @@ export default function MainScreen() {
                             </div>
                         </div>
                     </div>
-                   
+
                     {/* Time */}
                     <div id="team-area">
                         <div className="container">
