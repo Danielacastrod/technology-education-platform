@@ -223,7 +223,6 @@ export default function Formulario() {
 
   return (
     <Formik
-      ref={FormRef}
       initialValues={{
         c_nomecria_cont: "",
         d_nasccria_cont: "",
@@ -236,7 +235,7 @@ export default function Formulario() {
       onSubmit={handleClickCadastro}
       validationSchema={validationCadastro}
     >
-      <StyledForm>
+      <StyledForm ref={FormRef}>
         <StyledFormGroup>
           <label htmlFor="nomeCrianca">Nome da Criança </label>
           <StyledInput name="c_nomecria_cont" id="nomeCrianca" />
