@@ -2,7 +2,7 @@ import "../App.css";
 import React from "react";
 //import { useNavigate } from "react-router-dom";
 import logo from "./img/logo-developer-kids.png";
-import Rodape from "./Rodape";
+import Rodape from "../StylesGlobal/Rodape/Rodape";
 
 export default function TermosECondicoes() {
   //const navigate = useNavigate();

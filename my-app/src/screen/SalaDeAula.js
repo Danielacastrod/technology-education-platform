@@ -2,7 +2,7 @@ import "../App.css";
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import Rodape from "./Rodape";
+import Rodape from "../StylesGlobal/Rodape/Rodape";
 import aulaLogica_1 from "./img/aulaLogica_1.png";
 import aulaLogica_2 from "./img/aulaLogica_2.png";
 import aulaPython_1 from "./img/aulaPython_1.png";
@@ -17,12 +17,14 @@ export default function SalaDeAula() {
   const carrossel1 = useRef(null);
   const carrossel2 = useRef(null);
 
+  const encodedEncryptedEmail = encodeURIComponent(c_emailresp_cont);
+
   function Inicio() {
-    navigate(`/home/${c_emailresp_cont}`);
+    navigate(`/home/${encodedEncryptedEmail}`);
   }
 
   function Perfil() {
-    navigate(`/perfil/${c_emailresp_cont}`);
+    navigate(`/perfil/${encodedEncryptedEmail}`);
   }
 
   function Sair() {
@@ -30,11 +32,11 @@ export default function SalaDeAula() {
   }
 
   function Curso() {
-    navigate(`/curso/${c_emailresp_cont}`);
+    navigate(`/curso/${encodedEncryptedEmail}`);
   }
 
   function Dicas() {
-    navigate(`/dicas/${c_emailresp_cont}`);
+    navigate(`/dicas/${encodedEncryptedEmail}`);
   }
 
   const handleEsquerdaClick1 = (e) => {

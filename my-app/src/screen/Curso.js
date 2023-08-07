@@ -66,17 +66,19 @@ export default function Curso() {
     }
   };
 
+  const encodedEncryptedEmail = encodeURIComponent(c_emailresp_cont);
+
   /* O código abaixo define três funções para navegar em diferentes páginas. */
   function Voltar() {
-    navigate(`/saladeaula/${c_emailresp_cont}`);
+    navigate(`/saladeaula/${encodedEncryptedEmail}`);
   }
 
   function Inicio() {
-    navigate(`/home/${c_emailresp_cont}`);
+    navigate(`/home/${encodedEncryptedEmail}`);
   }
 
   function Perfil() {
-    navigate(`/perfil/${c_emailresp_cont}`);
+    navigate(`/perfil/${encodedEncryptedEmail}`);
   }
 
   function Sair() {
