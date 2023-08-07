@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import Axios from "axios";
@@ -68,20 +68,24 @@ const StyledError = styled(ErrorMessage)`
 export default function Formulario() {
   const navigate = useNavigate();
 
-  const handleClickRecSenha = (values) => {
-    Axios.post("http://localhost:3001/recsenha", {
-      c_emailresp_cont: values.c_emailresp_cont,
-    }).then((response) => {
-      if (response.data.msg === "Conta encontrada") {
-        console.log(response.data.msg);
-        alert("Verifique seu e-mail");
-        navigate("/");
-      } else {
-        console.log(response.data.msg);
-        alert(response.data.msg);
-      }
-    });
-  };
+  const FormRef = useRef();
+
+  async function handleClickRecSenha(values) {
+    const { c_emailresp_cont } = FormRef.current;
+
+    const dados = { c_emailresp_cont: c_emailresp_cont.value };
+
+    const response = await Axios.get(
+      `https://api-rest-azure.vercel.app/cadastro?c_emailresp_cont=${dados.c_emailresp_cont}`
+    );
+    if (response.data.length === 0) {
+      alert("Email não encontrado.");
+      return;
+    }
+
+    alert("Verifique seu e-mail");
+    navigate("/login");
+  }
 
   const validationLogin = yup.object().shape({
     c_emailresp_cont: yup
@@ -97,7 +101,7 @@ export default function Formulario() {
       validationSchema={validationLogin}
     >
       {({ values, handleChange }) => (
-        <StyledForm>
+        <StyledForm ref={FormRef}>
           <StyleDiv>
             <label htmlFor="emailUsuario" className="labelInputs--login">
               Insira seu e-mail para redefinir sua senha
