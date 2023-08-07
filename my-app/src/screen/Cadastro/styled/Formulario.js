@@ -73,6 +73,17 @@ const StyledInput = styled(Field)`
   }
 `;
 
+const StyledError = styled(ErrorMessage)`
+  color: #a9e500;
+  font-size: 12px;
+  position: absolute;
+  right: 0;
+
+  @media (max-width: 430px) {
+    font-size: 0.4rem;
+  }
+`;
+
 const StyledConteinerDoc = styled.div`
   align-items: center;
   display: flex;
@@ -184,7 +195,7 @@ export default function Formulario() {
 
     try {
       const response = await Axios.get(
-        `https://projeto-final-start.vercel.app/cadastro?c_emailresp_cont=${dados.c_emailresp_cont}`
+        `https://api-rest-azure.vercel.app/cadastro?c_emailresp_cont=${dados.c_emailresp_cont}`
         // `http://localhost:3000/cadastro?c_emailresp_cont=${dados.c_emailresp_cont}`
       );
       if (response.data.length > 0) {
@@ -198,7 +209,7 @@ export default function Formulario() {
     }
 
     // await Axios.post("http://localhost:3000/cadastro", dados);
-    await Axios.post("https://projeto-final-start.vercel.app/cadastro", dados);
+    await Axios.post("https://api-rest-azure.vercel.app/cadastro", dados);
     setAtializaGrid(!atualizaGrid);
     alert("Cadastro realizado com sucesso");
     login();
@@ -240,7 +251,7 @@ export default function Formulario() {
           <label htmlFor="nomeCrianca">Nome da Criança </label>
           <StyledInput name="c_nomecria_cont" id="nomeCrianca" />
 
-          <ErrorMessage
+          <StyledError
             component="span"
             name="c_nomecria_cont"
             className="form-error--acesso"
@@ -251,7 +262,7 @@ export default function Formulario() {
           <label htmlFor="nascCrianca">Data de nascimento da Criança </label>
           <StyledInput name="d_nasccria_cont" id="nascCrianca" type="date" />
 
-          <ErrorMessage
+          <StyledError
             component="span"
             name="d_nasccria_cont"
             className="form-error--acesso"
@@ -262,7 +273,7 @@ export default function Formulario() {
           <label htmlFor="nomeResponsavel">Nome do Responsável </label>
           <StyledInput name="c_nomeresp_cont" id="nomeResponsavel" />
 
-          <ErrorMessage
+          <StyledError
             component="span"
             name="c_nomeresp_cont"
             className="form-error--acesso"
@@ -273,7 +284,7 @@ export default function Formulario() {
           <label htmlFor="email">E-mail do responsável </label>
           <StyledInput type="email" name="c_emailresp_cont" id="email" />
 
-          <ErrorMessage
+          <StyledError
             component="span"
             name="c_emailresp_cont"
             className="form-error--acesso"
@@ -284,7 +295,7 @@ export default function Formulario() {
           <label htmlFor="senha">Senha </label>
           <StyledInput type="password" name="c_senha_cont" id="senha" />
 
-          <ErrorMessage
+          <StyledError
             component="span"
             name="c_senha_cont"
             className="form-error--acesso"
@@ -295,7 +306,7 @@ export default function Formulario() {
           <label htmlFor="confirmaSenha">Confirme sua senha </label>
           <StyledInput type="password" name="confirmSenha" id="confirmaSenha" />
 
-          <ErrorMessage
+          <StyledError
             component="span"
             name="confirmSenha"
             className="form-error--acesso"

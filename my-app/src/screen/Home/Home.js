@@ -5,6 +5,14 @@ import { useParams } from "react-router-dom";
 import NavType1 from "../../StylesGlobal/Header/NavType1";
 import { Header } from "../../StylesGlobal/Header/Header";
 import { TitleHeader } from "../../StylesGlobal/Header/TitleHeader";
+import { Main } from "../../StylesGlobal/CorpoApp/Main";
+import { Title } from "../../StylesGlobal/CorpoApp/Title";
+import { StyledBoxSalaDeAula } from "./styled/BoxSalaDeAula";
+import { Container } from "../../StylesGlobal/CorpoApp/Container";
+import { Carrossel } from "../../StylesGlobal/CorpoApp/Carrossel";
+import { BotaoAula } from "../../StylesGlobal/CorpoApp/BotaoAula";
+import { SetaEsquerda } from "../../StylesGlobal/CorpoApp/BotaoSeta/SetaEsquerda";
+import { SetaDireita } from "../../StylesGlobal/CorpoApp/BotaoSeta/SetaDireita";
 
 import Rodape from "../../StylesGlobal/Rodape/Rodape";
 import jogo_doodle from "../img/jogo_doodle.png";
@@ -56,56 +64,40 @@ export default function Home() {
         </TitleHeader>
       </Header>
 
-      <main className="corpo--app">
-        <h2 className="tituloCorpo--app">Sala de aula</h2>
-        <div className="saladeaula--app">
-          <button className="serie--app" onClick={SalaDeAula}>
-            3° ano
-          </button>
-          <button className="serie--app" onClick={SalaDeAula}>
-            4° ano
-          </button>
-          <button className="serie--app" onClick={SalaDeAula}>
-            5° ano
-          </button>
-          <button className="serie--app" onClick={SalaDeAula}>
-            6° ano
-          </button>
-          <button className="serie--app" onClick={SalaDeAula}>
-            7° ano
-          </button>
-          <button className="serie--app" onClick={SalaDeAula}>
-            8° ano
-          </button>
-          <button className="serie--app" onClick={SalaDeAula}>
-            9° ano
-          </button>
-        </div>
+      <Main>
+        <Title>Sala de aula</Title>
+        {/* <Carrossel> */}
+        <StyledBoxSalaDeAula>
+          <button onClick={SalaDeAula}>3° ano</button>
+          <button onClick={SalaDeAula}>4° ano</button>
+          <button onClick={SalaDeAula}>5° ano</button>
+          <button onClick={SalaDeAula}>6° ano</button>
+          <button onClick={SalaDeAula}>7° ano</button>
+          <button onClick={SalaDeAula}>8° ano</button>
+          <button onClick={SalaDeAula}>9° ano</button>
+        </StyledBoxSalaDeAula>
+        {/* </Carrosskel> */}
 
-        <h2 className="tituloCorpo--app">Comece por Aqui</h2>
-        <div className="jogos--app">
-          <button
+        <Title>Comece por Aqui</Title>
+        <Container>
+          <SetaEsquerda
             onClick={handleEsquerdaClick1}
             className="seta--app esquerda--app"
-          ></button>
+          ></SetaEsquerda>
 
-          <div className="carrossel--app" ref={carrossel1}>
+          <Carrossel ref={carrossel1}>
             <a
               href={`https://www.google.com/doodles/celebrating-50-years-of-kids-coding?hl=pt-BR`}
               target="blank"
               className="link--app"
             >
-              <button className="botaoJogo--app">
-                <img
-                  className="imagemJogo--app"
-                  src={jogo_doodle}
-                  alt="Jogo Doodle do Google"
-                />
+              <BotaoAula>
+                <img src={jogo_doodle} alt="Jogo Doodle do Google" />
 
-                <div className="boxNomeJogo--app">
-                  <p className="nomeJogo--app">Doodle do Google</p>
+                <div>
+                  <p>Doodle do Google</p>
                 </div>
-              </button>
+              </BotaoAula>
             </a>
 
             {/*vai direto pra plataforma de jogo escolhido */}
@@ -114,16 +106,12 @@ export default function Home() {
               target="blank"
               className="link--app"
             >
-              <button className="botaoJogo--app">
-                <img
-                  className="imagemJogo--app"
-                  src={jogo_tetris}
-                  alt="Tetris"
-                />
-                <div className="boxNomeJogo--app">
-                  <p className="nomeJogo--app">Tetris</p>
+              <BotaoAula>
+                <img src={jogo_tetris} alt="Tetris" />
+                <div>
+                  <p>Tetris</p>
                 </div>
-              </button>
+              </BotaoAula>
             </a>
             {/* vai direto pra plataforma de jogo escolhido */}
             <a
@@ -131,16 +119,12 @@ export default function Home() {
               target="blank"
               className="link--app"
             >
-              <button className="botaoJogo--app">
-                <img
-                  className="imagemJogo--app"
-                  src={jogo_cargoBot}
-                  alt="Cargo Bot"
-                />
-                <div className="boxNomeJogo--app">
-                  <p className="nomeJogo--app">Cargo Bot</p>
+              <BotaoAula>
+                <img src={jogo_cargoBot} alt="Cargo Bot" />
+                <div>
+                  <p>Cargo Bot</p>
                 </div>
-              </button>
+              </BotaoAula>
             </a>
             {/* vai direto pra plataforma de jogo escolhido */}
             <a
@@ -148,49 +132,41 @@ export default function Home() {
               target="blank"
               className="link--app"
             >
-              <button className="botaoJogo--app">
-                <img
-                  className="imagemJogo--app"
-                  src={jogo_scratch}
-                  alt="Scratch"
-                />
-                <div className="boxNomeJogo--app">
-                  <p className="nomeJogo--app">Scratch</p>
+              <BotaoAula>
+                <img src={jogo_scratch} alt="Scratch" />
+                <div>
+                  <p>Scratch</p>
                 </div>
-              </button>
+              </BotaoAula>
             </a>
 
             {/*vai direto pra plataforma de jogo escolhido */}
-          </div>
-          <button
+          </Carrossel>
+          <SetaDireita
             onClick={handleDireitaClick1}
             className="seta--app direita--app"
-          ></button>
-        </div>
+          ></SetaDireita>
+        </Container>
 
-        <h2 className="tituloCorpo--app">Aprenda css jogando</h2>
+        <Title>Aprenda css jogando</Title>
 
-        <div className="jogos--app">
-          <button
+        <Container>
+          <SetaEsquerda
             onClick={handleEsquerdaClick2}
             className="seta--app esquerda--app"
-          ></button>
-          <div className="carrossel--app" ref={carrossel2}>
+          ></SetaEsquerda>
+          <Carrossel ref={carrossel2}>
             <a
               href={`https://flexboxfroggy.com/`}
               target="blank"
               className="link--app"
             >
-              <button className="botaoJogo--app">
-                <img
-                  className="imagemJogo--app"
-                  src={jogo_flexboxFroggy}
-                  alt="Flexbox Froggy"
-                />
-                <div className="boxNomeJogo--app">
-                  <p className="nomeJogo--app">Flexbox Froggy</p>
+              <BotaoAula>
+                <img src={jogo_flexboxFroggy} alt="Flexbox Froggy" />
+                <div>
+                  <p>Flexbox Froggy</p>
                 </div>
-              </button>
+              </BotaoAula>
             </a>
             {/*vai direto pra plataforma de jogo escolhido*/}
             <a
@@ -198,16 +174,16 @@ export default function Home() {
               target="blank"
               className="link--app"
             >
-              <button className="botaoJogo--app">
+              <BotaoAula>
                 <img
                   class="imagemJogo--app"
                   src={jogo_gridGarden}
                   alt="Grid Garden"
                 />
-                <div className="boxNomeJogo--app">
-                  <p className="nomeJogo--app">Grid Garden</p>
+                <div>
+                  <p>Grid Garden</p>
                 </div>
-              </button>
+              </BotaoAula>
             </a>
             {/*vai direto pra plataforma de jogo escolhido*/}
             <a
@@ -215,16 +191,12 @@ export default function Home() {
               target="blank"
               className="link--app"
             >
-              <button className="botaoJogo--app">
-                <img
-                  className="imagemJogo--app"
-                  src={jogo_cssDiner}
-                  alt="CSS Diner"
-                />
-                <div className="boxNomeJogo--app">
-                  <p className="nomeJogo--app">CSS Diner</p>
+              <BotaoAula>
+                <img src={jogo_cssDiner} alt="CSS Diner" />
+                <div>
+                  <p>CSS Diner</p>
                 </div>
-              </button>
+              </BotaoAula>
             </a>
             {/*vai direto pra plataforma de jogo escolhido*/}
             <a
@@ -232,26 +204,22 @@ export default function Home() {
               target="blank"
               className="link--app"
             >
-              <button className="botaoJogo--app">
-                <img
-                  className="imagemJogo--app"
-                  src={jogo_flexboxDefense}
-                  alt="Flexbox Defense"
-                />
-                <div className="boxNomeJogo--app">
-                  <p className="nomeJogo--app">Flexbox Defense</p>
+              <BotaoAula>
+                <img src={jogo_flexboxDefense} alt="Flexbox Defense" />
+                <div>
+                  <p>Flexbox Defense</p>
                 </div>
-              </button>
+              </BotaoAula>
             </a>
 
             {/*  vai direto pra plataforma de jogo escolhido*/}
-          </div>
-          <button
+          </Carrossel>
+          <SetaDireita
             onClick={handleDireitaClick2}
             className="seta--app direita--app"
-          ></button>
-        </div>
-      </main>
+          ></SetaDireita>
+        </Container>
+      </Main>
       <Rodape />
     </div>
   );

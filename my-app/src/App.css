@@ -884,103 +884,28 @@ button:hover {
   padding: 1.5rem 0;
 }
 
-.saladeaula--app {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
 
-.serie--app {
-  width: 160px;
-  height: 70px;
-  background: #000000;
-  border-radius: 20px;
-  border: none;
-  color: #6100C0;
-  font-size: 17px;
-  font-weight: bold;
-}
-
-.serie--app:hover {
-  transform: scale(1.1);
-}
-
-.jogos--app,
-.aulas--app {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 360px;
-  width: 100%;
-}
-
-.carrossel--app {
-  max-width: 80vw;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-}
-
-.carrossel--app::-webkit-scrollbar {
-  display: none;
-}
 
 .link--app {
   text-decoration: none;
 }
 
 .botaoJogo--app,
-.botaoAula--app {
-  width: 250px;
-  height: 311px;
-  background: #6100C0;
-  color: #ffffff;
-  text-align: center;
-  border-radius: 20px;
-  transition: transform 0.2s;
-  border: none;
-  display: flex;
-  flex-direction: column;
-  margin: 0 20px;
-  flex: none;
-}
+.botaoAula--app {}
 
 .botaoJogo--app:hover,
-.botaoAula--app:hover {
-  transform: scale(1.1);
-  background-image: linear-gradient(45deg, #0000, #040408);
-}
+.botaoAula--app:hover {}
 
 .imagemJogo--app,
-.imagemAula--app {
-  width: 100%;
-  height: auto;
-  text-align: center;
-  border-radius: 15px 15px 0 0;
-}
+.imagemAula--app {}
 
-.imagemAula--app {
-  border-radius: 15px;
-  height: 100%;
-}
+.imagemAula--app {}
 
 .boxNomeJogo--app,
-.boxNomeAula--app {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1rem;
-}
+.boxNomeAula--app {}
 
 .nomeJogo--app,
-.nomeAula--app {
-  font-weight: 700;
-  font-size: 20px;
-}
+.nomeAula--app {}
 
 .esquerda--app {
   background: url("./screen/img/angulo-esquerdo.png") no-repeat center / cover;
@@ -990,12 +915,7 @@ button:hover {
   background: url("./screen/img/angulo-direito.png") no-repeat center / cover;
 }
 
-.seta--app {
-  width: 30px;
-  height: 30px;
-  border: none;
-  margin: 0 1rem;
-}
+.seta--app {}
 
 /* FIM TELAS APP (PÓS LOGIN/HOME E SALA DE AULA) */
 
@@ -1428,22 +1348,13 @@ button:hover {
     font-size: 1.3rem;
   }
 
-  .serie--app {
-    width: 90px;
-    height: 50px;
-    border-radius: 18px;
-  }
+  .serie--app {}
 
   .jogos--app,
-  .aulas--app {
-    height: 260px;
-  }
+  .aulas--app {}
 
   .botaoJogo--app,
-  .botaoAula--app {
-    width: 150px;
-    height: 211px;
-  }
+  .botaoAula--app {}
 
   .imagemAula--app {
     border-radius: 15px;
@@ -1451,10 +1362,7 @@ button:hover {
   }
 
   .nomeJogo--app,
-  .nomeAula--app {
-    font-weight: 700;
-    font-size: 13px;
-  }
+  .nomeAula--app {}
 
   .seta--app {
     width: 25px;

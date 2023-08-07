@@ -5,6 +5,13 @@ import { useParams } from "react-router-dom";
 import { Header } from "../../StylesGlobal/Header/Header";
 import NavType2 from "../../StylesGlobal/Header/NavType2";
 import { TitleHeader } from "../../StylesGlobal/Header/TitleHeader";
+import { Main } from "../../StylesGlobal/CorpoApp/Main";
+import { Title } from "../../StylesGlobal/CorpoApp/Title";
+import { Container } from "../../StylesGlobal/CorpoApp/Container";
+import { Carrossel } from "../../StylesGlobal/CorpoApp/Carrossel";
+import { BotaoAula } from "../../StylesGlobal/CorpoApp/BotaoAula";
+import { SetaEsquerda } from "../../StylesGlobal/CorpoApp/BotaoSeta/SetaEsquerda";
+import { SetaDireita } from "../../StylesGlobal/CorpoApp/BotaoSeta/SetaDireita";
 
 import Rodape from "../../StylesGlobal/Rodape/Rodape";
 import aulaLogica_1 from "../img/aulaLogica_1.png";
@@ -58,110 +65,110 @@ export default function SalaDeAula() {
         </TitleHeader>
       </Header>
 
-      <main className="corpo--app">
-        <h2 className="tituloCorpo--app">Aulas</h2>
+      <Main>
+        <Title>Aulas</Title>
 
-        <div class="aulas--app">
-          <button
+        <Container>
+          <SetaEsquerda
             className="seta--app esquerda--app"
             onClick={handleEsquerdaClick1}
-          ></button>
-          <div className="carrossel--app" ref={carrossel1}>
-            <button className="botaoAula--app" onClick={Curso}>
+          ></SetaEsquerda>
+          <Carrossel ref={carrossel1}>
+            <BotaoAula onClick={Curso}>
               <img
                 className="imagemAula--app"
                 src={aulaLogica_1}
                 alt="Lógica de Programação - 1"
               />
-              <div className="boxNomeAula--app">
-                <p className="nomeAula--app">Lógica de Programação - 1</p>
+              <div>
+                <p>Lógica de Programação - 1</p>
               </div>
-            </button>
+            </BotaoAula>
             {/** vai direto pra plataforma de jogo escolhido*/}
-            <button className="botaoAula--app" onClick={Curso}>
+            <BotaoAula onClick={Curso}>
               <img
                 className="imagemAula--app"
                 src={aulaLogica_2}
                 alt="Lógica de Programação - 2"
               />
-              <div className="boxNomeAula--app">
-                <p className="nomeAula--app">Lógica de Programação - 2</p>
+              <div>
+                <p>Lógica de Programação - 2</p>
               </div>
-            </button>{" "}
+            </BotaoAula>{" "}
             {/** vai direto pra plataforma de jogo escolhido*/}
-            <button className="botaoAula--app" onClick={Curso}>
+            <BotaoAula onClick={Curso}>
               <img
                 class="imagemAula--app"
                 src={aulaPython_1}
                 alt="Primeiros passos com Python"
               />
-              <div className="boxNomeAula--app">
-                <p className="nomeAula--app">Primeiros passos com Python</p>
+              <div>
+                <p>Primeiros passos com Python</p>
               </div>
-            </button>
+            </BotaoAula>
             {/** vai direto pra plataforma de jogo escolhido*/}
-            <button className="botaoAula--app" onClick={Curso}>
+            <BotaoAula onClick={Curso}>
               <img
                 class="imagemAula--app"
                 src={aulaPython_2}
                 alt="Criando jogos com Python"
               />
-              <div className="boxNomeAula--app">
-                <p className="nomeAula--app">Criando jogos com Python</p>
+              <div>
+                <p>Criando jogos com Python</p>
               </div>
-            </button>
-          </div>
-          <button
+            </BotaoAula>
+          </Carrossel>
+          <SetaDireita
             className="seta--app direita--app"
             onClick={handleDireitaClick1}
-          ></button>
+          ></SetaDireita>
           {/** vai direto pra plataforma de jogo escolhido*/}
-        </div>
+        </Container>
 
-        <h2 className="tituloCorpo--app">Dicas</h2>
-        <div className="aulas--app">
-          <button
+        <Title>Dicas</Title>
+        <Container>
+          <SetaEsquerda
             className="seta--app esquerda--app"
             onClick={handleEsquerdaClick2}
-          ></button>
-          <div className="carrossel--app" ref={carrossel2}>
-            <button className="botaoAula--app" onClick={Dicas}>
+          ></SetaEsquerda>
+          <Carrossel ref={carrossel2}>
+            <BotaoAula onClick={Dicas}>
               <img class="imagemAula--app" src={programacao_1} alt="" />
-            </button>
+            </BotaoAula>
             {/** vai direto pra plataforma de jogo escolhido*/}
-            <button className="botaoAula--app" onClick={Dicas}>
+            <BotaoAula onClick={Dicas}>
               <img class="imagemAula--app" src={html_1} alt="" />
-            </button>
+            </BotaoAula>
             {/** vai direto pra plataforma de jogo escolhido*/}
-            <button className="botaoAula--app" onClick={Curso}>
+            <BotaoAula onClick={Curso}>
               <img class="imagemAula--app" src={programacao_1} alt="" />
-            </button>
+            </BotaoAula>
             {/** vai direto pra plataforma de jogo escolhido*/}
-            <button className="botaoAula--app" onClick={Curso}>
+            <BotaoAula onClick={Curso}>
               <img class="imagemAula--app" src={html_1} alt="" />
-            </button>
-            <button className="botaoAula--app" onClick={Curso}>
+            </BotaoAula>
+            <BotaoAula onClick={Curso}>
               <img class="imagemAula--app" src={programacao_1} alt="" />
-            </button>
+            </BotaoAula>
             {/** vai direto pra plataforma de jogo escolhido*/}
-            <button className="botaoAula--app" onClick={Curso}>
+            <BotaoAula onClick={Curso}>
               <img class="imagemAula--app" src={html_1} alt="" />
-            </button>
-            <button className="botaoAula--app" onClick={Curso}>
+            </BotaoAula>
+            <BotaoAula onClick={Curso}>
               <img class="imagemAula--app" src={programacao_1} alt="" />
-            </button>
+            </BotaoAula>
             {/** vai direto pra plataforma de jogo escolhido*/}
-            <button className="botaoAula--app" onClick={Curso}>
+            <BotaoAula onClick={Curso}>
               <img class="imagemAula--app" src={html_1} alt="" />
-            </button>
-          </div>
+            </BotaoAula>
+          </Carrossel>
           {/** vai direto pra plataforma de jogo escolhido*/}
-          <button
+          <SetaDireita
             className="seta--app direita--app"
             onClick={handleDireitaClick2}
-          ></button>
-        </div>
-      </main>
+          ></SetaDireita>
+        </Container>
+      </Main>
 
       <Rodape />
     </div>
