@@ -34,7 +34,8 @@ export default function Perfil() {
     const fetchData = async () => {
       try {
         const response = await Axios.get(
-          `http://localhost:3000/cadastro?c_emailresp_cont=${decryptedEmail}`
+          `https://projeto-final-start.vercel.app/cadastro?c_emailresp_cont=${decryptedEmail}`
+          // `http://localhost:3000/cadastro?c_emailresp_cont=${decryptedEmail}`
         );
 
         if (response.data[0]) {

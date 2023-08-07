@@ -23,18 +23,6 @@ export default function SalaDeAula() {
 
   const encodedEncryptedEmail = encodeURIComponent(c_emailresp_cont);
 
-  function Inicio() {
-    navigate(`/home/${encodedEncryptedEmail}`);
-  }
-
-  function Perfil() {
-    navigate(`/perfil/${encodedEncryptedEmail}`);
-  }
-
-  function Sair() {
-    navigate("/");
-  }
-
   function Curso() {
     navigate(`/curso/${encodedEncryptedEmail}`);
   }
@@ -64,18 +52,6 @@ export default function SalaDeAula() {
   return (
     <div className="App">
       <Header>
-        {/* <nav className="navegacaoCabecalho--app">
-          <button className="botaoVoltar--curso" onClick={Inicio}>
-            <div className="iconVoltar--curso"></div>
-          </button>
-          <button className="logoInicio--app" onClick={Inicio}></button>
-          <div className="boxCabecalho--app">
-            <button className="botaoPerfil--app" onClick={Perfil}></button>
-            <button className="botaoSair--app" onClick={Sair}>
-              Sair
-            </button>
-          </div>
-        </nav> */}
         <NavType2 />
         <TitleHeader>
           <h1>Sala de Aula</h1>

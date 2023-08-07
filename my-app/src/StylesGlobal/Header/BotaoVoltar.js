@@ -34,5 +34,12 @@ export const BotaoVoltar = styled.button`
   }
 
   @media (max-width: 430px) {
+    height: 30px;
+    width: 30px;
+
+    div {
+      height: 20px;
+      width: 20px;
+    }
   }
 `;

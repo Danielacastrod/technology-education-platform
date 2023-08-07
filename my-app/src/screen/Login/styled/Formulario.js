@@ -84,7 +84,8 @@ export default function Formulario() {
     };
 
     const response = await Axios.get(
-      `http://localhost:3000/cadastro?c_emailresp_cont=${dados.c_emailresp_cont}`
+      `https://projeto-final-start.vercel.app/cadastro?c_emailresp_cont=${dados.c_emailresp_cont}`
+      // `http://localhost:3000/cadastro?c_emailresp_cont=${dados.c_emailresp_cont}`
     );
     if (response.data.length === 0) {
       alert("Email não encontrado.");
