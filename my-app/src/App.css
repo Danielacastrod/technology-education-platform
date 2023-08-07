@@ -1010,58 +1010,91 @@ li {
 }
 
 /* Barra de navegação */
-header,
+/*Éverson: Comentei pq tá dando algum erro, aí vc só descomenta e continua normalmente*/
+/* <<<<<<< HEAD header,
 .navbar {
   background-color: #6100C0;
   ;
 }
 
-#nav-container {
+=======header,
+.navbar {
+  background-color: #6100C0;
+  ;
+}
+
+>>>>>>>606dfb80e3c13137249065838c5e745e54389932 #nav-container {
   padding-top: 0;
   padding-bottom: 0;
-}
+} */
 
 #logo {
-  width: 80px;
+  width: 50px;
 }
 
-.navbar-brand {
+/*.navbar-brand {
   padding: 0;
   color: #FFF;
 }
 
 .navbar-brand:hover {
   color: #FFF;
-}
+}*/
 
 #navbar-links a {
   color: #FFF;
 }
 
+/*
 .navbar-expand-lg .navbar-nav .nav-link {
   padding: 1rem .8rem;
-}
+} 
 
 .nav-item.active {
   border-bottom: 3px solid #FFF;
-}
+}*/
 
 /* Slider */
 
-.container-fluid {
-  padding: 0;
-}
-
-#mainSlider .carousel-inner,
+/*Éverson: Comentei pq tá dando algum erro, aí vc só descomenta e continua normalmente*/
+/* <<<<<<< HEAD #mainSlider .carousel-inner,
 #mainSlider .carousel-item {
-  height: 95vh;
+  ======= */
+
+/* Estilos para o carrossel */
+.carousel {
+  overflow: hidden;
+  position: relative;
+
 }
 
-#mainSlider .carousel-caption {
+/*Éverson: Comentei pq tá dando algum erro, aí vc só descomenta e continua normalmente*/
+/* .carousel .carousel-inner,
+  .carousel .carousel-item {
+    >>>>>>>606dfb80e3c13137249065838c5e745e54389932 height: 95vh;
+  } */
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  opacity: 0.5;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+.carousel .carousel-caption {
   top: 30%;
 }
 
-#mainSlider .carousel-caption h2 {
+.carousel .carousel-caption h2 {
   color: #FFF;
   text-align: center;
   text-shadow: -6px 4px 0px 0px #8133CD;
@@ -1073,10 +1106,10 @@ header,
   text-transform: uppercase;
 }
 
-#mainSlider .carousel-caption p {
+.carousel .carousel-caption p {
   font-size: 25px;
   font-weight: 400;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
   color: #FFF;
 }
 
@@ -1103,11 +1136,35 @@ header,
   background-color: #fff;
 }
 
-/* Sobre a empresa */
+/* Estilos para fazer a borda infinita 
+.carousel-inner::before,
+.carousel-inner::after {
+  content: "";
+  display: block;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+*/
+
+
+
+
+
+/*
+ 
+
+
+
+
+/*.carousel-indicators .active {
+  background-color: #fff;
+}
+
+/* Sobre a empresa 
 
 #about-area {
   background-color: #F9F9F9;
-}
+} */
 
 .main-title {
   color: #444;
@@ -1141,10 +1198,11 @@ header,
   line-height: 30px;
 }
 
+/*
 #about-list i {
   color: #6100C0;
   margin-right: 15px;
-}
+}*/
 
 /* Serviços */
 
@@ -1164,48 +1222,54 @@ header,
   color: #444;
 }
 
+/*
 .service-box h4 {
   font-size: 24px;
   margin-bottom: 20px;
-}
+}*/
 
 .service-box:hover>i,
 .service-box:hover>h4 {
   color: #6100C0;
 }
 
-/* Dados */
-
-.circle-box div {
-  padding: 0 40px;
-}
-
-.progressbar-text {
-  font-weight: bold;
-  font-size: 32px;
-}
-
-#data-area p {
-  color: #FFF;
-  text-align: center;
-  font-size: 26px;
-  margin-top: 20px;
-}
 
 /* Time */
 .avatar {
   height: 270px;
 }
 
-.card {
-  min-height: 300px;
+/*Éverson: Comentei pq tá dando algum erro, aí vc só descomenta e continua normalmente*/
+/* <<<<<<< HEAD .card {
+    min-height: 300px;
+  }
+
+  =======>>>>>>>606dfb80e3c13137249065838c5e745e54389932 .card-body {
+    text-align: center;
+    width: 60px;
+  } */
+
+.card-title,
+.card-text {
+  white-space: nowrap;
+
 }
 
-.card-body {
-  text-align: center;
+.low-img {
+  width: 90%;
+  height: auto;
+  display: flex;
 }
 
-/* área tecnológica  */
+.portif-cont {
+  padding: 0px;
+  padding-left: 200px;
+  padding-right: 200px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* área tecnológica  
 
 #apply-area {
   height: 500px;
@@ -1221,8 +1285,8 @@ header,
   text-align: center;
 }
 
-#company-img {
-  background-image: url('./screen/img/empresa.jpg');
+/*#company-img {
+  background-image: url('../img/empresa.jpg');
   background-size: cover;
   height: 100%;
 }
@@ -1256,13 +1320,14 @@ header,
 #apply-btn:hover {
   border-color: #6100C0;
   background-color: #6100C0;
-}
+} */
 
 /* Portfólio */
 
 .project-box {
   margin-bottom: 30px;
 }
+
 
 #filter-btn-box {
   margin-bottom: 50px;
@@ -1320,13 +1385,13 @@ header,
   color: #FFF;
   text-transform: uppercase;
   height: 40px;
-  padding: 0 30px;
-  margin-left: -130px;
+  padding: 0 41px;
+  margin-left: -110px;
   position: absolute;
   transition: .5s;
 }
 
-#news-btn:hover {
+/*#news-btn:hover {
   background-color: #FFF;
   color: #65DAF9;
 }
@@ -1344,16 +1409,16 @@ header,
   border-bottom: 1px solid #6100C0;
 }
 
+/*
 .contact-box i {
   color: #444;
-  border: solid 1px #444;
   border-radius: 50%;
   width: 55px;
   height: 55px;
   line-height: 55px;
   font-size: 24px;
   margin-bottom: 20px;
-}
+}*/
 
 .contact-box p {
   font-size: 16px;
