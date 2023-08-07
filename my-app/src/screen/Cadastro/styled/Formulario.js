@@ -182,14 +182,21 @@ export default function Formulario() {
       c_senha_cont: c_senha_cont.value,
     };
 
-    const response = await Axios.get(
-      `https://projeto-final-start.vercel.app/cadastro?c_emailresp_cont=${dados.c_emailresp_cont}`
-      // `http://localhost:3000/cadastro?c_emailresp_cont=${dados.c_emailresp_cont}`
-    );
-    if (response.data.length > 0) {
-      alert("Este e-mail já está cadastrado.");
+    try {
+      const response = await Axios.get(
+        `https://projeto-final-start.vercel.app/cadastro?c_emailresp_cont=${dados.c_emailresp_cont}`
+        // `http://localhost:3000/cadastro?c_emailresp_cont=${dados.c_emailresp_cont}`
+      );
+      if (response.data.length > 0) {
+        alert("Este e-mail já está cadastrado.");
+        return;
+      }
+    } catch (error) {
+      // Capturar erros e exibir uma mensagem genérica de erro
+      alert("Ocorreu um erro ao verificar o e-mail.");
       return;
     }
+
     // await Axios.post("http://localhost:3000/cadastro", dados);
     await Axios.post("https://projeto-final-start.vercel.app/cadastro", dados);
     setAtializaGrid(!atualizaGrid);
