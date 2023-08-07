@@ -4,12 +4,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Inicio from "../screen/Index";
 import Cadastro from "../screen/Cadastro/Cadastro";
 import Login from "../screen/Login/Login";
-import Home from "../screen/Home";
+import Home from "../screen/Home/Home";
 import Perfil from "../screen/Perfil/Perfil";
 import RecSenha from "../screen/RecuperaSenha/RecSenha";
 import TermosECondicoes from "../screen/TermosECondicoes";
 import PoliticaDePrivacidade from "../screen/PoliticaDePrivacidade";
-import SalaDeAula from "../screen/SalaDeAula";
+import SalaDeAula from "../screen/SalaDeAula/SalaDeAula";
 import Curso from "../screen/Curso";
 import Dicas from "../screen/Dicas";
 

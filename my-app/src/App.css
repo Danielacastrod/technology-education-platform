@@ -799,13 +799,6 @@ button:hover {
 
 /* INÍCIO TELAS APP (PÓS LOGIN/HOME E SALA DE AULA) */
 
-.cabecalho--app {
-  background: url("../src/screen/img/capa.png") no-repeat center / cover;
-  height: 443px;
-  display: flex;
-  flex-direction: column;
-}
-
 .navegacaoCabecalho--app {
   display: flex;
   width: 100%;
@@ -851,12 +844,7 @@ button:hover {
   width: 54px;
 }
 
-.boxTituloCabecalho--app {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 100%;
-}
+.boxTituloCabecalho--app {}
 
 .tituloCabecalho--app {
   color: #ffff;
@@ -1414,6 +1402,8 @@ button:hover {
 
 
   /* INÍCIO TELAS APP (PÓS LOGIN/HOME E SALA DE AULA) */
+
+  /* 768 */
 
   .navegacaoCabecalho--app {
     padding: 0 1rem;
