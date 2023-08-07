@@ -1,7 +1,7 @@
 import "../App.css";
 import React from "react";
 import logo from "./img/logo-developer-kids.png";
-import Rodape from "./Rodape";
+import Rodape from "../StylesGlobal/Rodape/Rodape";
 
 export default function PoliticaDePrivacidade() {
   return (
