@@ -5,7 +5,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js.map';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck, faPhone, faMobileScreenButton, faEnvelope, faLocationDot, faHandPointer, faChildren , faPaintbrush, faUsers, faHandshakeAngle } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faPhone, faMobileScreenButton, faEnvelope, faLocationDot, faHandPointer, faChildren, faPaintbrush, faUsers, faHandshakeAngle } from '@fortawesome/free-solid-svg-icons'
 import logoDeveloperKids from "./img/logo-developer-kids.ico"
 import profile1 from "./img/profile1.jpeg"
 import profile2 from "./img/profile2.jpeg"
@@ -87,13 +87,13 @@ export default function MainScreen() {
         </div>
       </header>
       <main>
-        <div className="container-fluid">
+        <div className="carousel">
           {/* slider */}
           <div>
-            <Carousel interval={4000} fade={true} pause={false}>
-              <Carousel.Item>
+            <Carousel interval={4000} fade={true} pause={false} className="carousel-inner">
+              <Carousel.Item className="carousel-item" >
                 <img src={walp} className="d-block w-100" alt="Primeiro slide" />
-                <Carousel.Caption>
+                <Carousel.Caption className="carousel-caption">
                   <h2>Crie você mesmo seus jogos</h2>
                   <p>Jogos que facilitam a aprendizagem e melhoram o raciocínio lógico</p>
                   <a onClick={cadastrar} target="_blank" className="main-btn">Torne-se aluno</a>
@@ -139,11 +139,11 @@ export default function MainScreen() {
                   <p>Todo nosso design é pensado de forma que cative de forma expontânea! Você pode aprender se divertindo.</p>
                   <p>Quais os benefícios?</p>
                   <ul id="about-list">
-                    <li><i className="fas fa-check" /><FontAwesomeIcon icon={faCheck} className="me-1" /> Estímulo do raciocínio lógico e da criatividade</li>
-                    <li><i className="fas fa-check" /><FontAwesomeIcon icon={faCheck} className="me-1" /> Ajuda na organização</li>
-                    <li><i className="fas fa-check" /><FontAwesomeIcon icon={faCheck} className="me-1" /> Melhora o desempenho em matemática, inglês e física</li>
-                    <li><i className="fas fa-check" /><FontAwesomeIcon icon={faCheck} className="me-1" /> Ajuda nas descobertas pessoais e profissionais</li>
-                    <li><i className="fas fa-check" /><FontAwesomeIcon icon={faCheck} className="me-1" /> Capacidade de solucionar problemas</li>
+                    <li><FontAwesomeIcon icon={faCheck} className="me-1" /> Estímulo do raciocínio lógico e da criatividade</li>
+                    <li><FontAwesomeIcon icon={faCheck} className="me-1" /> Ajuda na organização</li>
+                    <li><FontAwesomeIcon icon={faCheck} className="me-1" /> Melhora o desempenho em matemática, inglês e física</li>
+                    <li><FontAwesomeIcon icon={faCheck} className="me-1" /> Ajuda nas descobertas pessoais e profissionais</li>
+                    <li><FontAwesomeIcon icon={faCheck} className="me-1" /> Capacidade de solucionar problemas</li>
                   </ul>
                 </div>
               </div>
@@ -157,32 +157,32 @@ export default function MainScreen() {
                   <h3 className="main-title">O que garantimos?</h3>
                 </div>
                 <div className="col-md-4 service-box">
-                  <i className="fas fa-mobile-alt" /><FontAwesomeIcon icon={faMobileScreenButton} className="me-1" />
+                  <i /><FontAwesomeIcon icon={faMobileScreenButton} className="me-1" />
                   <h4>Acessibilidade</h4>
                   <p>Acesse nossa plataforma de qualquer dispositivo, seja ele smartPhone, tablet ou computador .</p>
                 </div>
                 <div className="col-md-4 service-box">
-                  <i className="fas fa-shopping-cart" /><FontAwesomeIcon icon={faChildren} />
+                  <i /><FontAwesomeIcon icon={faChildren} />
                   <h4>Mentoria</h4>
                   <p>Proporcionamos um acompanhamento exclusivo para os usuários.</p>
                 </div>
                 <div className="col-md-4 service-box">
-                  <i className="fas fa-paint-brush" /><FontAwesomeIcon icon={faPaintbrush} />
+                  <i /><FontAwesomeIcon icon={faPaintbrush} />
                   <h4>Design Criativo</h4>
                   <p>Nossos designers são altamente capacitados para atrair cada vez mais o público infanto-juvenil.</p>
                 </div>
                 <div className="col-md-4 service-box">
-                  <i className="fab fa-google" /><FontAwesomeIcon icon={faUsers} />
+                  <i /><FontAwesomeIcon icon={faUsers} />
                   <h4>Público aberto</h4>
                   <p>Com nosso serviço gratuito, disponibilizamos variados conteúdos visando o futuro da sociedade.</p>
                 </div>
                 <div className="col-md-4 service-box">
-                  <i className="fas fa-hands-helping" /><FontAwesomeIcon icon={faHandshakeAngle} />
+                  <i /><FontAwesomeIcon icon={faHandshakeAngle} />
                   <h4>Suporte 24/7</h4>
                   <p>Você sempre terá alguem da equipe disponível para suporte, em diferentes plataformas. (chat, email, skype).</p>
                 </div>
                 <div className="col-md-4 service-box">
-                  <i className="fas fa-user" /><FontAwesomeIcon icon={faHandPointer} />
+                  <i /><FontAwesomeIcon icon={faHandPointer} />
                   <h4>Interatividade</h4>
                   <p>Garantimos um conteúdo de fácil acesso e entendimento simples para gerar uma aprendizagem participativa.</p>
                 </div>
@@ -210,7 +210,7 @@ export default function MainScreen() {
                   <div className="card">
                     <img src={profile2} className="card-img-top avatar" alt="Imagem de Perfil 2" />
                     <div className="card-body">
-                      <h5 className="card-title text-nowrap">Daniel Caldeira</h5>
+                      <h5 className="card-title">Daniel Caldeira</h5>
                       <p className="card-text">Front-end Developer</p>
                     </div>
                   </div>
@@ -228,7 +228,7 @@ export default function MainScreen() {
                   <div className="card">
                     <img src={profile4} className="card-img-top avatar" alt="Imagem de Perfil 4" />
                     <div className="card-body">
-                      <h5 className="card-title text-nowrap">Dinaide Barbosa</h5>
+                      <h5 className="card-title">Dinaide Barbosa</h5>
                       <p className="card-text">Front-end Developer</p>
                     </div>
                   </div>
@@ -284,24 +284,27 @@ export default function MainScreen() {
                 Cursos
               </button>
             </div>
-            <div className="col-md-4 project-box jogos" style={{ display: (visibleType === 'jogos' || visibleType === 'todos') ? 'block' : 'none' }}>
-              <img src={jogo1} className="img-fluid" alt="Projeto 1" />
+            <div id="portfolio-area" className="row portif-cont">
+              <div className="col-md-4 project-box jogos" style={{ display: (visibleType === 'jogos' || visibleType === 'todos') ? 'block' : 'none' }}>
+                <img src={jogo1} className="img-fluid low-img" alt="Projeto 1" />
+              </div>
+              <div className="col-md-4 project-box jogos" style={{ display: (visibleType === 'jogos' || visibleType === 'todos') ? 'block' : 'none' }}>
+                <img src={jogo2} className="img-fluid low-img" alt="Projeto 2" />
+              </div>
+              <div className="col-md-4 project-box jogos" style={{ display: (visibleType === 'jogos' || visibleType === 'todos') ? 'block' : 'none' }}>
+                <img src={jogo3} className="img-fluid low-img" alt="Projeto 3" />
+              </div>
+              <div className="col-md-4 project-box cursos" style={{ display: (visibleType === 'cursos' || visibleType === 'todos') ? 'block' : 'none' }}>
+                <img src={curso1} className="img-fluid low-img" alt="Projeto 4" />
+              </div>
+              <div className="col-md-4 project-box cursos" style={{ display: (visibleType === 'cursos' || visibleType === 'todos') ? 'block' : 'none' }}>
+                <img src={curso2} className="img-fluid low-img" alt="Projeto 5" />
+              </div>
+              <div className="col-md-4 project-box cursos" style={{ display: (visibleType === 'cursos' || visibleType === 'todos') ? 'block' : 'none' }}>
+                <img src={curso3} className="img-fluid low-img" alt="Projeto 6" />
+              </div>
             </div>
-            <div className="col-md-4 project-box jogos" style={{ display: (visibleType === 'jogos' || visibleType === 'todos') ? 'block' : 'none' }}>
-              <img src={jogo2} className="img-fluid" alt="Projeto 2" />
-            </div>
-            <div className="col-md-4 project-box jogos" style={{ display: (visibleType === 'jogos' || visibleType === 'todos') ? 'block' : 'none' }}>
-              <img src={jogo3} className="img-fluid" alt="Projeto 3" />
-            </div>
-            <div className="col-md-4 project-box cursos" style={{ display: (visibleType === 'cursos' || visibleType === 'todos') ? 'block' : 'none' }}>
-              <img src={curso1} className="img-fluid" alt="Projeto 4" />
-            </div>
-            <div className="col-md-4 project-box cursos" style={{ display: (visibleType === 'cursos' || visibleType === 'todos') ? 'block' : 'none' }}>
-              <img src={curso2} className="img-fluid" alt="Projeto 5" />
-            </div>
-            <div className="col-md-4 project-box cursos" style={{ display: (visibleType === 'cursos' || visibleType === 'todos') ? 'block' : 'none' }}>
-              <img src={curso3} className="img-fluid" alt="Projeto 6" />
-            </div>
+
           </div>
           {/* Newsletter */}
           <div id="news-area">
@@ -327,7 +330,7 @@ export default function MainScreen() {
                 <h3 className="main-title">Entre em contato conosco</h3>
               </div>
               <div className="col-md-4 contact-box">
-                <i/><FontAwesomeIcon icon={faPhone} className="me-2"/>
+                <i /><FontAwesomeIcon icon={faPhone} className="me-2" />
                 <p><span className="contact-tile">Ligue para:</span> (48)99999-9999</p>
                 <p><span className="contact-tile">Horários:</span> 8:00 - 19:00</p>
               </div>

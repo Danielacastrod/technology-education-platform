@@ -1645,7 +1645,7 @@ p, li {
 /* Barra de navegação */
 header, .navbar {
   background-color: #6100C0;;
-}
+} 
 
 #nav-container {
   padding-top: 0;
@@ -1653,45 +1653,62 @@ header, .navbar {
 }
 
 #logo {
-  width: 80px;
+  width: 50px;
 }
 
-.navbar-brand {
+/*.navbar-brand {
   padding: 0;
   color: #FFF;
 }
 
 .navbar-brand:hover {
   color: #FFF;
-}
+}*/
 
 #navbar-links a {
   color: #FFF;
 }
-
+/*
 .navbar-expand-lg .navbar-nav .nav-link {
   padding: 1rem .8rem;
-}
+} 
 
 .nav-item.active {
   border-bottom: 3px solid #FFF;
-}
+}*/
 
 /* Slider */
 
-.container-fluid {
-  padding: 0;
-}
 
-#mainSlider .carousel-inner, #mainSlider .carousel-item {
+
+
+
+/* Estilos para o carrossel */
+.carousel {
+  overflow: hidden;
+  position: relative;
+  
+}
+.carousel .carousel-inner, .carousel .carousel-item {
   height: 95vh;
 }
-
-#mainSlider .carousel-caption {
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  opacity: 0.5;
+  transition: opacity 0.5s ease-in-out;
+}
+.carousel-item.active {
+  opacity: 1;
+}
+.carousel .carousel-caption {
   top: 30%;
 }
-
-#mainSlider .carousel-caption h2 {
+.carousel .carousel-caption h2 {
   color: #FFF;
   text-align: center;
   text-shadow: -6px 4px 0px 0px #8133CD;
@@ -1703,13 +1720,12 @@ header, .navbar {
   text-transform: uppercase;
 }
 
-#mainSlider .carousel-caption p {
+.carousel .carousel-caption p {
   font-size: 25px;
   font-weight: 400;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
   color: #FFF;
 }
-
 .main-btn {
   background-color: #6100C0;
   color: #FFF;
@@ -1720,7 +1736,7 @@ header, .navbar {
   border-radius: 30px;
   border: 3px solid transparent;
   transition: .5s;
-}
+} 
 
 .main-btn:hover {
   text-decoration: none;
@@ -1728,16 +1744,39 @@ header, .navbar {
   background-color: transparent;
   border-color: #fff;
 }
-
 .carousel-indicators .active {
   background-color: #fff;
 }
 
-/* Sobre a empresa */
+/* Estilos para fazer a borda infinita 
+.carousel-inner::before,
+.carousel-inner::after {
+  content: "";
+  display: block;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+*/
+
+
+
+
+
+/*
+ 
+
+
+
+
+/*.carousel-indicators .active {
+  background-color: #fff;
+}
+
+/* Sobre a empresa 
 
 #about-area {
   background-color: #F9F9F9;
-}
+} */
 
 .main-title {
   color: #444;
@@ -1753,28 +1792,29 @@ header, .navbar {
   position: absolute;
   top: 60px;
   left: 42.5%;
-}
+} 
 
 .about-title {
   font-size: 17px;
   color: #444;
   text-transform: uppercase;
   font-weight: bold;
-}
+} 
 
 #about-list {
   list-style: none;
   padding-left: 0;
-}
+} 
 
 #about-list li {
   line-height: 30px;
 }
 
+/*
 #about-list i {
   color: #6100C0;
   margin-right: 15px;
-}
+}*/
 
 /* Serviços */
 
@@ -1792,46 +1832,46 @@ header, .navbar {
   margin-bottom: 20px;
   color: #444;
 }
-
+/*
 .service-box h4 {
   font-size: 24px;
   margin-bottom: 20px;
-}
+}*/
 
 .service-box:hover > i, .service-box:hover > h4 {
   color: #6100C0;
 }
 
-/* Dados */
-
-.circle-box div {
-  padding: 0 40px;
-}
-
-.progressbar-text {
-  font-weight: bold;
-  font-size: 32px;
-}
-
-#data-area p {
-  color: #FFF;
-  text-align: center;
-  font-size: 26px;
-  margin-top: 20px;
-}
 
 /* Time */
 .avatar{
   height: 270px;
 }
-.card{
-  min-height: 300px;
-}
+
 .card-body {
   text-align: center;
+  width: 60px;
+}
+.card-title, .card-text{
+  white-space: nowrap;
+
 }
 
-/* área tecnológica  */
+.low-img {
+  width: 90%;
+  height: auto;
+  display: flex;
+}
+
+.portif-cont {
+  padding: 0px;
+  padding-left: 200px;
+  padding-right: 200px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* área tecnológica  
 
 #apply-area {
   height: 500px;
@@ -1850,7 +1890,7 @@ header, .navbar {
   background-image: url('../img/empresa.jpg');
   background-size: cover;
   height: 100%;
-}*/
+}
 
 #pattern-img h4, #pattern-img p {
   color: #FFF;
@@ -1880,13 +1920,14 @@ header, .navbar {
 #apply-btn:hover {
   border-color: #6100C0;
   background-color: #6100C0;
-}
+} */
 
 /* Portfólio */
 
 .project-box {
   margin-bottom: 30px;
 }
+
 
 #filter-btn-box {
   margin-bottom: 50px;
@@ -1943,13 +1984,13 @@ header, .navbar {
   color: #FFF;
   text-transform: uppercase;
   height: 40px;
-  padding: 0 30px;
-  margin-left: -130px;
+  padding: 0 41px;
+  margin-left: -110px;
   position: absolute;
   transition: .5s;
 }
 
-#news-btn:hover {
+/*#news-btn:hover {
   background-color: #FFF;
   color: #65DAF9;
 }
@@ -1966,17 +2007,16 @@ header, .navbar {
   margin-bottom: 50px;
   border-bottom: 1px solid #6100C0;
 }
-
+/*
 .contact-box i {
   color: #444;
-  border: solid 1px #444;
   border-radius: 50%;
   width: 55px;
   height: 55px;
   line-height: 55px;
   font-size: 24px;
   margin-bottom: 20px;
-}
+}*/
 
 .contact-box p {
   font-size: 16px;
