@@ -2075,21 +2075,27 @@ header, .navbar {
   
   /* geral */
   .container {
-    padding: 20px 0;
+    padding: 50px 0;
   }
   
   /* slider */
-  #mainSlider .carousel-inner, #mainSlider .carousel-item {
+  .carousel .carousel-inner, .carousel .carousel-item {
     height: auto;
   }
 
-  #mainSlider .carousel-caption h2 {
-    font-size: 28px;
+  .carousel .carousel-caption h2 {
+    font-size: 20px;
   }
 
-  #mainSlider .carousel-caption p {
-    font-size: 18px;
-    margin-bottom: 40px;
+  .carousel .carousel-caption p {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  .main-btn {
+    padding: 3px 8px;
+    font-size: 10px;
+    width: 10px;
   }
 
   .carousel-caption {
@@ -2099,16 +2105,7 @@ header, .navbar {
   
   /* about */
   #about-area img {
-    margin-top: 100px;
-  }
-  
-  /* data */
-  .circle-box div {
-    padding: 0 10px;
-  }
-
-  #data-area p {
-    font-size: 16px;
+    margin-top: 10px;
   }
   
   /* team */
@@ -2119,10 +2116,29 @@ header, .navbar {
   .card-text {
     font-size: 12px;
   }
+  .card {
+    width: 225px;
+    margin: auto;
+    margin-bottom: 10px;  
+    height: 270px;
+  }
+  .card-img-top {
+   height: 200px;
+  }
+  .card-body{
+    width: 100%;
+  }
+
 
   /* apply */
-  #apply-area .apply-box {
+  #portfolio-area .row {
     padding: 50px 25px;
+    margin: auto;
+    margin-left: 30px;
+    margin-top: auto ;
+  }
+  #filter-btn-box{
+    margin-bottom: auto;
   }
 
   /* news */
@@ -2147,6 +2163,8 @@ header, .navbar {
   #call-area p, #call-area #call-btn {
     font-size: 16px;
   }
+  
+
 
 }
 
@@ -2154,26 +2172,28 @@ header, .navbar {
 @media(max-width: 430px) {
 
   /* slider */
-  #mainSlider {
-    margin-top: 90px;
+  .carousel {
+    margin-top: 15px;
   }
 
-  #mainSlider .carousel-caption {
-    top: 5%;
+  .carousel .carousel-caption {
+    top: 20%;
   }
 
-  #mainSlider .carousel-caption h2 {
-    font-size: 27px;
+  .carousel .carousel-caption h2 {
+    font-size: 20px;
     margin-bottom: 40px;
   }
 
-  #mainSlider .carousel-caption p {
-    display: none;
+  .carousel .carousel-caption p {
+    font-size: 13px;
+    margin-bottom: 10px;
   }
 
   .carousel-caption .main-btn {
-    
+    padding: 3px 8px;
     font-size: 10px;
+    width: 10px;
   }
 
   /* about */
@@ -2186,30 +2206,30 @@ header, .navbar {
     margin-bottom: 30px;
   }
 
-  /* data */
-  .circle-box {
-    width: 50%;
-  }
-
-  #team-area .col-md-3 {
-    width: 50%;
-    margin-bottom: 30px;
-  }
-
   /* team */
   .card {
-    width: 150px;
+    width: 160px;
     margin: auto;
+    margin-bottom: 10px;  
+    height: 270px;
   }
-
-  /* apply */
+  .card-img-top {
+   height: 190px;
+  }
+  .card-body{
+    width: 100%;
+  }
+  .card-title {
+    text-align: center;
+  }
+  /* apply 
   #apply-area {
     height: auto;
   }
 
   #company-img {
     display: none;
-  }
+  }*/
 
   /* filter */
   #portfolio-area .filter-btn {
@@ -2217,12 +2237,18 @@ header, .navbar {
   }
 
   .project-box {
-    width: 50%;
+    width: 10%;
   }
-
+  /* entre em contato conosco */
+  #contact-area h3 {
+    white-space: nowrap;
+    font-size: 25px;
+  }
+ 
   /* news */
-  #news-area .main-title {
-    font-size: 24px;
+  #news-area h3 {
+    white-space: nowrap;
+    font-size: 21px;
   }
 
   #news-area p {

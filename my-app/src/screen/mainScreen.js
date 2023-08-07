@@ -22,10 +22,6 @@ import jogo3 from "./img/jogo2.jpeg"
 import curso1 from "./img/curso1.png"
 import curso2 from "./img/curso2.png"
 import curso3 from "./img/curso3.png"
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
 
 
 
@@ -135,7 +131,7 @@ export default function MainScreen() {
                 <div className="col-md-6">
                   <h3 className="about-title">Uma plataforma que pensa no futuro</h3>
                   <p>Nossos projetos são adaptados ao público infanto-juvenil.</p>
-                  <p>Após muitas pesquisas realizadas pela DevPro, adotamos um modelo de conteúdos interativos para chamar a atencão do nosso púbico alvo.</p>
+                  <p>Após muitas pesquisas realizadas pela Developer Kids, adotamos um modelo de conteúdos interativos para chamar a atencão do nosso púbico alvo.</p>
                   <p>Todo nosso design é pensado de forma que cative de forma expontânea! Você pode aprender se divertindo.</p>
                   <p>Quais os benefícios?</p>
                   <ul id="about-list">
@@ -241,20 +237,6 @@ export default function MainScreen() {
                       <p className="card-text">Front-end Developer</p>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* área tecnológica */}
-          <div id="apply-area">
-            <div className="container-fluid">
-              <div className="row">
-                <div className="col-md-6 apply-box" id="company-img" />
-                <div className="col-md-6 apply-box" id="pattern-img">
-                  <h4>Gosta da área tecnológica?</h4>
-                  <p>Clique no botão abaixo e confira os benefícios que disponibilizamos.</p>
-                  <p>Aqui você terá a chance de aprender com as melhores tecnologias e os profissionais mais capacitados.</p>
-                  <a href="#" className="main-btn" id="apply-btn">Saiba Mais</a>
                 </div>
               </div>
             </div>
