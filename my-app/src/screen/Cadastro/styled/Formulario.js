@@ -184,7 +184,7 @@ export default function Formulario() {
 
     try {
       const response = await Axios.get(
-        `https://projeto-final-start.vercel.app/cadastro?c_emailresp_cont=${dados.c_emailresp_cont}`
+        `https://api-rest-azure.vercel.app/cadastro?c_emailresp_cont=${dados.c_emailresp_cont}`
         // `http://localhost:3000/cadastro?c_emailresp_cont=${dados.c_emailresp_cont}`
       );
       if (response.data.length > 0) {
@@ -198,7 +198,7 @@ export default function Formulario() {
     }
 
     // await Axios.post("http://localhost:3000/cadastro", dados);
-    await Axios.post("https://projeto-final-start.vercel.app/cadastro", dados);
+    await Axios.post("https://api-rest-azure.vercel.app/cadastro", dados);
     setAtializaGrid(!atualizaGrid);
     alert("Cadastro realizado com sucesso");
     login();
