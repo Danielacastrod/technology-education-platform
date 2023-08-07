@@ -5,7 +5,8 @@ import { AES } from "crypto-js";
 import { enc } from "crypto-js";
 
 import { Container } from "../../StylesGlobal/Container/Container";
-import Header from "../../StylesGlobal/Header/Header";
+import { StyledHeader } from "./styled/Header";
+import NavType1 from "../../StylesGlobal/Header/NavType1";
 import { Box } from "../../StylesGlobal/Acesso/BoxAcesso/Box";
 import { BoxTransparente } from "../../StylesGlobal/Acesso/BoxTransparenteAcesso/BoxTransparente";
 import { TitleForm } from "../../StylesGlobal/Title/TitleForm";
@@ -33,7 +34,8 @@ export default function Perfil() {
     const fetchData = async () => {
       try {
         const response = await Axios.get(
-          `http://localhost:3000/cadastro?c_emailresp_cont=${decryptedEmail}`
+          `https://projeto-final-start.vercel.app/cadastro?c_emailresp_cont=${decryptedEmail}`
+          // `http://localhost:3000/cadastro?c_emailresp_cont=${decryptedEmail}`
         );
 
         if (response.data[0]) {
@@ -66,7 +68,9 @@ export default function Perfil() {
 
   return (
     <Container>
-      <Header />
+      <StyledHeader>
+        <NavType1 />
+      </StyledHeader>
       <Box>
         <BoxTransparente>
           <TitleForm>Perfil do Usuário</TitleForm>

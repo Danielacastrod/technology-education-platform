@@ -1,8 +1,8 @@
 import "../App.css";
 import React, { useState } from "react";
 import YouTube from "react-youtube";
-import { useNavigate } from "react-router-dom";
-import { useParams } from "react-router-dom";
+
+import NavType2 from "../StylesGlobal/Header/NavType2";
 
 import doodle_quest1 from "./img/doodle-quest1.png";
 import doodle_quest2 from "./img/doodle-quest2.png";
@@ -11,18 +11,7 @@ import comemoracao from "./img/comemoracao.png";
 import tudoBem from "./img/tudoBem.png";
 import duvida from "./img/duvida.png";
 
-/**
-Esta é uma função JavaScript que representa uma página de curso com botões de navegação e seções de conteúdo.
-@returns A função 'Curso' está retornando elementos JSX, que representam a estrutura e o conteúdo do componente.
- */
 export default function Curso() {
-  /* O código abbaixo está usando atribuição de desestruturação para extrair a propriedade 'c_emailresp_cont' da função 'useParams()'. O valor de 'c_emailresp_cont' não é mostrado no trecho de código. */
-  const { c_emailresp_cont } = useParams();
-
-  /* A linha 'const navegar = useNavigate();' está usando o gancho 'useNavigate' da biblioteca 'react-router-dom' para obter a função 'navigate'. Esta função pode ser usada para navegar programaticamente para diferentes rotas no aplicativo. */
-  const navigate = useNavigate();
-
-  /* O código abaixo está declarando um array chamado "telas" que contém uma lista de strings representando diferentes telas ou páginas. A matriz inclui os nomes de 7 telas, "Tela1" a "Tela7". Também existem linhas comentadas que sugerem que pode haver telas adicionais, "Tela8" a "Tela10", mas atualmente não estão incluídas na matriz. */
   const telas = [
     "Tela1",
     "Tela2",
@@ -36,14 +25,8 @@ export default function Curso() {
     // "Tela10",
   ];
 
-  /* O código abaixo é escrito em JavaScript e está usando o hook useState do React. Ele declara uma variável de estado chamada "telaAtual" e uma função chamada "setTelaAtual" para atualizar o estado. O valor inicial de "telaAtual" é definido como "Tela1".
-   */
   const [telaAtual, setTelaAtual] = useState("Tela1");
 
-  /**
-  A função "handleTrocarTela" configura a tela atual para a tela especificada.
-  @param tela - O parâmetro "tela" representa a nova tela ou página para a qual você deseja alternar.
-  */
   const handleTrocarTela = (tela) => {
     setTelaAtual(tela);
   };
@@ -66,41 +49,10 @@ export default function Curso() {
     }
   };
 
-  const encodedEncryptedEmail = encodeURIComponent(c_emailresp_cont);
-
-  /* O código abaixo define três funções para navegar em diferentes páginas. */
-  function Voltar() {
-    navigate(`/saladeaula/${encodedEncryptedEmail}`);
-  }
-
-  function Inicio() {
-    navigate(`/home/${encodedEncryptedEmail}`);
-  }
-
-  function Perfil() {
-    navigate(`/perfil/${encodedEncryptedEmail}`);
-  }
-
-  function Sair() {
-    navigate("/");
-  }
-
-  /* O código abaixo está renderizando um contêiner para uma página de curso com cabeçalho, navegação e conteúdo principal. */
   return (
     <div className="container--curso">
       <header className="cabecalho--curso">
-        <nav className="navegacao--curso">
-          <button className="botaoVoltar--curso" onClick={Voltar}>
-            <div className="iconVoltar--curso"></div>
-          </button>
-          <button className="logoInicio--curso" onClick={Inicio}></button>
-          <div className="boxCabecalho--app">
-            <button className="botaoPerfil--app" onClick={Perfil}></button>
-            <button className="botaoSair--app" onClick={Sair}>
-              Sair
-            </button>
-          </div>
-        </nav>
+        <NavType2 />
       </header>
       <main className="corpo--curso">
         <div className="conteudo--curso">
@@ -121,15 +73,7 @@ export default function Curso() {
   );
 }
 
-/**
-A função abaixo é um componente React que renderiza uma lista de botões para diferentes lições em um curso de lógica.
-@returns O componente está retornando um div com um nome de classe "container--aula". Dentro do div, há outro div com o nome da classe "boxTitulo--aula" e um elemento h2 com o nome da classe "titulo--aula" e o texto "Curso de Lógica 1". Abaixo disso, há um div com o nome da classe "botoes--aula"
-*/
 const LadoEsquerdo = ({ onTrocarTela, telaAtual }) => {
-  /**
-  A função handleClick é utilizada para manipular um evento click e chamar a função onTrocarTela com um parâmetro especificado.
-  @param tela - O parâmetro "tela" representa a tela ou página que será exibida ou alterada quando a função handleClick for chamada.
-  */
   const handleClick = (tela) => {
     onTrocarTela(tela);
   };
