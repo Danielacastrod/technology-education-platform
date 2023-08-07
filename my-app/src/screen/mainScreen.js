@@ -239,7 +239,7 @@ export default function MainScreen() {
           </div>
           {/* Portfólio */}
           <div className="col-12">
-            <h3 className="main-title">Sobre a Developer Kids</h3>
+            <h3 className="main-title">Alguns projetos</h3>
           </div>
           <div id="portfolio-area">
             <div className="col-md-12" id="filter-btn-box">
