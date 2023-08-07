@@ -55,10 +55,6 @@ export default function MainScreen() {
       {/* Estilos */}
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossOrigin="anonymous" />
       <link rel="stylesheet" href="css/styles.css" />
-      {/* Scripts (jQuery não pode ser o slim que vem do Boostrap) */}
-      {/* Font Awesome */}
-      {/* Progress Bar */}
-      {/* Parallax */}
       <header>
         <div className="container" id="nav-container">
           {/* add essa class */}
@@ -175,7 +171,7 @@ export default function MainScreen() {
                 <div className="col-md-4 service-box">
                   <i /><FontAwesomeIcon icon={faHandshakeAngle} />
                   <h4>Suporte 24/7</h4>
-                  <p>Você sempre terá alguem da equipe disponível para suporte, em diferentes plataformas. (chat, email, skype).</p>
+                  <p>Você sempre terá alguem da equipe disponível para suporte, em diferentes plataformas. (email,  ).</p>
                 </div>
                 <div className="col-md-4 service-box">
                   <i /><FontAwesomeIcon icon={faHandPointer} />
@@ -296,7 +292,7 @@ export default function MainScreen() {
               </div>
               <p>Assine nossa lista de e-mails, e receba novos conteúdos sempre que a plataforma for atualizada</p>
               <form action>
-                <input type="text" className="form-control" id="email-input" name="email" placeholder="Seu melhor e-mail" />
+                <input type="text" className="form-control" id="email-input" name="email" placeholder="Seu e-mail" />
                 <input type="submit" id="news-btn" defaultValue="Inscrever" />
               </form>
             </div>
@@ -325,7 +321,8 @@ export default function MainScreen() {
                 <p><span className="contact-tile">Venha tomar um café:</span> Rua Lorem Ipsum - 1314</p>
               </div>
               <div className="col-md-6" id="msg-box">
-                <p>Ou nos deixe uma mensagem:</p>
+                <p>Nos deixe um feedback:</p>
+                <p>Sua opnião é de grande importância!</p>
               </div>
               <div className="col-md-6" id="contact-form">
                 <form action>

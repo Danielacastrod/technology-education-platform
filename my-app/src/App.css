@@ -1656,7 +1656,7 @@ header, .navbar {
   width: 50px;
 }
 
-/*.navbar-brand {
+.navbar-brand {
   padding: 0;
   color: #FFF;
 }
@@ -1668,14 +1668,14 @@ header, .navbar {
 #navbar-links a {
   color: #FFF;
 }
-/*
+
 .navbar-expand-lg .navbar-nav .nav-link {
   padding: 1rem .8rem;
 } 
 
 .nav-item.active {
   border-bottom: 3px solid #FFF;
-}*/
+}
 
 /* Slider */
 
@@ -2084,17 +2084,17 @@ header, .navbar {
   }
 
   .carousel .carousel-caption h2 {
-    font-size: 20px;
+    font-size: 30px;
   }
 
   .carousel .carousel-caption p {
-    font-size: 12px;
-    margin-bottom: 15px;
+    font-size: 18px;
+    margin-bottom: 19px;
   }
 
   .main-btn {
-    padding: 3px 8px;
-    font-size: 10px;
+    padding: 6px 9px;
+    font-size: 11px;
     width: 10px;
   }
 
@@ -2128,7 +2128,17 @@ header, .navbar {
   .card-body{
     width: 100%;
   }
-
+  /* novidades */
+  #contact-area h3 {
+    white-space: nowrap;
+    font-size: 32px;
+  }
+ 
+  /* news */
+  #news-area h3 {
+    white-space: nowrap;
+    font-size: 28px;
+  }
 
   /* apply */
   #portfolio-area .row {
