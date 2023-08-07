@@ -1713,15 +1713,15 @@ header, .navbar {
   text-align: center;
   text-shadow: -6px 4px 0px 0px #8133CD;
   font-family: 'Montserrat' ;
-  font-size: 64px;
+  font-size: 70px;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 950;
   line-height: normal;
   text-transform: uppercase;
 }
 
 .carousel .carousel-caption p {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 400;
   margin-bottom: 80px;
   color: #FFF;
