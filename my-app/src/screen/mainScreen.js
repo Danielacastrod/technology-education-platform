@@ -26,6 +26,7 @@ import Axios from "axios";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
 export default function MainScreen() {
@@ -149,7 +150,7 @@ export default function MainScreen() {
                   <img className="img-fluid" src={plataforma} alt="Developer Kids" />
                 </div>
                 <div className="col-md-6">
-                  <h3 className="about-title">Desenvolvendo mentes, criando o</h3>
+                  <h3 className="about-title">Desenvolvendo mentes, criando o futuro</h3>
                   <p>Nossos projetos são adaptados ao público infanto-juvenil.</p>
                   <p>Após muitas pesquisas realizadas pela Developer Kids, adotamos um modelo de conteúdos interativos para chamar a atencão do nosso púbico alvo.</p>
                   <p>Todo nosso design é pensado de forma que cative de forma expontânea! Você pode aprender se divertindo.</p>
@@ -349,8 +350,8 @@ export default function MainScreen() {
                 <p><span className="contact-tile">Venha tomar um café:</span> Rua Lorem Ipsum - 1314</p>
               </div>
               <div className="col-md-6" id="msg-box">
-                <p>Nos deixe um feedback:</p>
-                <p>Sua opnião é de grande importância!</p>
+                <p>Nos deixe um feedback</p>
+                <p>Sua opnião é de grande importância</p>
               </div>
               <div className="col-md-6" id="contact-form">
                 <Formik
