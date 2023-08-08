@@ -11,7 +11,7 @@ import TermosECondicoes from "../screen/TermosECondicoes";
 import PoliticaDePrivacidade from "../screen/PoliticaDePrivacidade";
 import SalaDeAula from "../screen/SalaDeAula/SalaDeAula";
 import Curso from "../screen/Curso";
-import Dicas from "../screen/Dicas";
+import Dicas from "../screen/Dicas/Dicas";
 
 export default function Rotas() {
   return (
