@@ -10,7 +10,7 @@ import RecSenha from "../screen/RecuperaSenha/RecSenha";
 import TermosECondicoes from "../screen/TermosECondicoes/TermosECondicoes";
 import PoliticaDePrivacidade from "../screen/PoliticaDePrivacidade/PoliticaDePrivacidade";
 import SalaDeAula from "../screen/SalaDeAula/SalaDeAula";
-import Curso from "../screen/Curso/Curso";
+import Curso from "../screen/Curso";
 import Dicas from "../screen/Dicas/Dicas";
 
 export default function Rotas() {

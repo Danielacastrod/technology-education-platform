@@ -1,31 +1,15 @@
+import "../App.css";
 import React, { useState } from "react";
 import YouTube from "react-youtube";
 
-import { Container } from "./styled/Container";
-import { Header } from "./styled/Header";
-import NavType2 from "../../StylesGlobal/Header/NavType2";
-import { Main } from "./styled/Main";
-import { Conteudo } from "./styled/Conteudo";
-import { BoxLadoEsquerdo } from "./styled/BoxLadoEsquerdo";
+import NavType2 from "../StylesGlobal/Header/NavType2";
 
-import { BoxLadoDireito } from "./styled/LadoDireito/BoxLadoDireito";
-import { ContainerVideo } from "./styled/LadoDireito/ContainerVideo";
-import { Youtube } from "./styled/LadoDireito/Youtube";
-import { BoxTitle } from "./styled/LadoDireito/BoxTitle";
-import { BotaoNulo } from "./styled/LadoDireito/BotaoNulo";
-import { SetaEsquerda } from "./styled/LadoDireito/SetaEsquerda";
-import { SetaDireita } from "./styled/LadoDireito/SetaDireita";
-import { LinkJogo } from "./styled/LadoDireito/LinkJogo";
-import { CargoBot } from "./styled/LadoDireito/CargoBot";
-import { Doodle } from "./styled/LadoDireito/Doodle";
-import { Tetris } from "./styled/LadoDireito/Tetris";
-
-import doodle_quest1 from "../img/doodle-quest1.png";
-import doodle_quest2 from "../img/doodle-quest2.png";
-import doodle_quest3 from "../img/doodle-quest3.png";
-import comemoracao from "../img/comemoracao.png";
-import tudoBem from "../img/tudoBem.png";
-import duvida from "../img/duvida.png";
+import doodle_quest1 from "./img/doodle-quest1.png";
+import doodle_quest2 from "./img/doodle-quest2.png";
+import doodle_quest3 from "./img/doodle-quest3.png";
+import comemoracao from "./img/comemoracao.png";
+import tudoBem from "./img/tudoBem.png";
+import duvida from "./img/duvida.png";
 
 export default function Curso() {
   const telas = [
@@ -66,26 +50,26 @@ export default function Curso() {
   };
 
   return (
-    <Container>
-      <Header>
+    <div className="container--curso">
+      <header className="cabecalho--curso">
         <NavType2 />
-      </Header>
-      <Main>
-        <Conteudo>
-          <BoxLadoEsquerdo>
+      </header>
+      <main className="corpo--curso">
+        <div className="conteudo--curso">
+          <div className="ladoEsquerdo--curso">
             <LadoEsquerdo
               onTrocarTela={handleTrocarTela}
               telaAtual={telaAtual}
             />
-          </BoxLadoEsquerdo>
+          </div>
           <LadoDireito
             telaAtual={telaAtual}
             onVoltar={handleVoltar}
             onAvancar={handleAvancar}
           />
-        </Conteudo>
-      </Main>
-    </Container>
+        </div>
+      </main>
+    </div>
   );
 }
 
@@ -198,8 +182,8 @@ const Tela1 = ({ onVoltar, onAvancar }) => {
   const videoId = "3U9k-4ihjSw"; // ID do vídeo incorporado
 
   const opts = {
-    width: "210%",
-    height: "100%",
+    width: "672",
+    height: "378",
     playerVars: {
       autoplay: 0, // Não reproduzir automaticamente
       controls: 0, // Remover os controles do player do YouTube
@@ -207,20 +191,23 @@ const Tela1 = ({ onVoltar, onAvancar }) => {
   };
 
   return (
-    <ContainerVideo>
-      <Youtube>
+    <div className="boxVideo--aula">
+      <div className="youtube-player--aula">
         <YouTube videoId={videoId} opts={opts} />
-      </Youtube>
-      <BoxTitle>
-        <BotaoNulo style={{ backgroundColor: "#797979" }}>
-          <SetaEsquerda></SetaEsquerda> Aula Anterior
-        </BotaoNulo>
-        <h2>Aula 1 - Iniciando a Lógica</h2>
-        <button onClick={onAvancar}>
-          Próxima Aula <SetaDireita></SetaDireita>
+      </div>
+      <div className="boxTitulo--aula">
+        <button className="aulaAnterior--aula botoesAula--aula aulaNulo--aula">
+          <div className="iconVoltar--aula"></div> Aula Anterior
         </button>
-      </BoxTitle>
-    </ContainerVideo>
+        <h2>Aula 1 - Iniciando a Lógica</h2>
+        <button
+          onClick={onAvancar}
+          className="proximaAula--aula botoesAula--aula"
+        >
+          Próxima Aula <div className="iconProceguir--aula"></div>
+        </button>
+      </div>
+    </div>
   );
 };
 
@@ -228,8 +215,8 @@ const Tela2 = ({ onVoltar, onAvancar }) => {
   const videoId = "tRcr4vtV-4o"; // ID do vídeo incorporado
 
   const opts = {
-    width: "210%",
-    height: "100%",
+    width: "672",
+    height: "378",
     playerVars: {
       autoplay: 0, // Não reproduzir automaticamente
       controls: 0, // Remover os controles do player do YouTube
@@ -237,20 +224,26 @@ const Tela2 = ({ onVoltar, onAvancar }) => {
   };
 
   return (
-    <ContainerVideo>
-      <Youtube>
+    <div className="boxVideo--aula">
+      <div className="youtube-player--aula">
         <YouTube videoId={videoId} opts={opts} />
-      </Youtube>
-      <BoxTitle>
-        <BotaoNulo onClick={onVoltar}>
-          <SetaEsquerda></SetaEsquerda> Aula Anterior
-        </BotaoNulo>
-        <h2>Aula 2 - Conceitos Básicos - Parte 1</h2>
-        <button onClick={onAvancar}>
-          Próxima Aula <SetaDireita></SetaDireita>
+      </div>
+      <div className="boxTitulo--aula">
+        <button
+          onClick={onVoltar}
+          className="aulaAnterior--aula botoesAula--aula"
+        >
+          <div className="iconVoltar--aula"></div> Aula Anterior
         </button>
-      </BoxTitle>
-    </ContainerVideo>
+        <h2>Aula 2 - Conceitos Básicos - Parte 1</h2>
+        <button
+          onClick={onAvancar}
+          className="proximaAula--aula botoesAula--aula"
+        >
+          Próxima Aula <div className="iconProceguir--aula"></div>
+        </button>
+      </div>
+    </div>
   );
 };
 
@@ -258,8 +251,8 @@ const Tela3 = ({ onVoltar, onAvancar }) => {
   const videoId = "CANYM34cIuQ"; // ID do vídeo incorporado
 
   const opts = {
-    width: "210%",
-    height: "100%",
+    width: "672",
+    height: "378",
     playerVars: {
       autoplay: 0, // Não reproduzir automaticamente
       controls: 0, // Remover os controles do player do YouTube
@@ -267,100 +260,127 @@ const Tela3 = ({ onVoltar, onAvancar }) => {
   };
 
   return (
-    <ContainerVideo>
-      <Youtube>
+    <div className="boxVideo--aula">
+      <div className="youtube-player--aula">
         <YouTube videoId={videoId} opts={opts} />
-      </Youtube>
-      <BoxTitle>
-        <BotaoNulo onClick={onVoltar}>
-          <SetaEsquerda></SetaEsquerda> Aula Anterior
-        </BotaoNulo>
-        <h2>Aula 3 - Conceitos Básicos - Parte 2</h2>
-        <button onClick={onAvancar}>
-          Próxima Aula <SetaDireita></SetaDireita>
+      </div>
+      <div className="boxTitulo--aula">
+        <button
+          onClick={onVoltar}
+          className="aulaAnterior--aula botoesAula--aula"
+        >
+          <div className="iconVoltar--aula"></div> Aula Anterior
         </button>
-      </BoxTitle>
-    </ContainerVideo>
+        <h2>Aula 3 - Conceitos Básicos - Parte 2</h2>
+        <button
+          onClick={onAvancar}
+          className="proximaAula--aula botoesAula--aula"
+        >
+          Próxima Aula <div className="iconProceguir--aula"></div>
+        </button>
+      </div>
+    </div>
   );
 };
 const Tela4 = ({ onVoltar, onAvancar }) => {
   return (
-    <ContainerVideo>
-      <LinkJogo
+    <div className="boxVideo--aula">
+      <a
+        className="linkJogo--aula"
         href="https://i4ds.github.io/CargoBot/?state=1"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <CargoBot>
-          <div>
+        <div className="imagem--aula cargoBot--aula">
+          <div className="cliqueAqui--aula">
             Clique Aqui <br /> Para Jogar
           </div>
-        </CargoBot>
-      </LinkJogo>
-      <BoxTitle>
-        <BotaoNulo onClick={onVoltar}>
-          <SetaEsquerda></SetaEsquerda> Aula Anterior
-        </BotaoNulo>
-        <h2>Aula 4 - Jogo Cargo-Bot</h2>
-        <button onClick={onAvancar}>
-          Próxima Aula <SetaDireita></SetaDireita>
+        </div>
+      </a>
+      <div className="boxTitulo--aula">
+        <button
+          onClick={onVoltar}
+          className="aulaAnterior--aula botoesAula--aula"
+        >
+          <div className="iconVoltar--aula"></div> Aula Anterior
         </button>
-      </BoxTitle>
-    </ContainerVideo>
+        <h2>Aula 4 - Jogo Cargo-Bot</h2>
+        <button
+          onClick={onAvancar}
+          className="proximaAula--aula botoesAula--aula"
+        >
+          Próxima Aula <div className="iconProceguir--aula"></div>
+        </button>
+      </div>
+    </div>
   );
 };
 
 const Tela5 = ({ onVoltar, onAvancar }) => {
   return (
-    <ContainerVideo>
-      <LinkJogo
+    <div className="boxVideo--aula">
+      <a
+        className="linkJogo--aula"
         href="https://www.google.com/doodles/celebrating-50-years-of-kids-coding?hl=pt-BR"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Doodle>
-          <div>
+        <div className="imagem--aula doodle--aula">
+          <div className="cliqueAqui--aula">
             Clique Aqui <br /> Para Jogar
           </div>
-        </Doodle>
-      </LinkJogo>
-      <BoxTitle>
-        <BotaoNulo onClick={onVoltar}>
-          <SetaEsquerda></SetaEsquerda> Aula Anterior
-        </BotaoNulo>
-        <h2>Aula 5 - Jogo Doodle do google</h2>
-        <button onClick={onAvancar}>
-          Próxima Aula <SetaDireita></SetaDireita>
+        </div>
+      </a>
+      <div className="boxTitulo--aula">
+        <button
+          onClick={onVoltar}
+          className="aulaAnterior--aula botoesAula--aula"
+        >
+          <div className="iconVoltar--aula"></div> Aula Anterior
         </button>
-      </BoxTitle>
-    </ContainerVideo>
+        <h2>Aula 5 - Jogo Doodle do google</h2>
+        <button
+          onClick={onAvancar}
+          className="proximaAula--aula botoesAula--aula"
+        >
+          Próxima Aula <div className="iconProceguir--aula"></div>
+        </button>
+      </div>
+    </div>
   );
 };
 
 const Tela6 = ({ onVoltar, onAvancar }) => {
   return (
-    <ContainerVideo>
-      <LinkJogo
+    <div className="boxVideo--aula">
+      <a
+        className="linkJogo--aula"
         href="https://tetris.com/play-tetris"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Tetris>
-          <div>
+        <div className="imagem--aula tetris--aula">
+          <div className="cliqueAqui--aula fundoPreto">
             Clique Aqui <br /> Para Jogar
           </div>
-        </Tetris>
-      </LinkJogo>
-      <BoxTitle>
-        <BotaoNulo onClick={onVoltar}>
-          <SetaEsquerda></SetaEsquerda> Aula Anterior
-        </BotaoNulo>
-        <h2>Aula 6 - Jogo Tetris</h2>
-        <button onClick={onAvancar}>
-          Próxima Aula <SetaDireita></SetaDireita>
+        </div>
+      </a>
+      <div className="boxTitulo--aula">
+        <button
+          onClick={onVoltar}
+          className="aulaAnterior--aula botoesAula--aula"
+        >
+          <div className="iconVoltar--aula"></div> Aula Anterior
         </button>
-      </BoxTitle>
-    </ContainerVideo>
+        <h2>Aula 6 - Jogo Tetris</h2>
+        <button
+          onClick={onAvancar}
+          className="proximaAula--aula botoesAula--aula"
+        >
+          Próxima Aula <div className="iconProceguir--aula"></div>
+        </button>
+      </div>
+    </div>
   );
 };
 
@@ -503,22 +523,36 @@ const Tela7 = ({ onVoltar, onAvancar }) => {
           ))}
         </ul>
       </div>
-      <BoxTitle>
-        <BotaoNulo onClick={onVoltar}>
-          <SetaEsquerda></SetaEsquerda> Aula Anterior
-        </BotaoNulo>
-        <h2>Avaliação de Lógica - 1</h2>
-        <button style={{ backgroundColor: "#797979" }}>
-          Próxima Aula <SetaDireita></SetaDireita>
+      <div className="boxTitulo--aula">
+        <button
+          onClick={onVoltar}
+          className="aulaAnterior--aula botoesAula--aula"
+        >
+          <div className="iconVoltar--aula"></div> Aula Anterior
         </button>
-      </BoxTitle>
+        <h2>Avaliação de Lógica - 1</h2>
+        <button className="proximaAula--aula botoesAula--aula aulaNulo--aula">
+          Próxima Aula <div className="iconProceguir--aula"></div>
+        </button>
+      </div>
     </div>
   );
 };
 
+// const Tela8 = () => {
+//   return <div>Tela 8 - Aula 8</div>;
+// };
+
+// const Tela9 = () => {
+//   return <div>Tela 9 - Aula 9</div>;
+// };
+// const Tela10 = () => {
+//   return <div>Tela 10 - Aula 10</div>;
+// };
+
 const LadoDireito = ({ telaAtual, onVoltar, onAvancar }) => {
   return (
-    <BoxLadoDireito>
+    <div className="ladoDireito--curso">
       {telaAtual === "Tela1" && (
         <Tela1 onVoltar={onVoltar} onAvancar={onAvancar} />
       )}
@@ -540,6 +574,9 @@ const LadoDireito = ({ telaAtual, onVoltar, onAvancar }) => {
       {telaAtual === "Tela7" && (
         <Tela7 onVoltar={onVoltar} onAvancar={onAvancar} />
       )}
-    </BoxLadoDireito>
+      {/* {telaAtual === "Tela8" && <Tela8 />}
+      {telaAtual === "Tela9" && <Tela9 />}
+      {telaAtual === "Tela10" && <Tela10 />} */}
+    </div>
   );
 };
