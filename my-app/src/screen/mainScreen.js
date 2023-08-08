@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from 'react';
+import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js.map';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -22,11 +21,16 @@ import jogo3 from "./img/jogo2.jpeg"
 import curso1 from "./img/curso1.png"
 import curso2 from "./img/curso2.png"
 import curso3 from "./img/curso3.png"
-
+import { Formik, Form, Field } from "formik";
+import Axios from "axios";
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
 
 export default function MainScreen() {
-
+  const FormRef1 = useRef();
+  const FormRef2 = useRef();
   const navigate = useNavigate();
   function cadastrar() {
     navigate("/cadastro");
@@ -41,6 +45,31 @@ export default function MainScreen() {
     setVisibleType(type);
   };
 
+  async function handleClickFeedback(values, { resetForm }) {
+    const { email, subject, message } = FormRef2.current;
+
+    const dados = {
+      email: email.value,
+      subject: subject.value,
+      message: message.value,
+    };
+
+    await Axios.post("https://api-rest-azure.vercel.app/feedback", dados);
+    alert("Feedback enviado com sucesso!");
+    resetForm();
+  }
+
+  async function handleClickAtualizacao(values, { resetForm }) {
+    const { email } = FormRef1.current;
+
+    const dados = {
+      email: email.value,
+    };
+
+    await Axios.post("https://api-rest-azure.vercel.app/novidades", dados);
+    alert("E-mail cadastrado com sucesso!");
+    resetForm();
+  }
 
   return (
 
@@ -53,33 +82,28 @@ export default function MainScreen() {
       <style dangerouslySetInnerHTML={{ __html: "\n    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');\n  " }} />
       <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet" />
       {/* Estilos */}
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossOrigin="anonymous" />
-      <link rel="stylesheet" href="css/styles.css" />
       <header>
-        <div className="container" id="nav-container">
-          {/* add essa class */}
-          <nav className="navbar navbar-expand-lg fixed-top navbar-dark">
-            <a className="navbar-brand" href="index.html">
+        <Container id="nav-container">
+          <Navbar expand="lg" fixed="top" variant="dark">
+            <Navbar.Brand href="index.html">
               <img id="logo" src={logoDeveloperKids} alt="Developer Kids" />
-            </a>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon" />
-            </button>
-            <div className="collapse navbar-collapse justify-content-end" id="navbar-links">
-              <div className="navbar-nav">
-                <a className="nav-item nav-link" id="home-menu" href="#">Home</a>
-                <a className="nav-item nav-link" id="about-menu" href="#about-area">Sobre nós</a>
-                <a className="nav-item nav-link" id="services-menu" href="#services-area">Serviços</a>
-                <a className="nav-item nav-link" id="team-menu" href="#team-area">Time</a>
-                <a className="nav-item nav-link" id="portfolio-menu" href="#portfolio-area">Projetos</a>
-                <a className="nav-item nav-link" id="contact-menu" href="#contact-area">Contato</a>
-              </div>
-            </div>
-          </nav>
-        </div>
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="navbar-links" />
+            <Navbar.Collapse id="navbar-links" className="justify-content-end">
+              <Nav className="ml-auto">
+                <Nav.Link href="#carousel-slide-area" id="home-menu">Home</Nav.Link>
+                <Nav.Link href="#about-area" id="about-menu">Sobre nós</Nav.Link>
+                <Nav.Link href="#services-area" id="services-menu">Serviços</Nav.Link>
+                <Nav.Link href="#team-area" id="team-menu">Time</Nav.Link>
+                <Nav.Link href="#portfolio-area" id="portfolio-menu">Projetos</Nav.Link>
+                <Nav.Link href="#contact-area" id="contact-menu">Contato</Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+        </Container>
       </header>
       <main>
-        <div className="carousel">
+        <div id="carousel-slide-area" className="carousel">
           {/* slider */}
           <div>
             <Carousel interval={4000} fade={true} pause={false} className="carousel-inner">
@@ -125,7 +149,7 @@ export default function MainScreen() {
                   <img className="img-fluid" src={plataforma} alt="Developer Kids" />
                 </div>
                 <div className="col-md-6">
-                  <h3 className="about-title">Uma plataforma que pensa no futuro</h3>
+                  <h3 className="about-title">Desenvolvendo mentes, criando o</h3>
                   <p>Nossos projetos são adaptados ao público infanto-juvenil.</p>
                   <p>Após muitas pesquisas realizadas pela Developer Kids, adotamos um modelo de conteúdos interativos para chamar a atencão do nosso púbico alvo.</p>
                   <p>Todo nosso design é pensado de forma que cative de forma expontânea! Você pode aprender se divertindo.</p>
@@ -288,13 +312,17 @@ export default function MainScreen() {
           <div id="news-area">
             <div className="container">
               <div className="col-md-12">
-                <h3 className="main-title">Fique por dentro das novidades</h3>
+                <h3 className="main-title">Fique por dentro das atualizações</h3>
               </div>
               <p>Assine nossa lista de e-mails, e receba novos conteúdos sempre que a plataforma for atualizada</p>
-              <form action>
-                <input type="text" className="form-control" id="email-input" name="email" placeholder="Seu e-mail" />
-                <input type="submit" id="news-btn" defaultValue="Inscrever" />
-              </form>
+              <Formik initialValues={{ email: "" }}
+                onSubmit={handleClickAtualizacao}
+              >
+                <Form action ref={FormRef1}>
+                  <Field type="text" className="form-control" id="email-input" name="email" placeholder="Seu e-mail" />
+                  <input type="submit" id="news-btn" defaultValue="Inscrever" />
+                </Form>
+              </Formik>
             </div>
           </div>
         </div>
@@ -325,12 +353,17 @@ export default function MainScreen() {
                 <p>Sua opnião é de grande importância!</p>
               </div>
               <div className="col-md-6" id="contact-form">
-                <form action>
-                  <input type="text" className="form-control" placeholder="E-mail" name="email" />
-                  <input type="text" className="form-control" placeholder="Assunto" name="subject" />
-                  <textarea className="form-control" rows={3} placeholder="Sua mensagem..." name="message" defaultValue={""} />
-                  <input type="submit" className="main-btn" />
-                </form>
+                <Formik
+                  initialValues={{ email: "", subject: "", message: "" }}
+                  onSubmit={handleClickFeedback}
+                >
+                  <Form action ref={FormRef2}>
+                    <Field type="text" className="form-control" placeholder="E-mail" name="email" />
+                    <Field type="text" className="form-control" placeholder="Assunto" name="subject" />
+                    <Field className="form-control" rows={3} placeholder="Sua mensagem..." name="message" defaultValue={""} />
+                    <input type="submit" className="main-btn" />
+                  </Form>
+                </Formik>
               </div>
             </div>
           </div>
