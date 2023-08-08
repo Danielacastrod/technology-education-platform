@@ -121,7 +121,7 @@ export default function MainScreen() {
                 <img src={jogando} className="d-block w-100" alt="Segundo slide" />
                 <Carousel.Caption>
                   <h2>Você pode aprender se divertindo</h2>
-                  <p>Melhore sua capacidade de solucionar problemas de uma forma descontraida</p>
+                  <p>Melhore sua capacidade de solucionar problemas de uma forma descontraída</p>
                   <a onClick={cadastrar} target="_blank" className="main-btn">Torne-se aluno</a>
                   <a onClick={login} className="main-btn ml-4">Área do aluno</a>
                 </Carousel.Caption>
@@ -176,32 +176,32 @@ export default function MainScreen() {
                 <div className="col-md-4 service-box">
                   <i /><FontAwesomeIcon icon={faMobileScreenButton} className="me-1" />
                   <h4>Acessibilidade</h4>
-                  <p>Acesse nossa plataforma de qualquer dispositivo, seja ele smartPhone, tablet ou computador .</p>
+                  <p>Acesse nossa plataforma de qualquer dispositivo, seja ele smartPhone, tablet ou computador</p>
                 </div>
                 <div className="col-md-4 service-box">
                   <i /><FontAwesomeIcon icon={faChildren} />
                   <h4>Mentoria</h4>
-                  <p>Proporcionamos um acompanhamento exclusivo para os usuários.</p>
+                  <p>Proporcionamos um acompanhamento exclusivo para os usuários</p>
                 </div>
                 <div className="col-md-4 service-box">
                   <i /><FontAwesomeIcon icon={faPaintbrush} />
                   <h4>Design Criativo</h4>
-                  <p>Nossos designers são altamente capacitados para atrair cada vez mais o público infanto-juvenil.</p>
+                  <p>Nossos designers são altamente capacitados para atrair cada vez mais o público infanto-juvenil</p>
                 </div>
                 <div className="col-md-4 service-box">
                   <i /><FontAwesomeIcon icon={faUsers} />
                   <h4>Público aberto</h4>
-                  <p>Com nosso serviço gratuito, disponibilizamos variados conteúdos visando o futuro da sociedade.</p>
+                  <p>Com nosso serviço gratuito, disponibilizamos variados conteúdos visando o futuro da sociedade</p>
                 </div>
                 <div className="col-md-4 service-box">
                   <i /><FontAwesomeIcon icon={faHandshakeAngle} />
                   <h4>Suporte 24/7</h4>
-                  <p>Você sempre terá alguem da equipe disponível para suporte, em diferentes plataformas. (email,  ).</p>
+                  <p>Você sempre terá alguem da equipe disponível para suporte, em diferentes plataformas (email, telefone e instagram)</p>
                 </div>
                 <div className="col-md-4 service-box">
                   <i /><FontAwesomeIcon icon={faHandPointer} />
                   <h4>Interatividade</h4>
-                  <p>Garantimos um conteúdo de fácil acesso e entendimento simples para gerar uma aprendizagem participativa.</p>
+                  <p>Garantimos um conteúdo de fácil acesso e entendimento simples para gerar uma aprendizagem participativa</p>
                 </div>
               </div>
             </div>
@@ -348,7 +348,7 @@ export default function MainScreen() {
               <div className="col-md-4 contact-box">
                 <i className="fas fa-map-marker-alt" /><FontAwesomeIcon icon={faCameraRetro} />
                 <p><span className="contact-tile"> Nosso instagram:</span> developer.kids</p>
-              </div>
+               </div>
               <div className="col-md-6" id="msg-box">
                 <p>Nos deixe um feedback</p>
                 <p>Sua opnião é de grande importância</p>
