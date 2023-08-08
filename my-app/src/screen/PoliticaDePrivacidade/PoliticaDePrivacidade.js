@@ -1,38 +1,39 @@
-import "../App.css";
 import React from "react";
-import logo from "./img/logo-developer-kids.png";
-import Rodape from "../StylesGlobal/Rodape/Rodape";
+
+import { Container } from "../../StylesGlobal/Documentos/Container";
+import { Header } from "../../StylesGlobal/Documentos/Header";
+import logo from "../img/logo-developer-kids.png";
+import { Main } from "../../StylesGlobal/Documentos/Main";
+import Rodape from "../../StylesGlobal/Rodape/Rodape";
 
 export default function PoliticaDePrivacidade() {
   return (
-    <div className="container--documentacao">
-      <header className="cabecalho--documentacao">
-        <img src={logo} alt="Logo DevPro" className="logo--documentacao" />
-      </header>
+    <Container>
+      <Header>
+        <img src={logo} alt="Logo DevPro" />
+      </Header>
 
-      <main className="corpo--documentacao">
-        <h1 className="titulo--documentacao">Política Privacidade</h1>
+      <Main>
+        <h1>Política Privacidade</h1>
 
-        <div className="conteudo--documentacao">
-          <section className="secao--documentacao">
-            <p className="conteudoSecao--documentacao">
+        <div>
+          <section>
+            <p>
               A sua privacidade é importante para nós. É política do DevPro
               respeitar a sua privacidade em relação a qualquer informação sua
               que possamos coletar no site{" "}
-              <a href="https://politicaprivacidade.com/" className="link">
-                DevPro
-              </a>
-              , e outros sites que possuímos e operamos.
+              <a href="https://politicaprivacidade.com/">DevPro</a>, e outros
+              sites que possuímos e operamos.
             </p>
 
-            <p className="conteudoSecao--documentacao">
+            <p>
               Solicitamos informações pessoais apenas quando realmente
               precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios
               justos e legais, com o seu conhecimento e consentimento. Também
               informamos por que estamos coletando e como será usado.
             </p>
 
-            <p className="conteudoSecao--documentacao">
+            <p>
               Apenas retemos as informações coletadas pelo tempo necessário para
               fornecer o serviço solicitado. Quando armazenamos dados,
               protegemos dentro de meios comercialmente aceitáveis ​​para evitar
@@ -40,36 +41,36 @@ export default function PoliticaDePrivacidade() {
               modificação não autorizados.
             </p>
 
-            <p className="conteudoSecao--documentacao">
+            <p>
               Não compartilhamos informações de identificação pessoal
               publicamente ou com terceiros, exceto quando exigido por lei.
             </p>
 
-            <p className="conteudoSecao--documentacao">
+            <p>
               O nosso site pode ter links para sites externos que não são
               operados por nós. Esteja ciente de que não temos controle sobre o
               conteúdo e práticas desses sites e não podemos aceitar
               responsabilidade por suas respectivas{" "}
-              <a href="https://politicaprivacidade.com/" className="link">
+              <a href="https://politicaprivacidade.com/">
                 políticas de privacidade
               </a>
               .
             </p>
 
-            <p className="conteudoSecao--documentacao">
+            <p>
               Você é livre para recusar a nossa solicitação de informações
               pessoais, entendendo que talvez não possamos fornecer alguns dos
               serviços desejados.
             </p>
 
-            <p className="conteudoSecao--documentacao">
+            <p>
               O uso continuado de nosso site será considerado como aceitação de
               nossas práticas em torno de privacidade e informações pessoais. Se
               você tiver alguma dúvida sobre como lidamos com dados do usuário e
               informações pessoais, entre em contacto connosco.
             </p>
 
-            <ul className="lista--documentacao">
+            <ul>
               <li>
                 O serviço Google AdSense que usamos para veicular publicidade
                 usa um cookie DoubleClick para veicular anúncios mais relevantes
@@ -100,17 +101,15 @@ export default function PoliticaDePrivacidade() {
               </li>
             </ul>
 
-            <p className="conteudoSecao--documentacao">
-              Compromisso do Usuário
-            </p>
+            <p>Compromisso do Usuário</p>
 
-            <p className="conteudoSecao--documentacao">
+            <p>
               O usuário se compromete a fazer uso adequado dos conteúdos e da
               informação que o DevPro oferece no site e com caráter enunciativo,
               mas não limitativo:
             </p>
 
-            <ul className="lista--documentacao">
+            <ul>
               <li>
                 A) Não se envolver em atividades que sejam ilegais ou contrárias
                 à boa fé a à ordem pública;
@@ -129,20 +128,18 @@ export default function PoliticaDePrivacidade() {
               </li>
             </ul>
 
-            <p className="conteudoSecao--documentacao">Mais informações</p>
-            <p className="conteudoSecao--documentacao">
+            <p>Mais informações</p>
+            <p>
               Esperemos que esteja esclarecido e, como mencionado anteriormente,
               se houver algo que você não tem certeza se precisa ou não,
               geralmente é mais seguro deixar os cookies ativados, caso interaja
               com um dos recursos que você usa em nosso site.
             </p>
-            <p className="conteudoSecao--documentacao">
-              Esta política é efetiva a partir de 12 July 2023 23:48
-            </p>
+            <p>Esta política é efetiva a partir de 12 July 2023 23:48</p>
           </section>
         </div>
-      </main>
+      </Main>
       <Rodape />
-    </div>
+    </Container>
   );
 }
