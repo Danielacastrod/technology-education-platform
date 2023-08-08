@@ -7,9 +7,8 @@
   font-family: "Montserrat", sans-serif;
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
+/* input[type="date"]::-webkit-calendar-picker-indicator {
   filter: invert(100%);
-  /* Inverter as cores do ícone */
 }
 
 button {
@@ -19,488 +18,7 @@ button {
 
 button:hover {
   opacity: .8;
-}
-
-/* INÍCIO ACESSO (LOGIN, CADASTRO, RECUPERAÇÃO DE SENHA, PERFIL) */
-
-.container--acesso {
-  background: url("./screen/img/capa.png") no-repeat center / cover;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  position: absolute;
-  width: 100%;
-}
-
-.logo--acesso {
-  height: 110px;
-  position: fixed;
-  width: 110px;
-}
-
-.box--acesso {
-  align-items: flex-end;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  width: 100%;
-}
-
-.boxTransparente--acesso {
-  align-items: center;
-  background: rgba(28, 28, 28, 0.75);
-  border-radius: 20px;
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  font-size: 17px;
-  font-weight: 400;
-  height: 484px;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-  position: absolute;
-  width: 639px;
-}
-
-.titulo--acesso {
-  text-align: center;
-  text-transform: uppercase;
-
-}
-
-.login-form--acesso {
-  margin-top: 3rem;
-}
-
-.login-form-group--acesso {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-  position: relative;
-}
-
-.inputs--acesso {
-  background: rgba(12, 12, 12, 0.75);
-  border: 1px solid #ffffff;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.432);
-  color: #ffffff;
-  height: 43px;
-  margin: 5px 0;
-  padding: 0 6px;
-  width: 513px;
-}
-
-.form-error--acesso {
-  color: #A9E500;
-  font-size: 12px;
-  position: absolute;
-  right: 0;
-}
-
-.boxBotao--acesso {
-  display: flex;
-  justify-content: center;
-}
-
-.botao--acesso {
-  background-color: #ffffff;
-  border: none;
-  border-radius: 20px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.24);
-  color: #000;
-  font-size: 17px;
-  font-weight: 700;
-  height: 50px;
-  text-align: center;
-  width: 150px;
-}
-
-/* FIM ACESSO (LOGIN, CADASTRO, RECUPERAÇÃO DE SENHA, PERFIL) */
-
-
-/* INÍCIO TELA DE LOGIN */
-
-.boxCaminhos--login {
-  display: flex;
-  flex-direction: column;
-  height: 4rem;
-  justify-content: space-between;
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.recuperaSenha--login,
-.cadastrar--login {
-  color: #ffffff;
-}
-
-.cadastrar--login {
-  margin-left: .3rem;
-}
-
-/* FIM TELA DE LOGIN */
-
-
-/* INÍCIO TELA DE CADASTRO */
-
-.logo--cadastro {
-  height: 130px;
-  margin-left: 1rem;
-  position: fixed;
-  width: 130px;
-}
-
-.botaoLogin--cadastro {
-  position: fixed;
-  margin-top: .5rem;
-  margin-left: 85%;
-  text-transform: uppercase;
-  background-color: #6100C0;
-  color: #ffffff;
-}
-
-.box--cadastro {
-  align-items: center;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  width: 100%;
-}
-
-.boxTransparente--cadastro {
-  align-items: center;
-  background: rgba(28, 28, 28, 0.75);
-  border-radius: 20px;
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  font-family: "Montserrat";
-  font-size: 17px;
-  font-weight: 400;
-  height: 38rem;
-  padding: 1rem 0;
-  position: absolute;
-  width: 639px;
-}
-
-.login-form--cadastro {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-around;
-  margin-top: .5rem;
-  padding: 0 3rem;
-  width: 100%;
-}
-
-.login-form-group--cadastro {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: .5rem;
-  position: relative;
-}
-
-.inputs--cadastro {
-  background: rgba(12, 12, 12, 0.75);
-  border: 1px solid #ffffff;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.432);
-  color: #ffffff;
-  cursor: text;
-  height: 43px;
-  margin: 4px 0;
-  padding: 0 6px;
-  width: 513px;
-}
-
-.containerBox {
-  align-items: center;
-  display: flex;
-  height: 4.8rem;
-  justify-content: space-between;
-}
-
-.boxDocumentos--cadastro {
-  height: 100%;
-}
-
-.boxPermicao--cadastro {
-  color: #ffffff;
-  font-size: .8rem;
-  margin: 0 .5rem 5rem 0;
-  padding: 1rem;
-  width: 21rem;
-}
-
-.checkPermicao--cadastro {
-  cursor: pointer;
-  margin-right: .4rem;
-}
-
-.links--cadastro {
-  color: #ffffff;
-}
-
-/* FIM TELA DE CADASTRO */
-
-/* INÍCIO TELA DE RECUPERAÇÃO DE SENHA */
-
-.chaves--recsenha {
-  margin-top: 2rem;
-}
-
-/* FIM TELA DE RECUPERAÇÃO DE SENHA */
-
-
-/* INÍCIO TELA DE PERFIL */
-
-.container--perfil {
-  background: url("./screen/img/capa.png") no-repeat center / cover;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-}
-
-.cabecalho--perfil {
-  position: absolute;
-  width: 100%;
-}
-
-.containerUserData--perfil {
-  margin-top: 1rem;
-}
-
-.boxUserData--perfil {
-  margin: 5px 0 15px 0;
-}
-
-.dados--perfil {
-  align-items: center;
-  background: rgba(12, 12, 12, 0.75);
-  border: 1px solid #ffffff;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.432);
-  color: #797979;
-  display: flex;
-  height: 43px;
-  margin-top: 5px;
-  padding: 0 6px;
-  user-select: none;
-  width: 513px;
-}
-
-.carregando {
-  font-size: 2rem;
-  margin-top: 10rem;
-}
-
-/* FIM TELA DE PERFIL */
-
-/* INÍCIO DOCUMENTAÇÃO (TERMOS E CONDIÇÕES, POLÍTICA DE PRIVACIDADE) */
-
-.container--documentacao {
-  background-color: #433E47;
-  height: 100%;
-  width: 100%;
-}
-
-.cabecalho--documentacao {
-  display: flex;
-  justify-content: center;
-  height: 6rem;
-  margin-bottom: 3rem;
-}
-
-.logo--documentacao {
-  height: 150px;
-  width: auto;
-}
-
-.corpo--documentacao {
-  text-align: center;
-  color: #ffffff;
-  padding-bottom: 3rem;
-}
-
-.titulo--documentacao {
-  font-size: 32px;
-  font-weight: 700;
-}
-
-.conteudo--documentacao {
-  margin-top: 2rem;
-  text-align: start;
-  padding: 0 10rem;
-}
-
-.secao--documentacao {
-  margin-top: 2rem;
-}
-
-.tituloSecao--documentacao {
-  margin-top: 2rem;
-}
-
-.conteudoSecao--documentacao {
-  margin: 1rem 0;
-}
-
-.conteudoFinal--documentacao {
-  margin-top: 2rem;
-}
-
-.lista--documentacao {
-  padding-left: 2rem;
-}
-
-
-/* FIM DOCUMENTAÇÃO (TERMOS E CONDIÇÕES, POLÍTICA DE PRIVACIDADE) */
-/* RESPONSIVIDADE */
-@media(max-width: 768px){
-  
-  
-  .logo--documentacao {
-    height: 120px;
-  } 
-  
-  .corpo--documentacao {
-    font-size: 10px;
-  
-  }
-  
-  .titulo--documentacao {
-    font-size: 20px;
-   
-  }
-  
-  .conteudo--documentacao {
-    font-size: 15px;
-    margin: 20px;
-    padding: 40px;
-  }
-  
-  .secao--documentacao {
-    font-size: 15px;
-  }
-  
-  .tituloSecao--documentacao {
-    font-size: 18px;
-  }
-  
-  .conteudoSecao--documentacao {
-    font-size: 15px;
-  }
-
-}
-
-@media(max-width: 430px){
-  
-  .logo--documentacao {
-    height: 100px;
-  } 
-  
-  .titulo--documentacao {
-    font-size: 15px;
-   
-  }
-  
-  .conteudo--documentacao {
-    font-size: 12px;
-    margin: 15px;
-    padding: 20px;
-  }
-  
-  .secao--documentacao {
-    font-size: 12px;
-
-  }
-  
-  .tituloSecao--documentacao {
-    font-size: 12px;
-  }
-  
-  .conteudoSecao--documentacao {
-    font-size: 12px;
-  }
-}
-/* INÍCIO RODAPÉ */
-
-.rodape {
-  background-color: #000000;
-}
-
-.boxRodape {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-}
-
-.boxContato {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50%;
-}
-
-.logoRodape {
-  width: 130px;
-  height: 130px;
-}
-
-.link {
-  color: #ffffff;
-}
-
-.boxRedes {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50%;
-}
-
-.boxRedesSociais {
-  display: flex;
-  justify-content: space-between;
-  width: 25%;
-  margin-bottom: 1rem;
-}
-
-.redesSociais {
-  width: 24px;
-  height: 24px;
-  border: none;
-}
-
-.redesSociais.instagram {
-  background: url("./screen/img/instagram.png") no-repeat center / cover;
-}
-
-.redesSociais.facebook {
-  background: url("./screen/img/facebook.png") no-repeat center / cover;
-}
-
-.redesSociais.twitter {
-  background: url("./screen/img/twitter.png") no-repeat center / cover;
-}
-
-.redesSociais.linkedin {
-  background: url("./screen/img/linkedin.png") no-repeat center / cover;
-}
-
-.boxCopyRodape {
-  color: #ffffff;
-  text-align: center;
-  margin-top: 2rem;
-  padding-bottom: 1rem;
-}
-
-/* FIM RODAPÉ */
-
+} */
 
 /* INÍCIO CURSO */
 
@@ -797,235 +315,9 @@ button:hover {
 /* FIM CURSO */
 
 
-/* INÍCIO TELAS APP (PÓS LOGIN/HOME E SALA DE AULA) */
-
-.cabecalho--app {
-  background: url("../src/screen/img/capa.png") no-repeat center / cover;
-  height: 443px;
-  display: flex;
-  flex-direction: column;
-}
-
-.navegacaoCabecalho--app {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  padding: 0 2rem;
-  align-items: center;
-}
-
-.logoInicio--app {
-  background: url("../src/screen/img/logo-developer-kids.png") no-repeat center / cover;
-  border: none;
-  height: 94px;
-  width: 94px;
-}
-
-.boxCabecalho--app {
-  width: 10rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.botaoSair--app {
-  background-color: #6100C0;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.24);
-  color: #ffffff;
-  font-size: 17px;
-  font-weight: 700;
-  height: 40px;
-  text-align: center;
-  width: 80px;
-  text-transform: uppercase;
-}
-
-.botaoPerfil--app {
-  background: url("./screen/img/perfil.png") no-repeat center / cover;
-  background-color: #dbdbdb;
-  border: none;
-  border-radius: 100%;
-  height: 54px;
-  width: 54px;
-}
-
-.boxTituloCabecalho--app {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 100%;
-}
-
-.tituloCabecalho--app {
-  color: #ffff;
-  text-shadow: 5px 5px 0px #6100C0;
-  font-size: 64px;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-.corpo--app {
-  background-color: #433e47;
-  padding-bottom: 5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.tituloCorpo--app {
-  color: #ffff;
-  text-shadow: 3px 3px 0px #6100C0;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 1.5rem 0;
-}
-
-
-
-.link--app {
-  text-decoration: none;
-}
-
-.botaoJogo--app,
-.botaoAula--app {}
-
-.botaoJogo--app:hover,
-.botaoAula--app:hover {}
-
-.imagemJogo--app,
-.imagemAula--app {}
-
-.imagemAula--app {}
-
-.boxNomeJogo--app,
-.boxNomeAula--app {}
-
-.nomeJogo--app,
-.nomeAula--app {}
-
-.esquerda--app {
-  background: url("./screen/img/angulo-esquerdo.png") no-repeat center / cover;
-}
-
-.direita--app {
-  background: url("./screen/img/angulo-direito.png") no-repeat center / cover;
-}
-
-.seta--app {}
-
-/* FIM TELAS APP (PÓS LOGIN/HOME E SALA DE AULA) */
-
-
 
 /* RESPONSIVIDADE */
 @media(max-width: 768px) {
-
-  /* INÍCIO ACESSO (LOGIN, CADASTRO, RECUPERAÇÃO DE SENHA, PERFIL) */
-
-  .logo--acesso {
-    height: 115px;
-    width: 115px;
-  }
-
-  .boxTransparente--acesso {
-    height: 424px;
-    margin-bottom: -6rem;
-    padding-top: 0;
-    width: 589px;
-  }
-
-  .titulo--acesso {
-    font-size: 1.5rem;
-  }
-
-  .botao--acesso {
-    border-radius: 15px;
-    font-size: 13px;
-    height: 42px;
-    width: 110px;
-  }
-
-  /* FIM ACESSO (LOGIN, CADASTRO, RECUPERAÇÃO DE SENHA, PERFIL) */
-
-  /* INÍCIO TELA DE CADASTRO */
-
-  .logo--cadastro {
-    height: 90px;
-    margin-left: 1rem;
-    position: fixed;
-    width: 90px;
-  }
-
-  .box--acesso {
-    align-items: center;
-
-  }
-
-  .botaoLogin--cadastro {
-    position: fixed;
-    margin-top: .5rem;
-    margin-left: 85%;
-    text-transform: uppercase;
-    background-color: #6100C0;
-    color: #ffffff;
-  }
-
-  .boxTransparente--cadastro {
-    height: 33rem;
-    padding: .3rem 0;
-    width: 520px;
-  }
-
-  .login-form-group--cadastro {
-    margin-bottom: .3rem;
-    width: 100%;
-  }
-
-  .label--cadastro {
-    font-size: .9rem;
-  }
-
-  .inputs--cadastro {
-    height: 38px;
-    padding: 0 6px;
-    width: 100%;
-  }
-
-  /* FIM TELA DE CADASTRO */
-
-
-  /* INÍCIO RECUPERAÇÃO DE SENHA */
-
-  .chaves--recsenha {
-    width: 9rem;
-  }
-
-  /* FIM RECUPERAÇÃO DE SENHA */
-
-  /* INÍCIO TELA DE PERFIL */
-
-  .containerUserData--perfil {
-    margin-top: .5rem;
-    width: 100%;
-    padding: 0 5rem;
-  }
-
-  .boxUserData--perfil {
-    margin: 5px 0 10px 0;
-  }
-
-  .dados--perfil {
-    border-radius: 10px;
-    height: 38px;
-    margin-top: 5px;
-    width: 100%;
-  }
-
-  /* FIM TELA DE PERFIL */
 
   /* INÍCIO CURSO */
 
@@ -1313,228 +605,14 @@ button:hover {
 
   /* FIM CURSO */
 
-  /* INÍCIO RODAPÉ */
-
-  .rodape {
-    font-size: 15px;
-  }
-
-  .logoRodape {
-    width: 90px;
-    height: 90px;
-  }
-
-  .redesSociais {
-    width: 18px;
-    height: 18px;
-    /* border: none; */
-  }
-
-  /* FIM RODAPÉ */
-
-
-  /* INÍCIO TELAS APP (PÓS LOGIN/HOME E SALA DE AULA) */
-
-  .navegacaoCabecalho--app {
-    padding: 0 1rem;
-  }
-
-  .tituloCabecalho--app {
-    text-align: center;
-    width: 30rem;
-  }
-
-  .tituloCorpo--app {
-    font-size: 1.3rem;
-  }
-
-  .serie--app {}
-
-  .jogos--app,
-  .aulas--app {}
-
-  .botaoJogo--app,
-  .botaoAula--app {}
-
-  .imagemAula--app {
-    border-radius: 15px;
-    height: 100%;
-  }
-
-  .nomeJogo--app,
-  .nomeAula--app {}
-
-  .seta--app {
-    width: 25px;
-    height: 25px;
-  }
-
-  /* FIM TELAS APP (PÓS LOGIN/HOME E SALA DE AULA) */
 }
 
-
-@media(max-width: 430px) {
-  /* INÍCIO ACESSO (LOGIN, CADASTRO, RECUPERAÇÃO DE SENHA, PERFIL) */
-
-  .logo--acesso {
-    height: 70px;
-    width: 70px;
-  }
-
-  .boxTransparente--acesso {
-    margin-bottom: 0;
-    border-radius: 20px;
-    font-size: 17px;
-    height: 22rem;
-    width: 305px;
-  }
-
-  .titulo--acesso {
-    font-size: 1.2rem;
-  }
-
-  .login-form--acesso {
-    width: 100%;
-    padding: 0 2rem;
-  }
-
-  .login-form-group--acesso {
-    width: 100%;
-  }
-
-  .inputs--acesso {
-    border-radius: 8px;
-    height: 30px;
-    margin: 5px 0;
-    padding: 0 6px;
-    width: 100%;
-    font-size: .5rem;
-  }
-
-  .form-error--acesso {
-    font-size: .4rem;
-  }
-
-  .botao--acesso {
-    border-radius: 8px;
-    font-size: .5rem;
-    height: 2rem;
-    width: 70px;
-    font-weight: 900;
-  }
-
-  /* FIM ACESSO (LOGIN, CADASTRO, RECUPERAÇÃO DE SENHA, PERFIL) */
-
-  /* INÍCIO TELA DE LOGIN */
-
-  .labelInputs--login {
-    font-size: 13px;
-  }
-
-  .boxCaminhos--login {
-    font-size: 13px;
-    height: 3rem;
-    margin-top: 1rem;
-  }
-
-  /* FIM TELA DE LOGIN */
-
-  /* INÍCIO TELA DE CADASTRO */
-
-  .logo--cadastro {
-    height: 60px;
-    width: 60px;
-    margin-left: .1rem;
-    margin-top: -.1rem;
-  }
-
-  .botaoLogin--cadastro {
-    margin-top: .3rem;
-    margin-left: 82%;
-    font-size: .5rem;
-    width: 4rem;
-    height: 2rem;
-    border-radius: 8px;
-  }
-
-  .boxTransparente--cadastro {
-    height: 29rem;
-    padding: .1rem 0;
-    width: 305px;
-  }
-
-  .login-form--cadastro {
-    padding: 0 2rem;
-  }
-
-  .login-form-group--cadastro {
-    margin-bottom: .1rem;
-    width: 100%;
-  }
-
-  .label--cadastro {
-    font-size: .6rem;
-  }
-
-  .inputs--cadastro {
-    height: 28px;
-    padding: 0 6px;
-    width: 100%;
-    font-size: .5rem;
-    border-radius: 8px;
-  }
-
-  .boxPermicao--cadastro {
-    color: #ffffff;
-    font-size: .6rem;
-    margin: 0 .5rem 5rem 0;
-    padding: 1rem 0;
-    width: 12rem;
-  }
-
-  .documentacao--cadastro {
-    font-size: .6rem;
-  }
-
-  /* FIM TELA DE CADASTRO */
-
-  /* INÍCIO RECUPERAÇÃO DE SENHA */
-
-  .chaves--recsenha {
-    width: 5rem;
-  }
-
-  /* FIM RECUPERAÇÃO DE SENHA */
-
-  /* INÍCIO TELA DE PERFIL */
-
-  .containerUserData--perfil {
-    padding: 0 1rem;
-  }
-
-  .boxUserData--perfil {
-    margin: 2px 0 10px 0;
-  }
-
-  .tipoDado--perfil {
-    font-size: 13px;
-  }
-
-  .dados--perfil {
-    border-radius: 8px;
-    height: 28px;
-    margin-top: 5px;
-    font-size: 13px;
-  }
-
-  /* FIM TELA DE PERFIL */
-}
 
 /* INICIO MAINSCREEN*/
 
 /* Gerais */
 body {
-  font-family: 'Montserrat','Roboto', sans-serif;
+  font-family: 'Montserrat', 'Roboto', sans-serif;
 }
 
 .row {
@@ -1545,15 +623,18 @@ body {
   padding: 70px 0;
 }
 
-p, li {
+p,
+li {
   color: #444;
   font-size: 14px;
 }
 
 /* Barra de navegação */
-header, .navbar {
-  background-color: #6100C0;;
-} 
+header,
+.navbar {
+  background-color: #6100C0;
+  ;
+}
 
 #nav-container {
   padding-top: 0;
@@ -1571,21 +652,26 @@ header, .navbar {
 
 .navbar-brand:hover {
   color: #FFF;
-}*/
+}
 
-#navbar-links a {
+*/ #navbar-links a {
   color: #FFF;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
   padding: 1rem .8rem;
-} 
+}
 
 .nav-item.active {
   border-bottom: 3px solid #FFF;
 }
-#home-menu , #about-menu , #services-menu,
- #team-menu , #portfolio-menu , #contact-menu {
+
+#home-menu,
+#about-menu,
+#services-menu,
+#team-menu,
+#portfolio-menu,
+#contact-menu {
   color: #FFF;
   font-size: 20px;
   font-weight: 600;
@@ -1601,32 +687,39 @@ header, .navbar {
 .carousel {
   overflow: hidden;
   position: relative;
-  
+
 }
-.carousel .carousel-inner, .carousel .carousel-item {
+
+.carousel .carousel-inner,
+.carousel .carousel-item {
   height: 95vh;
 }
+
 .carousel-inner {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
+
 .carousel-item {
   flex: 0 0 100%;
   max-width: 100%;
   opacity: 0.5;
   transition: opacity 0.5s ease-in-out;
 }
+
 .carousel-item.active {
   opacity: 1;
 }
+
 .carousel .carousel-caption {
   top: 30%;
 }
+
 .carousel .carousel-caption h2 {
   color: #FFF;
   text-align: center;
   text-shadow: -6px 4px 0px 0px #8133CD;
-  font-family: 'Montserrat' ;
+  font-family: 'Montserrat';
   font-size: 70px;
   font-style: normal;
   font-weight: 950;
@@ -1640,6 +733,7 @@ header, .navbar {
   margin-bottom: 80px;
   color: #FFF;
 }
+
 .main-btn {
   background-color: #6100C0;
   color: #FFF;
@@ -1650,7 +744,7 @@ header, .navbar {
   border-radius: 30px;
   border: 3px solid transparent;
   transition: .5s;
-} 
+}
 
 .main-btn:hover {
   text-decoration: none;
@@ -1658,6 +752,7 @@ header, .navbar {
   background-color: transparent;
   border-color: #fff;
 }
+
 .carousel-indicators .active {
   background-color: #fff;
 }
@@ -1706,19 +801,19 @@ header, .navbar {
   position: absolute;
   top: 60px;
   left: 42.5%;
-} 
+}
 
 .about-title {
   font-size: 17px;
   color: #444;
   text-transform: uppercase;
   font-weight: bold;
-} 
+}
 
 #about-list {
   list-style: none;
   padding-left: 0;
-} 
+}
 
 #about-list li {
   line-height: 30px;
@@ -1737,7 +832,8 @@ header, .navbar {
   margin-bottom: 50px;
 }
 
-.service-box i, .service-box h4 {
+.service-box i,
+.service-box h4 {
   transition: .5s;
 }
 
@@ -1746,19 +842,21 @@ header, .navbar {
   margin-bottom: 20px;
   color: #444;
 }
+
 /*
 .service-box h4 {
   font-size: 24px;
   margin-bottom: 20px;
 }*/
 
-.service-box:hover > i, .service-box:hover > h4 {
+.service-box:hover>i,
+.service-box:hover>h4 {
   color: #6100C0;
 }
 
 
 /* Time */
-.avatar{
+.avatar {
   height: 270px;
 }
 
@@ -1766,7 +864,9 @@ header, .navbar {
   text-align: center;
   width: 60px;
 }
-.card-title, .card-text{
+
+.card-title,
+.card-text {
   white-space: nowrap;
 
 }
@@ -1861,7 +961,8 @@ header, .navbar {
   padding: 0 20px;
 }
 
-#portfolio-area .filter-btn.active, #portfolio-area .filter-btn:hover {
+#portfolio-area .filter-btn.active,
+#portfolio-area .filter-btn:hover {
   color: #FFF;
   border: 1px solid #6100C0;
   background-color: #6100C0;
@@ -1921,6 +1022,7 @@ header, .navbar {
   margin-bottom: 50px;
   border-bottom: 1px solid #6100C0;
 }
+
 /*
 .contact-box i {
   color: #444;
@@ -1945,7 +1047,8 @@ header, .navbar {
   font-size: 22px;
 }
 
-#contact-form input[type="text"], #contact-form textarea {
+#contact-form input[type="text"],
+#contact-form textarea {
   margin-bottom: 15px;
   border-radius: 0;
 }
@@ -1986,14 +1089,15 @@ header, .navbar {
 
 /* responsive */
 @media(max-width: 768px) {
-  
+
   /* geral */
   .container {
     padding: 50px 0;
   }
-  
+
   /* slider */
-  .carousel .carousel-inner, .carousel .carousel-item {
+  .carousel .carousel-inner,
+  .carousel .carousel-item {
     height: auto;
   }
 
@@ -2016,12 +1120,12 @@ header, .navbar {
     left: 10%;
     right: 10%;
   }
-  
+
   /* about */
   #about-area img {
     margin-top: 10px;
   }
-  
+
   /* team */
   .card-title {
     font-size: 14px;
@@ -2030,24 +1134,28 @@ header, .navbar {
   .card-text {
     font-size: 12px;
   }
+
   .card {
     width: 225px;
     margin: auto;
-    margin-bottom: 10px;  
+    margin-bottom: 10px;
     height: 270px;
   }
+
   .card-img-top {
-   height: 200px;
+    height: 200px;
   }
-  .card-body{
+
+  .card-body {
     width: 100%;
   }
+
   /* novidades */
   #contact-area h3 {
     white-space: nowrap;
     font-size: 32px;
   }
- 
+
   /* news */
   #news-area h3 {
     white-space: nowrap;
@@ -2059,9 +1167,10 @@ header, .navbar {
     padding: 50px 25px;
     margin: auto;
     margin-left: 30px;
-    margin-top: auto ;
+    margin-top: auto;
   }
-  #filter-btn-box{
+
+  #filter-btn-box {
     margin-bottom: auto;
   }
 
@@ -2084,10 +1193,11 @@ header, .navbar {
     padding: 30px;
   }
 
-  #call-area p, #call-area #call-btn {
+  #call-area p,
+  #call-area #call-btn {
     font-size: 16px;
   }
-  
+
 
 
 }
@@ -2136,18 +1246,22 @@ header, .navbar {
   .card {
     width: 160px;
     margin: auto;
-    margin-bottom: 10px;  
+    margin-bottom: 10px;
     height: 270px;
   }
+
   .card-img-top {
-   height: 190px;
+    height: 190px;
   }
-  .card-body{
+
+  .card-body {
     width: 100%;
   }
+
   .card-title {
     text-align: center;
   }
+
   /* apply 
   #apply-area {
     height: auto;
@@ -2165,12 +1279,13 @@ header, .navbar {
   .project-box {
     width: 10%;
   }
+
   /* entre em contato conosco */
   #contact-area h3 {
     white-space: nowrap;
     font-size: 25px;
   }
- 
+
   /* news */
   #news-area h3 {
     white-space: nowrap;
@@ -2185,12 +1300,14 @@ header, .navbar {
     width: 80%;
   }
 
-  #call-area p, #call-area #call-btn {
+  #call-area p,
+  #call-area #call-btn {
     font-size: 14px;
     letter-spacing: 0;
   }
 
-  #call-area p, #call-area #call-btn {
+  #call-area p,
+  #call-area #call-btn {
     margin: 0;
     width: 50%;
   }
