@@ -127,8 +127,8 @@ export default function Rodape() {
         <StyledBoxRodape>
           <StyledBoxContato>
             <StyledLogo src={logo} alt="Logo Developer Kids" />
-            <StyledLink href="mailto:contato_developerkids@gmail.com">
-              contato_developerkids@gmail.com
+            <StyledLink href="mailto:contato.developerkids@gmail.com">
+              contato.developerkids@gmail.com
             </StyledLink>
           </StyledBoxContato>
 
@@ -147,7 +147,7 @@ export default function Rodape() {
 
         <StyledBoxCopy>
           <p>
-            Copyright &copy; 2023 Star Dance -{" "}
+            Copyright &copy; 2023 Developer Kids -{" "}
             <StyledLink href="/politicadeprivacidade" target="_blank">
               Política de Privacidade
             </StyledLink>

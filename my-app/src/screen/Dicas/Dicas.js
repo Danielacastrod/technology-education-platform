@@ -1,6 +1,4 @@
 import React, { useRef } from "react";
-import { useNavigate } from "react-router-dom";
-import { useParams } from "react-router-dom";
 
 import { Header } from "../../StylesGlobal/Header/Header";
 import NavType2 from "../../StylesGlobal/Header/NavType2";
@@ -14,23 +12,13 @@ import { SetaDireita } from "../../StylesGlobal/CorpoApp/BotaoSeta/SetaDireita";
 import Rodape from "../../StylesGlobal/Rodape/Rodape";
 
 import programacao_1 from "../img/programacao_1.png";
-import html_1 from "../img/html_1.png";
+import programacao_2 from "../img/programacao_2.png";
+import programacao_3 from "../img/programacao_3.png";
+import programacao_4 from "../img/programacao_4.png";
+import programacao_5 from "../img/programacao_5.png";
 
 export default function Dicas() {
-  const { c_emailresp_cont } = useParams();
-  const navigate = useNavigate();
-
   const carrossel = useRef(null);
-
-  const encodedEncryptedEmail = encodeURIComponent(c_emailresp_cont);
-
-  function Curso() {
-    navigate(`/curso/${encodedEncryptedEmail}`);
-  }
-
-  function Dicas() {
-    navigate(`/dicas/${encodedEncryptedEmail}`);
-  }
 
   const handleEsquerdaClick = (e) => {
     e.preventDefault();
@@ -51,46 +39,25 @@ export default function Dicas() {
       </Header>
       <Main>
         <Container>
-          <SetaEsquerda
-            className="seta--app esquerda--app"
-            onClick={handleEsquerdaClick}
-          ></SetaEsquerda>
+          <SetaEsquerda onClick={handleEsquerdaClick}></SetaEsquerda>
           <Carrossel ref={carrossel}>
-            <BotaoAula onClick={Dicas}>
-              <img class="imagemAula--app" src={programacao_1} alt="" />
+            <BotaoAula>
+              <img className="imagemAula--app" src={programacao_1} alt="" />
             </BotaoAula>
-            {/** vai direto pra plataforma de jogo escolhido*/}
-            <BotaoAula onClick={Dicas}>
-              <img class="imagemAula--app" src={html_1} alt="" />
+            <BotaoAula>
+              <img className="imagemAula--app" src={programacao_2} alt="" />
             </BotaoAula>
-            {/** vai direto pra plataforma de jogo escolhido*/}
-            <BotaoAula onClick={Curso}>
-              <img class="imagemAula--app" src={programacao_1} alt="" />
+            <BotaoAula>
+              <img className="imagemAula--app" src={programacao_3} alt="" />
             </BotaoAula>
-            {/** vai direto pra plataforma de jogo escolhido*/}
-            <BotaoAula onClick={Curso}>
-              <img class="imagemAula--app" src={html_1} alt="" />
+            <BotaoAula>
+              <img className="imagemAula--app" src={programacao_4} alt="" />
             </BotaoAula>
-            <BotaoAula onClick={Curso}>
-              <img class="imagemAula--app" src={programacao_1} alt="" />
-            </BotaoAula>
-            {/** vai direto pra plataforma de jogo escolhido*/}
-            <BotaoAula onClick={Curso}>
-              <img class="imagemAula--app" src={html_1} alt="" />
-            </BotaoAula>
-            <BotaoAula onClick={Curso}>
-              <img class="imagemAula--app" src={programacao_1} alt="" />
-            </BotaoAula>
-            {/** vai direto pra plataforma de jogo escolhido*/}
-            <BotaoAula onClick={Curso}>
-              <img class="imagemAula--app" src={html_1} alt="" />
+            <BotaoAula>
+              <img className="imagemAula--app" src={programacao_5} alt="" />
             </BotaoAula>
           </Carrossel>
-          {/** vai direto pra plataforma de jogo escolhido*/}
-          <SetaDireita
-            className="seta--app direita--app"
-            onClick={handleDireitaClick}
-          ></SetaDireita>
+          <SetaDireita onClick={handleDireitaClick}></SetaDireita>
         </Container>
       </Main>
       <Rodape />
