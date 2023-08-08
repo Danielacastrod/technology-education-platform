@@ -121,7 +121,7 @@ export default function MainScreen() {
                 <img src={jogando} className="d-block w-100" alt="Segundo slide" />
                 <Carousel.Caption>
                   <h2>Você pode aprender se divertindo</h2>
-                  <p>Melhore sua capacidade de solucionar problemas de uma forma descontraida</p>
+                  <p>Melhore sua capacidade de solucionar problemas de uma forma descontraída</p>
                   <a onClick={cadastrar} target="_blank" className="main-btn">Torne-se aluno</a>
                   <a onClick={login} className="main-btn ml-4">Área do aluno</a>
                 </Carousel.Caption>
