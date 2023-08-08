@@ -4,7 +4,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js.map';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck, faPhone, faMobileScreenButton, faEnvelope, faLocationDot, faHandPointer, faChildren, faPaintbrush, faUsers, faHandshakeAngle } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faPhone, faMobileScreenButton, faEnvelope, faCameraRetro, faHandPointer, faChildren, faPaintbrush, faUsers, faHandshakeAngle } from '@fortawesome/free-solid-svg-icons'
 import logoDeveloperKids from "./img/logo-developer-kids.ico"
 import profile1 from "./img/profile1.jpeg"
 import profile2 from "./img/profile2.jpeg"
@@ -121,7 +121,7 @@ export default function MainScreen() {
                 <img src={jogando} className="d-block w-100" alt="Segundo slide" />
                 <Carousel.Caption>
                   <h2>Você pode aprender se divertindo</h2>
-                  <p>Melhore sua capacidade de solucionar problemas de uma forma descontraida.</p>
+                  <p>Melhore sua capacidade de solucionar problemas de uma forma descontraida</p>
                   <a onClick={cadastrar} target="_blank" className="main-btn">Torne-se aluno</a>
                   <a onClick={login} className="main-btn ml-4">Área do aluno</a>
                 </Carousel.Caption>
@@ -130,9 +130,9 @@ export default function MainScreen() {
                 <img src={crianca} className="d-block w-100" alt="terceiro slide" />
                 <Carousel.Caption>
                   <h2>Linguagem de programação objetiva</h2>
-                  <p>Conheça Python: A LP que tem uma redigibilidade como nenhuma outra.</p>
+                  <p>Conheça Python: A LP que tem uma redigibilidade como nenhuma outra</p>
                   <a onClick={cadastrar} target="_blank" className="main-btn">Torne-se aluno</a>
-                  <a onClick={login} className="main-btn ml-4">Área do aluno</a>
+                  <a onClick={login} className="main-btn ml-7">Área do aluno</a>
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel>
@@ -151,9 +151,9 @@ export default function MainScreen() {
                 </div>
                 <div className="col-md-6">
                   <h3 className="about-title">Desenvolvendo mentes, criando o futuro</h3>
-                  <p>Nossos projetos são adaptados ao público infanto-juvenil.</p>
-                  <p>Após muitas pesquisas realizadas pela Developer Kids, adotamos um modelo de conteúdos interativos para chamar a atencão do nosso púbico alvo.</p>
-                  <p>Todo nosso design é pensado de forma que cative de forma expontânea! Você pode aprender se divertindo.</p>
+                  <p>Nossos projetos são adaptados ao público infanto-juvenil</p>
+                  <p>Após muitas pesquisas realizadas pela Developer Kids, adotamos um modelo de conteúdos interativos para chamar a atencão do nosso púbico alvo</p>
+                  <p>Todo nosso design é pensado de forma que cative de forma expontânea! Você pode aprender se divertindo</p>
                   <p>Quais os benefícios?</p>
                   <ul id="about-list">
                     <li><FontAwesomeIcon icon={faCheck} className="me-1" /> Estímulo do raciocínio lógico e da criatividade</li>
@@ -343,11 +343,11 @@ export default function MainScreen() {
               </div>
               <div className="col-md-4 contact-box"><FontAwesomeIcon icon={faEnvelope} />
                 <i className="fas fa-envelope" />
-                <p><span className="contact-tile">Envie um email:</span> contato@DeveloperKids.com.br</p>
+                <p><span className="contact-tile">Nosso email:</span> contato.developerkids@gmail.com</p>
               </div>
               <div className="col-md-4 contact-box">
-                <i className="fas fa-map-marker-alt" /><FontAwesomeIcon icon={faLocationDot} />
-                <p><span className="contact-tile">Venha tomar um café:</span> Rua Lorem Ipsum - 1314</p>
+                <i className="fas fa-map-marker-alt" /><FontAwesomeIcon icon={faCameraRetro} />
+                <p><span className="contact-tile"> Nosso instagram:</span> developer.kids</p>
               </div>
               <div className="col-md-6" id="msg-box">
                 <p>Nos deixe um feedback</p>

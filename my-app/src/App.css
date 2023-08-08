@@ -66,6 +66,10 @@ button:hover {
   margin-top: -1rem;
   height: 94px;
   width: 94px;
+  margin-left: 20px;
+}
+#logo {
+  margin-left: 30px;
 }
 
 .botaoPerfil--curso {
@@ -453,8 +457,8 @@ header,
   border: 3px solid transparent;
   transition: .5s;
   text-decoration: none;
+  margin-right: 25px;
 }
-
 
 
 
