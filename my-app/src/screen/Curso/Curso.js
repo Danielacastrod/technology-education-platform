@@ -20,13 +20,6 @@ import { CargoBot } from "./styled/LadoDireito/CargoBot";
 import { Doodle } from "./styled/LadoDireito/Doodle";
 import { Tetris } from "./styled/LadoDireito/Tetris";
 
-import doodle_quest1 from "../img/doodle-quest1.png";
-import doodle_quest2 from "../img/doodle-quest2.png";
-import doodle_quest3 from "../img/doodle-quest3.png";
-import comemoracao from "../img/comemoracao.png";
-import tudoBem from "../img/tudoBem.png";
-import duvida from "../img/duvida.png";
-
 export default function Curso() {
   const telas = [
     "Tela1",
@@ -365,144 +358,19 @@ const Tela6 = ({ onVoltar, onAvancar }) => {
 };
 
 const Tela7 = ({ onVoltar, onAvancar }) => {
-  const questions = [
-    {
-      id: 1,
-      question: "Qual a melhor opção para o coelhinho pegar as duas cenouras?",
-      image: doodle_quest1,
-      options: ["1", "2", "3", "4"],
-      correctAnswer: "2",
-    },
-    {
-      id: 2,
-      question:
-        "Qual a melhor opção para o coelhinho pegar as quatro cenouras?",
-      image: doodle_quest2,
-      options: ["1", "2", "3", "4"],
-      correctAnswer: "4",
-    },
-    {
-      id: 3,
-      question:
-        "Qual a melhor opção de repetição para o coelhinho pegar todas as cenouras?",
-      image: doodle_quest3,
-      options: ["1", "2", "3", "4"],
-      correctAnswer: "1",
-    },
-  ];
-
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [userAnswers, setUserAnswers] = useState([]);
-  const [showResult, setShowResult] = useState(false);
-
-  const handleOptionSelect = (selectedOption) => {
-    setUserAnswers([...userAnswers, selectedOption]);
-
-    if (currentQuestion + 1 < questions.length) {
-      setCurrentQuestion(currentQuestion + 1);
-    } else {
-      setShowResult(true);
-    }
-  };
-
-  const restartQuiz = () => {
-    setCurrentQuestion(0);
-    setUserAnswers([]);
-    setShowResult(false);
-  };
-
-  if (showResult) {
-    const totalCorrectAnswers = userAnswers.filter(
-      (answer, index) => answer === questions[index].correctAnswer
-    ).length;
-
-    const imageResult = () => {
-      if (totalCorrectAnswers === 0) {
-        const img = duvida;
-        console.log("Que pena, não foi dessa vez");
-        return img;
-      } else if ((totalCorrectAnswers > 0) & (totalCorrectAnswers < 3)) {
-        const img = tudoBem;
-        console.log("Tente mais um pouco e você consegue!");
-        return img;
-      } else if (totalCorrectAnswers === 3) {
-        const img = comemoracao;
-        console.log("Parabéns, você conseguiu!!!");
-        return img;
-      }
-    };
-
-    const mensageResult = () => {
-      if (totalCorrectAnswers === 0) {
-        const msg = "Que pena, não foi dessa vez. Tente novamente!";
-        return msg;
-      } else if ((totalCorrectAnswers > 0) & (totalCorrectAnswers < 3)) {
-        const msg = "Tente mais um pouco e você consegue!";
-        return msg;
-      } else if (totalCorrectAnswers === 3) {
-        const msg = "Parabéns, você conseguiu!!!";
-        return msg;
-      }
-    };
-
-    return (
-      <div className="boxQuestionario--aula">
-        <div className="questionario--aula">
-          <h2>Resultado</h2>
-          <p className="resultado--aula">
-            Você acertou {totalCorrectAnswers} de {questions.length} perguntas.
-          </p>
-          <img
-            src={imageResult()}
-            alt="Imagem resultado"
-            className="imgResult--aula"
-          />
-          <p className="resultado--aula">{mensageResult()}</p>
-          <button onClick={restartQuiz} className="opcao--aula">
-            Reiniciar
-          </button>
-        </div>
-
-        <div className="boxTitulo--aula">
-          <button
-            onClick={onVoltar}
-            className="aulaAnterior--aula botoesAula--aula"
-          >
-            <div className="iconVoltar--aula"></div> Aula Anterior
-          </button>
-          <h2>Avaliação de Lógica - 1</h2>
-          <button className="proximaAula--aula botoesAula--aula aulaNulo--aula">
-            Próxima Aula <div className="iconProceguir--aula"></div>
-          </button>
-        </div>
-      </div>
-    );
-  }
-
   return (
-    <div className="boxQuestionario--aula">
-      <div className="questionario--aula">
-        <h2>Pergunta {currentQuestion + 1}</h2>
-        <p className="questao--aula">{questions[currentQuestion].question}</p>
-        <div className="boxImagemQuestionario--aula">
-          <img
-            src={questions[currentQuestion].image}
-            alt={`Pergunta ${currentQuestion + 1}`}
-            className="imagemQuestionario--aula"
-          />
-        </div>
-        <ul className="listaOpcoes--aula">
-          {questions[currentQuestion].options.map((option, index) => (
-            <li
-              key={index}
-              onClick={() => handleOptionSelect(option)}
-              className="opcao--aula"
-            >
-              {option}
-            </li>
-          ))}
-        </ul>
-      </div>
+    <ContainerVideo>
+      <LinkJogo
+        href="https://tetris.com/play-tetris"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Tetris>
+          <div>
+            Clique Aqui <br /> Para Jogar
+          </div>
+        </Tetris>
+      </LinkJogo>
       <BoxTitle>
         <BotaoNulo onClick={onVoltar}>
           <SetaEsquerda></SetaEsquerda> Aula Anterior
@@ -512,7 +380,7 @@ const Tela7 = ({ onVoltar, onAvancar }) => {
           Próxima Aula <SetaDireita></SetaDireita>
         </button>
       </BoxTitle>
-    </div>
+    </ContainerVideo>
   );
 };
 
