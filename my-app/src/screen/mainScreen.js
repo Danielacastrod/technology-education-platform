@@ -4,7 +4,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js.map';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck, faPhone, faMobileScreenButton, faEnvelope, faLocationDot, faHandPointer, faChildren, faPaintbrush, faUsers, faHandshakeAngle } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faPhone, faMobileScreenButton, faEnvelope, faCameraRetro, faHandPointer, faChildren, faPaintbrush, faUsers, faHandshakeAngle } from '@fortawesome/free-solid-svg-icons'
 import logoDeveloperKids from "./img/logo-developer-kids.ico"
 import profile1 from "./img/profile1.jpeg"
 import profile2 from "./img/profile2.jpeg"
@@ -343,11 +343,11 @@ export default function MainScreen() {
               </div>
               <div className="col-md-4 contact-box"><FontAwesomeIcon icon={faEnvelope} />
                 <i className="fas fa-envelope" />
-                <p><span className="contact-tile">Envie um email:</span> contato@DeveloperKids.com.br</p>
+                <p><span className="contact-tile">Nosso email:</span> contato.developerkids@gmail.com</p>
               </div>
               <div className="col-md-4 contact-box">
-                <i className="fas fa-map-marker-alt" /><FontAwesomeIcon icon={faLocationDot} />
-                <p><span className="contact-tile">Venha tomar um café:</span> Rua Lorem Ipsum - 1314</p>
+                <i className="fas fa-map-marker-alt" /><FontAwesomeIcon icon={faCameraRetro} />
+                <p><span className="contact-tile"> Nosso instagram:</span> developer.kids</p>
               </div>
               <div className="col-md-6" id="msg-box">
                 <p>Nos deixe um feedback</p>
