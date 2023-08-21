@@ -152,7 +152,7 @@ header,
   text-align: center;
   text-shadow: -6px 4px 0px 0px #8133CD;
   font-family: 'Montserrat';
-  font-size: 68px;
+  font-size: 60px;
   font-style: normal;
   font-weight: 950;
   line-height: normal;
@@ -162,7 +162,7 @@ header,
 .carousel .carousel-caption p {
   font-size: 30px;
   font-weight: 400;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   color: #FFF;
 }
 
@@ -192,6 +192,7 @@ header,
 .carousel-indicators .active {
   background-color: #fff;
 }
+
 .main-title {
   position: relative;
   white-space: nowrap;
@@ -282,13 +283,12 @@ header,
   align-items: center;
 }
 
-* área tecnológica  
-
-#apply-area {
+* área tecnológica #apply-area {
   height: 500px;
 }
 
-#apply-area .container-fluid, #apply-area .row {
+#apply-area .container-fluid,
+#apply-area .row {
   height: 100%;
 }
 
@@ -487,13 +487,13 @@ header,
     height: auto;
   }
 
-  .carousel .carousel-caption h2 {
-    font-size: 30px;
-  }
+  /* .carousel .carousel-caption h2 {
+    font-size: 20px;
+  } */
 
   .carousel .carousel-caption p {
     font-size: 18px;
-    margin-bottom: 19px;
+    margin-bottom: 10px;
   }
 
   .main-btn {
@@ -607,10 +607,10 @@ header,
     margin-bottom: 40px;
   }
 
-  .carousel .carousel-caption p {
+  /* .carousel .carousel-caption p {
     font-size: 13px;
     margin-bottom: 10px;
-  }
+  } */
 
   .carousel-caption .main-btn {
     padding: 3px 8px;
