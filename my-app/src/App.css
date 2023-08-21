@@ -92,7 +92,7 @@ header,
   color: #FFF;
 }
 
-*/ #navbar-links a {
+#navbar-links a {
   color: #FFF;
 }
 
@@ -283,7 +283,7 @@ header,
   align-items: center;
 }
 
-* área tecnológica #apply-area {
+/* área tecnológica */ #apply-area {
   height: 500px;
 }
 
